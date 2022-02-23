@@ -2,12 +2,28 @@
 require_once('../incs-marketing/config.php');
 require_once('../incs-marketing/gen_serv_con.php');
 //include('../incs-marketing/cookie-session.php');
+?>
+
+<?php 
+if(!isset($_GET['link'])){
+    $_GET['link'] = '';
+
+}
+
+$query = mysqli_query($connect, "SELECT m_username FROM marketer WHERE m_username= '".mysqli_real_escape_string ($connect, $_GET['link'])."' AND m_confirm_email = '1'") or die(db_conn_error);
+
+if(mysqli_num_rows($query) == 0){
+    header('Location:'.GEN_WEBSITE);
+    exit();
+}
+
 include('../incs-marketing/header-admin.php');
 
 ?>
+
 <?php
 $signup_errors = array();
-if(isset($_POST['register']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
+if(isset($_POST['register']) AND $_SERVER['REQUEST_METHOD']== "POST"){
 
   if (preg_match ('/^[a-zA-Z]{3,20}$/i', trim($_POST['firstname']))) {		//only 20 characters are allowed to be inputted
 		$firstname = mysqli_real_escape_string ($connect, trim($_POST['firstname']));
@@ -50,50 +66,15 @@ if($_POST['password'] == $_POST['confirm_password']){
 
 if(empty($signup_errors)){
 
-
-    $query = mysqli_query($connect, "SELECT m_username FROM marketer WHERE m_username='".$username."' AND m_confirm_email = '0'") or die(mysqli_error($connect));    //confriming email
-    if(mysqli_num_rows($query)== 0){
+ if(mysqli_num_rows($query)== 1){
       $hash=md5(rand(0,1000));
       $encrypted = password_hash($password, PASSWORD_DEFAULT);
     
 
-    $q = mysqli_query($connect,"INSERT INTO  marketer (m_firstname, m_surname, m_username, m_email, m_password, m_cookie_session, m_remember_pass) VALUES ('".$firstname."','".$surname."','".$username."', '".$email."', '".$encrypted."', '', '".$hash."')") or die(db_conn_error);
+    $q = mysqli_query($connect,"INSERT INTO users (user_id_marketer, u_firstname, u_surname, u_email, u_password) VALUES ('".$_GET['link']."','".$firstname."' ,'".$surname."','".$email."', '".$encrypted."')") or die(db_conn_error);
 
             if(mysqli_affected_rows($connect) == 1){
 
-
-      $body = '
-      <div style="max-width:1000px; margin-left:auto; margin-right:auto;">
-        <div style="font-size:14px; margin-top:50px;">
-        <center>
-        <h1 style="color:#f5f5f5; background-color:#161616; text-shadow:1px 1px 1px #a2a2a2; padding-top:10px; padding-bottom:10px; text-transform:uppercase;">
-        
-       Registration was successful</h1>
-        </center>
-
-
-        <p>Thank you for registering. Please click this link to confirm your email.
-        <center><a href="'.GEN_WEBSITE.'/verify-email.php?confirm='.$hash.'">'.GEN_WEBSITE.'/verify-email.php?confirm='.$hash.'</a></center>
-        </p>
-        
-        
-        </div>
-      </div>
-
-      ';
-          
-          $headers = 'MIME-Version: 1.0' . "\r\n";
-          $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-          $headers .= 'From: noreply@'.DOMAIN_NAME . "\r\n";
-          $headers .= 'Reply-To: noreply@'.DOMAIN_NAME . "\r\n";
-          $headers .= 'Return-Path: noreply@'.DOMAIN_NAME . "\r\n";
-          $headers .= 'BCC: noreply@'.DOMAIN_NAME . "\r\n";
-          $headers .= 'X-Priority: 3' . "\r\n";
-          $headers .= 'X-Mailer: PHP/'. phpversion() . "\r\n";
-          
-          mail($email, 'Beta Souk Registration', $body, $headers);	
-          
-          //edit 1
           echo '
           
           <div class="global_community_wrapper newsletter_wrapper index2_newsletter index3_newsletter float_left">
@@ -125,7 +106,7 @@ trigger_error('You could not be registered due to a system error. We apologize f
 
 
 
-$signup_errors['username'] = 'This username has already been registered. Please try another.';
+$signup_errors['username'] = 'This username has already been registered.';
 
 
 }
@@ -152,6 +133,11 @@ $signup_errors['username'] = 'This username has already been registered. Please 
 
 
 }
+
+
+
+
+
 
 ?>
 
@@ -231,17 +217,6 @@ $signup_errors['username'] = 'This username has already been registered. Please 
 
                                     <div class="form-group icon_form comments_form">
 
-<input type="text" class="form-control require" value="<?php if(isset($_POST['username'])){echo $_POST['username'];}?>" name="username" placeholder="Username">
-<?php 
-if (array_key_exists('username', $signup_errors)) {
-echo '<p class="text-danger" >'.$signup_errors['username'].'</p>';
-}
-?>
-</div>
-
-
-                                    <div class="form-group icon_form comments_form">
-
                                     <input type="text" class="form-control require" value="<?php if(isset($_POST['email'])){echo $_POST['email'];}?>" name="email" placeholder="Email Address">
                                     <?php 
                    if (array_key_exists('email', $signup_errors)) {
@@ -271,6 +246,12 @@ echo '<p class="text-danger" >'.$signup_errors['username'].'</p>';
                        }
                    ?>
                                     </div>
+
+                                    <div class="form-group icon_form comments_form">
+
+                             <input type="hidden" name="referral_username" value="<?=$_GET['link'];?>">                          
+                                                            </div>
+
                         <!-- <div class="login_remember_box">
                             <label class="control control--checkbox">Remember me
                                     <input type="checkbox">

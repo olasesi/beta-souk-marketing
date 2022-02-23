@@ -55,7 +55,7 @@ Author: Webstrot
     <!-- Top Scroll End -->
     <!-- cp navi wrapper Start -->
     <nav class="cd-dropdown index3_cd_dropdown d-block d-sm-block d-md-block d-lg-none d-xl-none">
-        <h2><a href="index.html"> savehyip </a></h2>
+        <h2><a href="/"> savehyip </a></h2>
         <a href="#0" class="cd-close">Close</a>
         <ul class="cd-dropdown-content">
             <li>
@@ -147,7 +147,7 @@ Author: Webstrot
                 </ul>
             </li>
             <li><a href="contact_us.html"> contact us </a></li>
-            <li><a href="../admin"> login </a></li>
+            <li><a href="login.php"> login </a></li>
             <li><a href="register.php"> register </a></li>
         </ul>
         <!-- .cd-dropdown-content -->
@@ -201,7 +201,7 @@ Author: Webstrot
                         <li>
                             <a href="register.php"> register </a> </li>
                         <li>
-                            <a href="../admin"> login </a> </li>
+                            <a href="login.php"> login </a> </li>
                     </ul>
 
                 </div>
