@@ -32,10 +32,10 @@ For <span>Future</span></h3>
                                         <div class="slider_btn index2_sliderbtn index3_sliderbtn float_left">
                                             <ul>
                                                 <li data-animation="animated bounceInLeft">
-                                                    <a href="#">start now</a>
+                                                    <a href="register.php">Affiliate register</a>
                                                 </li>
                                                 <li data-animation="animated bounceInLeft">
-                                                    <a href="#">view plans</a>
+                                                    <a href="login.php">Affiliate login</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -74,7 +74,7 @@ For <span>Future</span></h3>
                                         <div class="slider_btn index2_sliderbtn index3_sliderbtn float_left">
                                             <ul>
                                                 <li data-animation="animated bounceInLeft">
-                                                    <a href="#">start now</a>
+                                                <a href="register.php">Affiliate register</a>
                                                 </li>
                                                 <li data-animation="animated bounceInLeft">
                                                     <a href="#">view plans</a>
@@ -116,7 +116,7 @@ For <span>Future</span></h3>
                                         <div class="slider_btn index2_sliderbtn index3_sliderbtn float_left">
                                             <ul>
                                                 <li data-animation="animated bounceInLeft">
-                                                    <a href="#">start now</a>
+                                                <a href="register.php">Affiliate register</a>
                                                 </li>
                                                 <li data-animation="animated bounceInLeft">
                                                     <a href="#">view plans</a>

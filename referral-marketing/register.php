@@ -51,8 +51,11 @@ if($_POST['password'] == $_POST['confirm_password']){
 if(empty($signup_errors)){
 
 
-    $query = mysqli_query($connect, "SELECT m_username FROM marketer WHERE m_username='".$username."' AND m_confirm_email = '0'") or die(mysqli_error($connect));    //confriming email
-    if(mysqli_num_rows($query)== 0){
+    $query = mysqli_query($connect, "SELECT m_username, m_email FROM marketer WHERE m_username='".$username."' OR m_email = '".$email."'") or die(db_conn_error); 
+    
+    if(mysqli_num_rows($query)== 1){
+        $signup_errors['username'] = 'This username or email has already been registered. Please try another one.';
+    }else{
       $hash=md5(rand(0,1000));
       $encrypted = password_hash($password, PASSWORD_DEFAULT);
     
@@ -121,14 +124,14 @@ trigger_error('You could not be registered due to a system error. We apologize f
 }
 
 
-}else{
-
-
-
-$signup_errors['username'] = 'This username has already been registered. Please try another.';
-
-
 }
+
+
+
+
+
+
+
 
 
 

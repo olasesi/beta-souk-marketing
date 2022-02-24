@@ -25,7 +25,10 @@ define ('DOMAIN_NAME', 'betasouk.com');	//
 date_default_timezone_set('UTC');
 session_start();
 
-
+//Packgage
+define ('BASIC', 1000);
+define ('ESSENTIAL', 2000);
+define ('PREMIUM', 3000);
 
 $now = new DateTime();					
 

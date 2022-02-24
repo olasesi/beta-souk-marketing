@@ -75,7 +75,7 @@ Author: Webstrot
             <li><a href="about_us.html"> about us </a></li>
             <li><a href="investment.html"> investment plan </a></li>
             <li><a href="faq.html"> FAQ </a></li>
-            <li class="has-children">
+            <!-- <li class="has-children">
                 <a href="#">dashboard</a>
                 <ul class="cd-secondary-dropdown icon_menu is-hidden">
                     <li class="go-back"><a href="#0">Menu</a></li>
@@ -145,10 +145,11 @@ Author: Webstrot
                     <li><a href="blog_category.html">blog category</a></li>
                     <li><a href="blog_single.html">blog single</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li><a href="contact_us.html"> contact us </a></li>
-            <li><a href="login.php"> login </a></li>
-            <li><a href="register.php"> register </a></li>
+           
+            <li><a href="buy-login.php">login</a></li>
+            <li><a href="buy.php"> Buy ecommerce </a></li>
         </ul>
         <!-- .cd-dropdown-content -->
     </nav>
@@ -198,10 +199,11 @@ Author: Webstrot
                 <p><i class="flaticon-phone-contact"></i> (+91) 123 123 4567</p>
                 <div class="header_btn index3_header_btn">
                     <ul>
+                   
                         <li>
-                            <a href="register.php"> register </a> </li>
+                            <a href="buy.php">Buy Ecommerce </a> </li>
                         <li>
-                            <a href="login.php"> login </a> </li>
+                            <a href="buy-login.php">Login</a> </li>
                     </ul>
 
                 </div>
@@ -238,7 +240,7 @@ Author: Webstrot
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">dashboard <i class="fas fa-caret-down"></i></a>
+                        <!-- <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">dashboard <i class="fas fa-caret-down"></i></a>
                             <ul class="navi_2_dropdown">
 
                                 <li class="parent">
@@ -326,8 +328,8 @@ Author: Webstrot
                                 <li class="parent">
                                     <a href="tickets.html"><i class="fas fa-caret-right"></i>view tickets</a></li>
                             </ul>
-                        </li>
-                        <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">blog <i class="fas fa-caret-down"></i></a>
+                        </li> -->
+                        <!-- <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">blog <i class="fas fa-caret-down"></i></a>
                             <ul class="navi_2_dropdown">
                                 <li class="parent">
                                     <a href="blog_category.html"><i class="fas fa-caret-right"></i>blog category</a>
@@ -336,7 +338,7 @@ Author: Webstrot
                                     <a href="blog_single.html"><i class="fas fa-caret-right"></i> blog single</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li><a href="contact_us.html" class="gc_main_navigation">contact us</a></li>
                     </ul>
                 </div>

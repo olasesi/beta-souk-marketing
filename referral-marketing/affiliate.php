@@ -17,13 +17,13 @@ if(mysqli_num_rows($query) == 0){
     exit();
 }
 
-include('../incs-marketing/header-admin.php');
+include('../incs-marketing/header.php');
 
 ?>
 
 <?php
 $signup_errors = array();
-if(isset($_POST['register']) AND $_SERVER['REQUEST_METHOD']== "POST"){
+if(isset($_POST['pay']) AND $_SERVER['REQUEST_METHOD'] == "POST"){
 
   if (preg_match ('/^[a-zA-Z]{3,20}$/i', trim($_POST['firstname']))) {		//only 20 characters are allowed to be inputted
 		$firstname = mysqli_real_escape_string ($connect, trim($_POST['firstname']));
@@ -37,11 +37,7 @@ if(isset($_POST['register']) AND $_SERVER['REQUEST_METHOD']== "POST"){
 		$signup_errors['surname'] = 'Please enter valid surname';
 	} 
 
-    if (preg_match ('/^[a-zA-Z-_]{3,20}$/i', trim($_POST['username']))) {		//only 20 characters are allowed to be inputted
-		$username = mysqli_real_escape_string ($connect, trim($_POST['username']));
-	} else {
-		$signup_errors['username'] = 'Please enter valid username. Alpha-numeric letters, underscore or dash.';
-	} 
+   
 
 if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
 	$email = mysqli_real_escape_string($connect,$_POST['email']);
@@ -81,8 +77,8 @@ if(empty($signup_errors)){
           <div class="container">
               <div class="row">
                   <div class="global_comm_wraper news_cntnt">
-                      <h1> Congratulations for the Successful Registration</h1>
-                      <p>  A link has been sent to your email to continue the process. If you do not find the mail in your inbox, please check the spam mails.</p>
+                      <h1> Your details has now been saved</h1>
+                      <p>  Please choose from the packages below</p>
                     
                   </div>
              
@@ -92,7 +88,7 @@ if(empty($signup_errors)){
    ';
 
     
-   include('../incs-marketing/footer-admin.php');
+   include('../incs-marketing/footer.php');
     exit();
 
 
@@ -106,7 +102,7 @@ trigger_error('You could not be registered due to a system error. We apologize f
 
 
 
-$signup_errors['username'] = 'This username has already been registered.';
+$signup_errors['username'] = 'This referral username is not valid';
 
 
 }
@@ -151,13 +147,13 @@ $signup_errors['username'] = 'This username has already been registered.';
 
                 <div class="col-lg-9 col-md-9 col-12 col-sm-8">
 
-                    <h1>Register</h1>
+                    <h1>Register to pay</h1>
                 </div>
                 <div class="col-lg-3 col-md-3 col-12 col-sm-4">
                     <div class="sub_title_section">
                         <ul class="sub_title">
                             <li> <a href="#"> Home </a>&nbsp; / &nbsp; </li>
-                            <li>Register</li>
+                            <li>Register to pay</li>
                         </ul>
                     </div>
                 </div>
@@ -263,7 +259,7 @@ $signup_errors['username'] = 'This username has already been registered.';
                         </div> -->
                         <div class="about_btn login_btn float_left">
                               
-                               <button type="submit" name="register" class="button"> <a>Register</a></button>
+                               <button type="submit" name="pay" class="button"> <a>Continue</a></button>
                         </div>
                         <!-- <div class="dont_have_account float_left">
                             <p>Don’t have an acount ? <a href="register.html">Sign up</a></p>
@@ -333,6 +329,6 @@ $signup_errors['username'] = 'This username has already been registered.';
 <!-- payments wrapper end -->
 <?php
 
-include('../incs-marketing/footer-admin.php');
+include('../incs-marketing/footer.php');
 
 ?>
