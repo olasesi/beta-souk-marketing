@@ -4,11 +4,29 @@ require_once('../incs-marketing/gen_serv_con.php');
 //include('../incs-marketing/cookie-session.php');
 ?>
 <?php
+
+if(isset($_SESSION['user_id_marketer'])) {
+    header('Location:'.GEN_WEBSITE.'/my_account.php');
+       exit;
+}
 if(isset($_SESSION['non_ref_users_id'])) {
-    header('Location:'.GEN_WEBSITE);
+    header('Location:'.GEN_WEBSITE.'/dashboard.php');
        exit();
 }
+
+if(isset($_SESSION['user_id'])) {
+    header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
+       exit();
+}
+
+
+
 ?>
+
+
+
+
+
 
 
 
@@ -37,7 +55,7 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
     if(empty($signup_errors)){
  
   
-        $query = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE 	non_ref_users_username='".$username."'") or die(db_conn_error);
+        $query = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_username='".$username."'") or die(db_conn_error);
         
        
       while($row = mysqli_fetch_array($query)){

@@ -8,7 +8,8 @@ if(!isset($_SESSION['user_id_marketer'])) {
        exit;
 }
 
-include('../incs-marketing/header-dashboard.php');
+
+include('../incs-marketing/header-my-account.php');
 ?>
 
         <!-- Main section Start -->
@@ -43,16 +44,12 @@ include('../incs-marketing/header-dashboard.php');
                 <div class="userdet user_transcation">
                     <h3>Available Balance</h3>
                     <dl class="userdescc">
-                        <dt>Paypal</dt>
+                     <?php
+                        // $price_amount = mysqli_query($connect, "SELECT products_categories_id, products_categories_name FROM products_categories") or die(db_conn_error);
+                     ?>   
+                    <dt>Amount</dt>
                         <dd>:&nbsp;&nbsp;$ 392.79</dd>
-                        <dt>Pexpay</dt>
-                        <dd>:&nbsp;&nbsp;$ 498.61</dd>
-                        <dt>PerfectMoney</dt>
-                        <dd>:&nbsp;&nbsp;$ 60.18</dd>
-                        <dt>Payza</dt>
-                        <dd>:&nbsp;&nbsp;$ 435</dd>
-                        <dt>HDMoney</dt>
-                        <dd>:&nbsp;&nbsp;$ 0.08</dd>
+                       
 
                     </dl>
                 </div>

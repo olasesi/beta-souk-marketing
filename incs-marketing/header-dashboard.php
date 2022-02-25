@@ -195,7 +195,7 @@ Author: WebstrotSavehyip
                 </div>
                 <!-- .cd-dropdown-wrapper -->
             </header>
-            <div class="top_header_right_wrapper dashboard_right_Wrapper">
+            <!-- <div class="top_header_right_wrapper dashboard_right_Wrapper">
                <div class="crm_message_dropbox_wrapper">
                         <div class="nice-select budge_noti_wrapper" tabindex="0"> <span class="current"><i class="flaticon-envelope"></i></span>
                             <div class="budge_noti">4</div>
@@ -340,7 +340,7 @@ Author: WebstrotSavehyip
                             </ul>
                         </div>
                     </div>
-            </div>
+            </div> -->
 
             <div class="cp_navigation_wrapper main_top_wrapper dashboard_header">
                 <div class="mainmenu d-xl-block d-lg-block d-md-none d-sm-none d-none">
@@ -515,14 +515,7 @@ Author: WebstrotSavehyip
                         <ul class="crm_hover_menu">
                             <li><a href="my_account.html"><i class="fa fa-circle"></i> my account</a>
                             </li>
-                            <li><a href="view_profile.html"><i class="fa fa-circle"></i> my profile</a>
-                            </li>                      
-                            <li><a href="email_notification.html"><i class="fa fa-circle"></i>email notification</a>
-                            </li>
-                            <li><a href="change_password.html"><i class="fa fa-circle"></i>change password</a>
-                            </li>
-                              <li><a href="change_pin.html"><i class="fa fa-circle"></i>change pin</a>
-                            </li>
+                          
                         </ul>
                     </div>
                 </li>
@@ -534,75 +527,13 @@ Author: WebstrotSavehyip
                     <ul>
                          <li><a href="my_account.html"><i class="fa fa-circle"></i> my account</a>
                          </li>
-                         <li><a href="view_profile.html"><i class="fa fa-circle"></i> my profile</a>
-                         </li>                      
-                         <li><a href="email_notification.html"><i class="fa fa-circle"></i>email notification</a>
-                         </li>
-                         <li><a href="change_password.html"><i class="fa fa-circle"></i>change password</a>
-                         </li>
-                        <li><a href="change_pin.html"><i class="fa fa-circle"></i>change pin</a>
-                         </li>
+                        
                     </ul>
                 </li>
             </ul>
-            <ul class="u-list crm_drop_second_ul">
-                <li class="crm_navi_icon">
-                    <div class="c-menu__item__inner"><a href="make_deposit.html"><i class="flaticon-movie-tickets"></i></a>
-                        <ul class="crm_hover_menu">
-                            <li>
-                                <a href="make_deposit.html"> <i class="fa fa-circle"></i>make deposit</a>
-                            </li>
-                            <li>
-                                <a href="deposit_list.html"> <i class="fa fa-circle"></i> deposit lists</a>
-                            </li>
-                            <li>
-                                <a href="payment_request.html"> <i class="fa fa-circle"></i> payment request</a>
-                            </li>
-                            <li>
-                                <a href="exchange_money.html"> <i class="fa fa-circle"></i>exchange money</a>
-                            </li>
-                            <li>
-                                <a href="transfer_fund.html"> <i class="fa fa-circle"></i>fund transfer</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="c-menu__item is-active has-sub crm_navi_icon_cont">
-                    <a href="make_deposit.html">
-                        <div class="c-menu-item__title"><span>finance</span><i class="no_badge">5</i>
-                        </div>
-                    </a>
-                    <ul>
-                         <li>
-                                <a href="make_deposit.html"> <i class="fa fa-circle"></i>make deposit</a>
-                            </li>
-                            <li>
-                                <a href="deposit_list.html"> <i class="fa fa-circle"></i> deposit lists</a>
-                            </li>
-                            <li>
-                                <a href="payment_request.html"> <i class="fa fa-circle"></i> payment request</a>
-                            </li>
-                            <li>
-                                <a href="exchange_money.html"> <i class="fa fa-circle"></i>exchange money</a>
-                            </li>
-                            <li>
-                                <a href="transfer_fund.html"> <i class="fa fa-circle"></i>fund transfer</a>
-                            </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="u-list crm_drop_second_ul">
-                <li class="crm_navi_icon">
-                    <div class="c-menu__item__inner"><a href="transfer_fund.html"><i class="flaticon-progress-report"></i></a>
-                    </div>
-                </li>
-                <li class="c-menu__item crm_navi_icon_cont">
-                    <a href="transfer_fund.html">
-                        <div class="c-menu-item__title">fund transfer</div>
-                    </a>
-                </li>
-            </ul>         
-            <ul class="u-list crm_drop_second_ul">
+          
+           
+            <!-- <ul class="u-list crm_drop_second_ul">
                 <li class="crm_navi_icon">
                     <div class="c-menu__item__inner"><a href="referrals.html"><i class="flaticon-settings"></i></a>
                         <ul class="crm_hover_menu">
@@ -633,8 +564,8 @@ Author: WebstrotSavehyip
                          </li>
                     </ul>
                 </li>
-            </ul>
-            <ul class="u-list crm_drop_second_ul">
+            </ul> -->
+            <!-- <ul class="u-list crm_drop_second_ul">
                 <li class="crm_navi_icon">
                     <div class="c-menu__item__inner"><a href="make_deposit.html"><i class="flaticon-profile"></i></a>
                     </div>
@@ -644,11 +575,11 @@ Author: WebstrotSavehyip
                         <div class="c-menu-item__title">deposit</div>
                     </a>
                 </li>
-            </ul>
+            </ul> -->
             <ul class="u-list crm_drop_second_ul">
                 <li class="crm_navi_icon">
                     <div class="c-menu__item__inner"><a href="all_transactions.html"><i class="flaticon-help"></i></a>
-                        <ul class="crm_hover_menu">
+                        <!-- <ul class="crm_hover_menu">
                             <li><a href="all_transactions.html"><i class="fa fa-circle"></i> all transactions</a>
                             </li>
                             <li><a href="deposit_history.html"><i class="fa fa-circle"></i>deposit history</a>
@@ -659,7 +590,7 @@ Author: WebstrotSavehyip
                             </li>
                              <li><a href="earnings_history.html"><i class="fa fa-circle"></i>earning history</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </li>
                 <li class="c-menu__item is-active has-sub crm_navi_icon_cont">

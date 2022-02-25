@@ -2,7 +2,28 @@
 require_once('../incs-marketing/config.php');
 require_once('../incs-marketing/gen_serv_con.php');
 //include('../incs-marketing/cookie-session.php');
-$array = array('Basic', 'Essential', 'Premium');   
+
+
+if(isset($_SESSION['user_id_marketer'])) {
+    header('Location:'.GEN_WEBSITE.'/my_account.php');
+       exit;
+}
+if(isset($_SESSION['non_ref_users_id'])) {
+    header('Location:'.GEN_WEBSITE.'/dashboard.php');
+       exit();
+}
+
+if(isset($_SESSION['user_id'])) {
+    header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
+       exit();
+}
+
+
+
+
+
+
+
 
 ?>
 <?php
@@ -60,18 +81,29 @@ if (preg_match ('/^.{3,255}+$/i', trim($_POST['address']))) {
     }
     
 
-if(empty($errors)){
-if($package='Basic'){
-    $price = BASIC;
-}elseif($package='Essential'){
-    $price = ESSENTIAL;
-}else{
-    $price = PREMIUM; 
-}
+    $queries = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_username='".$username."'") or die(db_conn_error); 
 
-$reference_num = genReference(10);
-   
-$encrypted = password_hash($password, PASSWORD_DEFAULT);
+    if(mysqli_num_rows($queries) == 1 ){
+        $errors['username_taken'] = 'Username has been taken. Please choose another username';
+
+    }
+
+            if(empty($errors)){
+            if($package=='Basic'){
+                $price = BASIC;
+            }elseif($package=='Essential'){
+                $price = ESSENTIAL;
+            }else{
+                $price = PREMIUM; 
+            }
+
+            $reference_num = genReference(10);
+            
+            $encrypted = password_hash($password, PASSWORD_DEFAULT);
+
+
+
+
 
    $q = mysqli_query($connect,"INSERT INTO non_ref_users (non_ref_users_firstname, non_ref_users_surname, non_ref_users_username, non_ref_users_email, non_ref_users_password, non_ref_users_address, non_ref_users_package, non_ref_users_price, non_ref_users_reference) VALUES ('".$firstname."','".$surname."', '".$username."', '".$email."', '".$encrypted."', '".$address."', '".$package."', '".$price."', '".$reference_num."')") or die(db_conn_error);
 
@@ -114,7 +146,7 @@ $encrypted = password_hash($password, PASSWORD_DEFAULT);
             
              }
     
-   exit();          
+                exit();          
 
 
   }else{
@@ -235,7 +267,24 @@ if (array_key_exists('username', $errors)) {
 echo '<p class="text-danger" >'.$errors['username'].'</p>';
 }
 ?>
+<?php 
+if (array_key_exists('username_taken', $errors)) {
+echo '<p class="text-danger" >'.$errors['username_taken'].'</p>';
+}
+?>
 </div>
+
+<div class="form-group icon_form comments_form">
+
+<input type="text" class="form-control require" value="<?php if(isset($_POST['email'])){echo $_POST['email'];}?>" name="email" placeholder="email">
+<?php 
+if (array_key_exists('email', $errors)) {
+echo '<p class="text-danger" >'.$errors['email'].'</p>';
+}
+?>
+</div>
+
+
 
                                     <div class="form-group icon_form comments_form">                                   
 
@@ -265,16 +314,7 @@ echo '<p class="text-danger" >'.$errors['username'].'</p>';
                                     </select>
 
                                                         </div>
-                                                                        <div class="form-group icon_form comments_form">
-
-                                    <input type="text" class="form-control require" value="<?php if(isset($_POST['email'])){echo $_POST['email'];}?>" name="email" placeholder="email">
-                                    <?php 
-                                    if (array_key_exists('email', $errors)) {
-                                    echo '<p class="text-danger" >'.$errors['email'].'</p>';
-                                    }
-                                    ?>
-                                    </div>
-
+                                                                       
                                     
                                                                         <div class="form-group icon_form comments_form">
 

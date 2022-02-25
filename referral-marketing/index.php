@@ -1,8 +1,23 @@
 <?php
 require_once('../incs-marketing/config.php');
-//include('../incs-marketing/cookie-session.php');
-include('../incs-marketing/header.php');
+require_once('../incs-marketing/gen_serv_con.php');
 
+if(isset($_SESSION['user_id_marketer'])) {
+    header('Location:'.GEN_WEBSITE.'/my_account.php');
+       exit;
+}
+if(isset($_SESSION['non_ref_users_id'])) {
+    header('Location:'.GEN_WEBSITE.'/dashboard.php');
+       exit();
+}
+
+if(isset($_SESSION['user_id'])) {
+    header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
+       exit();
+}
+
+
+include('../incs-marketing/header.php');
 ?>
     <!-- slider wrapper start -->
     <div class="slider-area slider_index2_wrapper slider_index3_wrapper  float_left">
@@ -77,7 +92,7 @@ For <span>Future</span></h3>
                                                 <a href="register.php">Affiliate register</a>
                                                 </li>
                                                 <li data-animation="animated bounceInLeft">
-                                                    <a href="#">view plans</a>
+                                                <a href="login.php">Affiliate login</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -119,7 +134,7 @@ For <span>Future</span></h3>
                                                 <a href="register.php">Affiliate register</a>
                                                 </li>
                                                 <li data-animation="animated bounceInLeft">
-                                                    <a href="#">view plans</a>
+                                                <a href="login.php">Affiliate login</a>
                                                 </li>
                                             </ul>
                                         </div>

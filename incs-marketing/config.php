@@ -26,9 +26,9 @@ date_default_timezone_set('UTC');
 session_start();
 
 //Packgage
-define ('BASIC', 1000);
-define ('ESSENTIAL', 2000);
-define ('PREMIUM', 3000);
+define ('BASIC', 60000);
+define ('ESSENTIAL', 150000);
+define ('PREMIUM', 300000);
 
 $now = new DateTime();					
 

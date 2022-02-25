@@ -4,8 +4,20 @@ require_once('../incs-marketing/gen_serv_con.php');
 //include('../incs-marketing/cookie-session.php');
 ?>
 <?php
+
+
+
 if(isset($_SESSION['user_id_marketer'])) {
     header('Location:'.GEN_WEBSITE.'/my_account.php');
+       exit;
+}
+if(isset($_SESSION['non_ref_users_id'])) {
+    header('Location:'.GEN_WEBSITE.'/dashboard.php');
+       exit();
+}
+
+if(isset($_SESSION['user_id'])) {
+    header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
        exit();
 }
 ?>
@@ -19,7 +31,7 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
     if (preg_match ('/^[a-zA-Z-_]{3,20}$/i', trim($_POST['username']))) {		//only 20 characters are allowed to be inputted
 		$username = mysqli_real_escape_string ($connect, trim($_POST['username']));
 	} else {
-		$signup_errors['username'] = 'Please enter valid username. Alpha-numeric letters, underscore or dash.';
+		$signup_errors['username'] = 'Please enter valid username.';
 	} 
 
 
@@ -39,11 +51,11 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
   
         $query = mysqli_query($connect, "SELECT * FROM marketer WHERE m_username='".$username."' AND m_confirm_email='1'") or die(db_conn_error);
         
-       
-      while($row = mysqli_fetch_array($query)){
+      
+     if(mysqli_num_rows($query) == 1){
       
 
-      
+      while($row = mysqli_fetch_array($query)){
        
         if(password_verify($password,$row[7])){
           
@@ -82,25 +94,27 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
       
       
       
-        } else{
-      
-      
-      
-          $signup_errors['email'] = 'You entered an incorrect login details.';
-         
-      
+        }else{
+
+            $signup_errors['login_details'] = 'Your login details are invalid';
+
         }
+    
+     }
+    
+    
+    }else{
+
+        $signup_errors['login_details'] = 'Your login details are invalid';
+
     }
-      
+
+
+
+    
+    
+
     }
-
-
-
-
-
-
-
-
 
 
 
@@ -169,13 +183,24 @@ include('../incs-marketing/header.php');
 
                         </div>
                         <div class="form-group icon_form comments_form">
-
-                            <input type="text" class="form-control require" name="username" value="" placeholder="Username">
-
+                        <?php if (array_key_exists('login_details', $signup_errors)) {
+	                    echo '<p class="text-danger">'.$signup_errors['login_details'].'</p>';
+	                    }
+                    ?>
+                            <input type="text" class="form-control require" name="username" value="<?php if(isset($_POST['username'])){echo $_POST['username'];} ?>" placeholder="Username">
+                            <?php if (array_key_exists('username', $signup_errors)) {
+	                    echo '<p class="text-danger">'.$signup_errors['username'].'</p>';
+	                    }
+                    ?>
                         </div>
                         <div class="form-group icon_form comments_form">
 
                             <input type="password" class="form-control require" name="password" value="" placeholder="Password">
+                            <?php if (array_key_exists('password', $signup_errors)) {
+	                    echo '<p class="text-danger">'.$signup_errors['password'].'</p>';
+	                    }
+                    ?>
+
 
                         </div>
                         <!-- <div class="login_remember_box">
@@ -189,7 +214,7 @@ include('../incs-marketing/header.php');
                         </div> -->
                         <div class="about_btn login_btn float_left">
 
-                            <button type="submit" name="login"><a>login</a></button>
+                            <button type="submit" name="login">login</button>
                         </div>
                         <div class="dont_have_account float_left">
                             <p>Don’t have an acount ? <a href="register.php">Sign up</a></p>
