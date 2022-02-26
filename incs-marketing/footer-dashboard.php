@@ -4,7 +4,7 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="crm_left_footer_cont">
-                                <p>2019 Copyright © <a href="#"> savehyip </a> . All Rights Reserved.</p>
+                                <p><script>var year = new Date(); document.write(year.getFullYear()); </script> Copyright © <a href="#"> savehyip </a> . All Rights Reserved.</p>
                             </div>
                         </div>
 

@@ -121,7 +121,7 @@ if(empty($signup_errors)){
     $encrypted = password_hash($password, PASSWORD_DEFAULT);
 
 
-    $q = mysqli_query($connect,"INSERT INTO users (user_id_marketer, u_firstname, u_surname, u_email, u_username, u_address, u_package, u_price, u_reference, u_password) VALUES ('".mysqli_real_escape_string ($connect, $_GET['link'])."', '".$firstname."','".$surname."', '".$email."','".$username."' '".$address."', '".$package."', '".$price."', '".$reference_num."', $encrypted)") or die(db_conn_error);
+    $q = mysqli_query($connect,"INSERT INTO users (user_id_marketer, u_firstname, u_surname, u_email, u_username, u_address, u_package, u_price, u_reference, u_password) VALUES ('".mysqli_real_escape_string ($connect, $_GET['link'])."', '".$firstname."','".$surname."', '".$email."','".$username."' ,'".$address."', '".$package."', '".$price."', '".$reference_num."', '".$encrypted."')") or die(db_conn_error);
 
     if(mysqli_affected_rows($connect) == 1){
 
@@ -144,7 +144,7 @@ if(empty($signup_errors)){
      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
      $headers = [
-         'Authorization: Bearer sk_test_*********************************',
+         'Authorization: '.API_KEY,
          'Content-Type: application/json',
     
      ];
@@ -280,8 +280,8 @@ trigger_error('You could not be registered due to a system error. We apologize f
 
 <input type="text" class="form-control require" value="<?php if(isset($_POST['username'])){echo $_POST['username'];}?>" name="username" placeholder="username">
 <?php 
-if (array_key_exists('username', $errors)) {
-echo '<p class="text-danger" >'.$errors['username'].'</p>';
+if (array_key_exists('username', $signup_errors)) {
+echo '<p class="text-danger" >'.$signup_errors['username'].'</p>';
 }
 ?>
 </div>
@@ -297,16 +297,6 @@ echo '<p class="text-danger" >'.$errors['username'].'</p>';
 
                                     </div>
 
-
-                                    <div class="form-group icon_form comments_form">
-
-<input type="text" class="form-control require" value="<?php if(isset($_POST['username'])){echo $_POST['username'];}?>" name="username" placeholder="username">
-<?php 
-if (array_key_exists('username', $errors)) {
-echo '<p class="text-danger" >'.$errors['username'].'</p>';
-}
-?>
-</div>
 
 
 <div class="form-group icon_form comments_form">                                   
@@ -329,8 +319,8 @@ echo '<p class="text-danger" >'.$errors['username'].'</p>';
                         }
                         ?>     
 <?php 
-                if (array_key_exists('package', $errors)) {
-                    echo '<p class="text-danger" >'.$errors['package'].'</p>';
+                if (array_key_exists('package', $signup_errors)) {
+                    echo '<p class="text-danger" >'.$signup_errors['package'].'</p>';
                     }
                 ?>
 
@@ -365,8 +355,8 @@ echo '<p class="text-danger" >'.$errors['username'].'</p>';
 
 <input type="text" class="form-control require" value="<?php if(isset($_POST['address'])){echo $_POST['address'];}?>" name="address" placeholder="location">
 <?php 
-if (array_key_exists('address', $errors)) {
-echo '<p class="text-danger" >'.$errors['address'].'</p>';
+if (array_key_exists('address', $signup_errors)) {
+echo '<p class="text-danger" >'.$signup_errors['address'].'</p>';
 }
 ?>
 
@@ -375,10 +365,7 @@ echo '<p class="text-danger" >'.$errors['address'].'</p>';
 
 
 
-                                    <div class="form-group icon_form comments_form">
-
-                             <input type="hidden" name="referral_username" value="<?=$_GET['link'];?>">                          
-                                                            </div>
+                                  
 
                         <!-- <div class="login_remember_box">
                             <label class="control control--checkbox">Remember me

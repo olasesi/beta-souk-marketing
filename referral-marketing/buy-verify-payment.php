@@ -28,7 +28,7 @@ curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt(
 $ch, CURLOPT_HTTPHEADER, [
-'Authorization: Bearer sk_test_*****************************']
+'Authorization: '.API_KEY]
 );
 $request = curl_exec($ch);
 curl_close($ch);

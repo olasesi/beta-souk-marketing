@@ -30,7 +30,7 @@ if(isset($_POST['complete_order']) AND $_SERVER['REQUEST_METHOD'] == "POST"){
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
     $headers = [
-        'Authorization: Bearer sk_test_*********************************',
+        'Authorization: '.API_KEY,
         'Content-Type: application/json',
    
     ];

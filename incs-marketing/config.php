@@ -32,7 +32,7 @@ define ('PREMIUM', 300000);
 
 $now = new DateTime();					
 
-
+define('API_KEY', 'Bearer sk_test_*********************************');
 
 
 

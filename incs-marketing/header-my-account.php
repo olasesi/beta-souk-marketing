@@ -44,11 +44,11 @@ Author: WebstrotSavehyip
 
 <body>
   <!-- preloader Start -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="status">
             <img src="images/loader.gif" id="preloader_image" alt="loader">
         </div>
-    </div>
+    </div> -->
     <div class="cursor"></div>
     <!-- Top Scroll Start -->
     <a href="javascript:" id="return-to-top"> <i class="fas fa-angle-double-up"></i></a>
@@ -58,105 +58,36 @@ Author: WebstrotSavehyip
         <h2><a href="index.html"> savehyip </a></h2>
         <a href="#0" class="cd-close">Close</a>
          <ul class="cd-dropdown-content">
-            <li>
-                <form class="cd-search">
-                    <input type="search" placeholder="Search...">
-                </form>
-            </li> 
-              <li class="has-children">
-                <a href="#">index</a>
-                <ul class="cd-secondary-dropdown icon_menu is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                    <li><a href="index.html">index I</a></li>
-                    <li><a href="index2.html">index II</a></li>
-                    <li><a href="index3.html">index III</a></li>
-                </ul>
+           
+              <li>
+                <a href="my_account.php">Home</a>
+                <!-- <ul class="cd-secondary-dropdown icon_menu is-hidden">
+                   
+                </ul> -->
             </li>
             <li><a href="about_us.html"> about us </a></li>
-            <li><a href="investment.html"> investment plan </a></li>
-			<li><a href="faq.html"> FAQ </a></li>
-			<li class="has-children">
-              <a href="#">dashboard</a>
-                <ul class="cd-secondary-dropdown icon_menu is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                      <li>
-                      <a href="all_transactions.html">all transactions</a>
-					</li>
-                    <li>
-                      <a href="banners.html">banners</a>
-					</li> 
-				   <li>
-                      <a href="change_password.html">change password</a>
-					</li>
-					<li>
-                      <a href="change_pin.html">change pin</a>
-					</li>
-					<li>
-                      <a href="deposit_history.html">deposit history</a>
-                  </li>
-					<li>
-                      <a href="deposit_list.html">deposit list</a>
-                  </li>
-					<li>
-                      <a href="earnings_history.html">earnings history</a>
-                  </li>
-					<li>
-                      <a href="email_notification.html">email notification</a>
-                  </li>   
-					<li>
-                      <a href="exchange_history.html">exchange history</a>
-                  </li>  
-					<li>
-						<a href="exchange_money.html">exchange money</a>
-                  </li> 
-					<li>
-                      <a href="make_deposit.html">make deposit</a>
-                  </li> 	
-					<li>
-                      <a href="my_account.html">my account</a>
-                  </li> 	
-					<li>
-                      <a href="payment_request.html">payment request</a>
-                  </li> 	
-					<li>
-                      <a href="pending_history.html">pending history</a>
-                  </li> 	
-					<li>
-                      <a href="referral_earnings.html">referral earnings</a>
-                  </li> 	
-					<li>
-                      <a href="referrals.html">referrals</a>
-                  </li> 
-					<li>
-                      <a href="tickets.html">tickets</a>
-                  </li> 	
-					<li>
-                      <a href="transfer_fund.html">transfer fund</a>
-                  </li>
-				<li>
-                      <a href="view_profile.html">view profile</a>
-                  </li> 									
-              </ul>
-             </li>  
-				<li class="has-children">
-                <a href="#">blog</a>
-                <ul class="cd-secondary-dropdown icon_menu is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                    <li><a href="blog_category.html">blog category</a></li>
-                    <li><a href="blog_single.html">blog single</a></li>
-                </ul>
+            <!-- <li><a href="investment.html"> investment plan </a></li>-->
+			<li><a href="faq.html"> FAQ </a></li> 
 			
-            </li>   
-            <li><a href="contact_us.html"> contact us </a></li>
-            <li><a href="login.html"> login </a></li>
-            <li><a href="register.html"> register </a></li>
+                       <li><a href="contact_us.html"> contact us </a></li>
+            
+                       <li class="has-children">
+              <a href="#">Logout</a>
+                <ul class="cd-secondary-dropdown icon_menu is-hidden">
+                    <li class="go-back"><a href="#0">Back</a></li>
+                      <li>
+                      <a href="logout-my-account.php">logout now</a>
+					</li>
+                   			
+              </ul>
+</li>
         </ul>
         <!-- .cd-dropdown-content -->
     </nav>
 	 <div class="cp_navi_main_wrapper inner_header_wrapper dashboard_header_middle float_left">
         <div class="container-fluid">
               <div class="cp_logo_wrapper">
-                <a href="index.html">
+                <a href="my_account.php">
                     <img src="images/logo2.png" alt="logo">
                 </a>
             </div>
@@ -345,22 +276,13 @@ Author: WebstrotSavehyip
             <div class="cp_navigation_wrapper main_top_wrapper dashboard_header">
                 <div class="mainmenu d-xl-block d-lg-block d-md-none d-sm-none d-none">
                      <ul class="main_nav_ul">             
-                        <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation active_class">index <i class="fas fa-caret-down"></i></a>
-                            <ul class="navi_2_dropdown">
-                                <li class="parent">
-                                    <a href="index.html"><i class="fas fa-caret-right"></i>index I</a>
-                                </li>
-                                <li class="parent">
-                                    <a href="index2.html"><i class="fas fa-caret-right"></i>index II</a>
-                                </li>
-								<li class="parent">
-                                    <a href="index3.html"><i class="fas fa-caret-right"></i>index III</a>
-                                </li> 								
-                            </ul>
+                        <li class="has-mega gc_main_navigation"><a href="my_account.php" class="gc_main_navigation active_class">Home </a>
+                           
                         </li>   
                         <li><a href="about_us.html" class="gc_main_navigation">about us</a></li>
-                        <li><a href="investment.html" class="gc_main_navigation">investment plan</a></li>  
-						<li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">pages <i class="fas fa-caret-down"></i></a>
+                        <!-- <li><a href="investment.html" class="gc_main_navigation">investment plan</a></li>   -->
+                        <li><a href="faq.html" class="gc_main_navigation">FAQ</a></li>
+						<!-- <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">pages <i class="fas fa-caret-down"></i></a>
                             <ul class="navi_2_dropdown">
                                 <li class="parent">
                                     <a href="faq.html"><i class="fas fa-caret-right"></i>FAQ</a>
@@ -372,8 +294,8 @@ Author: WebstrotSavehyip
                                     <a href="register.html"><i class="fas fa-caret-right"></i>register</a>
                                 </li>   								
                             </ul>
-                        </li>
-						<li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">dashboard <i class="fas fa-caret-down"></i></a>
+                        </li> -->
+						<!-- <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">dashboard <i class="fas fa-caret-down"></i></a>
                             <ul class="navi_2_dropdown">
                               
                                 <li class="parent">
@@ -461,9 +383,9 @@ Author: WebstrotSavehyip
 								<li class="parent">
                                     <a href="tickets.html"><i class="fas fa-caret-right"></i>view tickets</a></li>
                             </ul>
-                        </li>						
+                        </li>						 -->
 						    						
-                        <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">blog <i class="fas fa-caret-down"></i></a>
+                        <!-- <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">blog <i class="fas fa-caret-down"></i></a>
                             <ul class="navi_2_dropdown">
                                 <li class="parent">
                                     <a href="blog_category.html"><i class="fas fa-caret-right"></i>blog category</a>
@@ -472,7 +394,7 @@ Author: WebstrotSavehyip
                                     <a href="blog_single.html"><i class="fas fa-caret-right"></i> blog single</a>
                                 </li>                   
                             </ul>
-                        </li>     
+                        </li>      -->
                         <li><a href="contact_us.html" class="gc_main_navigation">contact us</a></li>
                     </ul>
                 </div>

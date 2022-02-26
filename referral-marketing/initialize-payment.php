@@ -25,7 +25,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postdata));  //Post Fields
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 $headers = [
-    'Authorization: Bearer sk_test_*********************************',
+    'Authorization: '.API_KEY,
     'Content-Type: application/json',
 
 ];

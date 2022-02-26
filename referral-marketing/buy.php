@@ -128,7 +128,7 @@ if (preg_match ('/^.{3,255}+$/i', trim($_POST['address']))) {
              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       
              $headers = [
-                 'Authorization: Bearer sk_test_*********************************',
+                 'Authorization: '.API_KEY,
                  'Content-Type: application/json',
             
              ];
