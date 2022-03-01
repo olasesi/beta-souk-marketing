@@ -1,0 +1,11 @@
+.about_btn button {
+    background: #031b55;
+}
+
+.about_btn button::before {
+    border: 2px solid #031b55;
+}
+
+.about_btn button:hover{
+    color: #031b55;
+}

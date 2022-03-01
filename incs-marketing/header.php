@@ -41,6 +41,7 @@ Author: Webstrot
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <!--favicon-->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
 <script src='../../../google_analytics_auto.js'></script></head>
 
 <body>
@@ -135,12 +136,10 @@ Author: Webstrot
             <div class="cp_navigation_wrapper">
                 <div class="mainmenu d-xl-block d-lg-block d-md-none d-sm-none d-none">
                     <ul class="main_nav_ul">
-                        <li class="has-mega gc_main_navigation"><a href="/" class="gc_main_navigation active_class">Home 
-                           
-                        </li>   
+                        <li class="has-mega gc_main_navigation"><a href="/" class="gc_main_navigation active_class">Home</a></li>   
                         <li><a href="#about" class="gc_main_navigation">About us</a></li>
                         <li><a href="#package" class="gc_main_navigation">Package</a></li>
-                        <li><a href="#affiliate"> Become an affiliate </a></li>
+                        <li><a href="#affiliate" class="gc_main_navigation"> Become an affiliate </a></li>
                         <li><a href="#faq" class="gc_main_navigation">FAQ</a></li>
                       
                        

@@ -36,7 +36,7 @@
 
         <div class="col-lg-2 col-md-3 col-12 col-sm-4">
             <div class="wrapper_second_useful">
-                <h4>usefull links </h4>
+                <h4>useful links </h4>
 
                 <ul>
                
@@ -101,10 +101,10 @@
                 <div class="social_link_foter">
 
                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/BetaSoukAfrica/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/betasoukafrica"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="https://www.instagram.com/betasoukafrica/"><i class="fab fa-instagram"></i></a></li>
 
                     </ul>
                 </div>

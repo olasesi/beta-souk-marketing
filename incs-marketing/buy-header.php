@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!-- 
-Template Name: Savehyip
+Template Name: beta souk
 Version: 1.0.0
-Author: WebstrotSavehyip
+Author: Webstrotbeta souk
 
 -->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
@@ -16,10 +16,10 @@ Author: WebstrotSavehyip
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8" />
-    <title>Savehyip Dashboard HTML Template</title>
+    <title>Beta Souk</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="description" content="Savehyip" />
-    <meta name="keywords" content="Savehyip" />
+    <meta name="description" content="beta souk" />
+    <meta name="keywords" content="beta souk" />
     <meta name="author" content="" />
     <meta name="MobileOptimized" content="320" />
     <!--Template style -->
@@ -55,11 +55,11 @@ Author: WebstrotSavehyip
     <!-- Top Scroll End -->
     <!-- cp navi wrapper Start -->
     <nav class="cd-dropdown d-block d-sm-block d-md-block d-lg-none d-xl-none">
-        <h2><a href="index.html"> savehyip </a></h2>
+        <h2><a href="index.html"> beta Souk </a></h2>
         <a href="#0" class="cd-close">Close</a>
          <ul class="cd-dropdown-content">
           
-              <li class="has-children">
+              <!-- <li class="has-children">
                 <a href="#">index</a>
                 <ul class="cd-secondary-dropdown icon_menu is-hidden">
                     <li class="go-back"><a href="#0">Menu</a></li>
@@ -67,7 +67,7 @@ Author: WebstrotSavehyip
                     <li><a href="index2.html">index II</a></li>
                     <li><a href="index3.html">index III</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li><a href="about_us.html"> about us </a></li>
             <li><a href="investment.html"> investment plan </a></li>
 			<li><a href="faq.html"> FAQ </a></li>
@@ -153,7 +153,7 @@ Author: WebstrotSavehyip
         <div class="container-fluid">
               <div class="cp_logo_wrapper">
                 <a href="index.html">
-                    <img src="images/logo2.png" alt="logo">
+                    <img src="images/logo5.png" alt="logo">
                 </a>
             </div>
             <!-- mobile menu area start -->
@@ -192,7 +192,7 @@ Author: WebstrotSavehyip
                 <!-- .cd-dropdown-wrapper -->
             </header>
             <div class="top_header_right_wrapper dashboard_right_Wrapper">
-               <div class="crm_message_dropbox_wrapper">
+               <!-- <div class="crm_message_dropbox_wrapper">
                         <div class="nice-select budge_noti_wrapper" tabindex="0"> <span class="current"><i class="flaticon-envelope"></i></span>
                             <div class="budge_noti">4</div>
                             <ul class="list">
@@ -336,12 +336,12 @@ Author: WebstrotSavehyip
                             </ul>
                         </div>
                     </div>
-            </div>
+            </div> -->
 
             <div class="cp_navigation_wrapper main_top_wrapper dashboard_header">
                 <div class="mainmenu d-xl-block d-lg-block d-md-none d-sm-none d-none">
                      <ul class="main_nav_ul">             
-                        <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation active_class">index <i class="fas fa-caret-down"></i></a>
+                        <!-- <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation active_class">index <i class="fas fa-caret-down"></i></a>
                             <ul class="navi_2_dropdown">
                                 <li class="parent">
                                     <a href="index.html"><i class="fas fa-caret-right"></i>index I</a>
@@ -353,7 +353,7 @@ Author: WebstrotSavehyip
                                     <a href="index3.html"><i class="fas fa-caret-right"></i>index III</a>
                                 </li> 								
                             </ul>
-                        </li>   
+                        </li>    -->
                         <li><a href="about_us.html" class="gc_main_navigation">about us</a></li>
                         <li><a href="investment.html" class="gc_main_navigation">investment plan</a></li>  
 						<li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">pages <i class="fas fa-caret-down"></i></a>
