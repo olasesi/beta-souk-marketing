@@ -82,7 +82,7 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
        
       
       header('Location:'.GEN_WEBSITE.'/my_account.php');
-       exit;
+       exit();
       
       
       

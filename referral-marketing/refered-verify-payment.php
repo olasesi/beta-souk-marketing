@@ -9,7 +9,7 @@ if(!isset($_GET['reference'])){
     exit(); 
 }
 
-$query_select = mysqli_query($connect, "SELECT non_ref_users_reference FROM non_ref_users WHERE non_ref_users_reference  = '".mysqli_real_escape_string ($connect, $_GET['reference'])."'") or die(db_conn_error);
+$query_select = mysqli_query($connect, "SELECT u_reference FROM users WHERE u_reference  = '".mysqli_real_escape_string ($connect, $_GET['reference'])."'") or die(db_conn_error);
 
 if(mysqli_num_rows($query_select) == 0){
     header('Location:'.GEN_WEBSITE);
@@ -48,7 +48,7 @@ if (array_key_exists('data', $result) && array_key_exists('status', $result['dat
     // }
 
 
-    mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_order='1' WHERE non_ref_users_reference = '".$_GET['reference']."'") or die(db_conn_error);
+    mysqli_query($connect, "UPDATE users SET u_order='1' WHERE u_reference = '".$_GET['reference']."'") or die(db_conn_error);
 
     // if(mysqli_affected_rows($connect) == 1){
     

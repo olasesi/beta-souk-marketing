@@ -6,13 +6,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the */
-define( 'DB_NAME', 'beta_souk_marketing');
+define( 'DB_NAME', 'beta_souk_marketing');//betasouk_beta_souk_marketing
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'root' );//betasouk_beta_souk_marketing
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', '' );//eQD}TXM#kVEj
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );

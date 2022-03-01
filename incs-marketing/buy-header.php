@@ -44,11 +44,11 @@ Author: WebstrotSavehyip
 
 <body>
   <!-- preloader Start -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="status">
             <img src="images/loader.gif" id="preloader_image" alt="loader">
         </div>
-    </div>
+    </div> -->
     <div class="cursor"></div>
     <!-- Top Scroll Start -->
     <a href="javascript:" id="return-to-top"> <i class="fas fa-angle-double-up"></i></a>
@@ -58,11 +58,7 @@ Author: WebstrotSavehyip
         <h2><a href="index.html"> savehyip </a></h2>
         <a href="#0" class="cd-close">Close</a>
          <ul class="cd-dropdown-content">
-            <li>
-                <form class="cd-search">
-                    <input type="search" placeholder="Search...">
-                </form>
-            </li> 
+          
               <li class="has-children">
                 <a href="#">index</a>
                 <ul class="cd-secondary-dropdown icon_menu is-hidden">
@@ -148,8 +144,8 @@ Author: WebstrotSavehyip
 			
             </li>   
             <li><a href="contact_us.html"> contact us </a></li>
-            <li><a href="login.html"> login </a></li>
-            <li><a href="register.html"> register </a></li>
+            <li><a href="buy-logout.php"> logout </a></li>
+            <!-- <li><a href="register.html"> register </a></li> -->
         </ul>
         <!-- .cd-dropdown-content -->
     </nav>
@@ -366,11 +362,9 @@ Author: WebstrotSavehyip
                                     <a href="faq.html"><i class="fas fa-caret-right"></i>FAQ</a>
                                 </li>
                                 <li class="parent">
-                                    <a href="login.html"><i class="fas fa-caret-right"></i>login</a>
+                                    <a href="buy-logout.php"><i class="fas fa-caret-right"></i>logout</a>
                                 </li>  
-								<li class="parent">
-                                    <a href="register.html"><i class="fas fa-caret-right"></i>register</a>
-                                </li>   								
+														
                             </ul>
                         </li>
 						<li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">dashboard <i class="fas fa-caret-down"></i></a>

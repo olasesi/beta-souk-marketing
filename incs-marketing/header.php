@@ -16,11 +16,13 @@ Author: Webstrot
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8" />
-    <title>Savehyip Responsive HTML Template</title>
+    <title>Beta Souk</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="description" content="Savehyip" />
-    <meta name="keywords" content="Savehyip" />
-    <meta name="author" content="" />
+    <meta name="description" content="Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales.
+
+" />
+    <meta name="keywords" content="Ecommerce, online store, beta souk, digital platforms, businesses, promote, business, sercives, sales, profit" />
+    <meta name="author" content="Beta Souk" />
     <meta name="MobileOptimized" content="320" />
     <!--Template style -->
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
@@ -42,122 +44,43 @@ Author: Webstrot
 <script src='../../../google_analytics_auto.js'></script></head>
 
 <body>
-    <!-- preloader Start -->
-    <!-- preloader Start -->
-    <!-- <div id="preloader">
-        <div id="status">
-            <img src="images/loader.gif" id="preloader_image" alt="loader">
-        </div>
-    </div> -->
+  
     <div class="cursor cursor3"></div>
     <!-- Top Scroll Start -->
     <a href="javascript:" id="return-to-top" class="index3_scroll"> <i class="fas fa-angle-double-up"></i></a>
     <!-- Top Scroll End -->
     <!-- cp navi wrapper Start -->
     <nav class="cd-dropdown index3_cd_dropdown d-block d-sm-block d-md-block d-lg-none d-xl-none">
-        <h2><a href="/"> savehyip </a></h2>
+        <h2><a href="/"> Beta Souk </a></h2>
         <a href="#0" class="cd-close">Close</a>
         <ul class="cd-dropdown-content">
             <li>
-                <form class="cd-search">
+                <!-- <form class="cd-search">
                     <input type="search" placeholder="Search...">
-                </form>
+                </form> -->
             </li>
-             <li class="has-children">
-                <a href="#">index</a>
-                <ul class="cd-secondary-dropdown icon_menu is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                    <li><a href="index.html">index I</a></li>
-                    <li><a href="index2.html">index II</a></li>
-                    <li><a href="index3.html">index III</a></li>
-                </ul>
+             <li class="">
+                <a href="/">Home</a>
+               
             </li>
-            <li><a href="about_us.html"> about us </a></li>
-            <li><a href="investment.html"> investment plan </a></li>
-            <li><a href="faq.html"> FAQ </a></li>
-            <!-- <li class="has-children">
-                <a href="#">dashboard</a>
-                <ul class="cd-secondary-dropdown icon_menu is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                    <li>
-                        <a href="all_transactions.html">all transactions</a>
-                    </li>
-                    <li>
-                        <a href="banners.html">banners</a>
-                    </li>
-                    <li>
-                        <a href="change_password.html">change password</a>
-                    </li>
-                    <li>
-                        <a href="change_pin.html">change pin</a>
-                    </li>
-                    <li>
-                        <a href="deposit_history.html">deposit history</a>
-                    </li>
-                    <li>
-                        <a href="deposit_list.html">deposit list</a>
-                    </li>
-                    <li>
-                        <a href="earnings_history.html">earnings history</a>
-                    </li>
-                    <li>
-                        <a href="email_notification.html">email notification</a>
-                    </li>
-                    <li>
-                        <a href="exchange_history.html">exchange history</a>
-                    </li>
-                    <li>
-                        <a href="exchange_money.html">exchange money</a>
-                    </li>
-                    <li>
-                        <a href="make_deposit.html">make deposit</a>
-                    </li>
-                    <li>
-                        <a href="my_account.html">my account</a>
-                    </li>
-                    <li>
-                        <a href="payment_request.html">payment request</a>
-                    </li>
-                    <li>
-                        <a href="pending_history.html">pending history</a>
-                    </li>
-                    <li>
-                        <a href="referral_earnings.html">referral earnings</a>
-                    </li>
-                    <li>
-                        <a href="referrals.html">referrals</a>
-                    </li>
-                    <li>
-                        <a href="tickets.html">tickets</a>
-                    </li>
-                    <li>
-                        <a href="transfer_fund.html">transfer fund</a>
-                    </li>
-                    <li>
-                        <a href="view_profile.html">view profile</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="has-children">
-                <a href="#">blog</a>
-                <ul class="cd-secondary-dropdown icon_menu is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                    <li><a href="blog_category.html">blog category</a></li>
-                    <li><a href="blog_single.html">blog single</a></li>
-                </ul>
-            </li> -->
-            <li><a href="contact_us.html"> contact us </a></li>
-           
+            
+            <li><a href="#about"> About us </a></li>
+            <li><a href="#package"> Package </a></li>
+            <li><a href="#affiliate"> Become an affiliate </a></li>
+            <li><a href="#faq"> FAQ </a></li>
+          
+          
+            <li><a href="buy.php"> Get started </a></li>
             <li><a href="buy-login.php">login</a></li>
-            <li><a href="buy.php"> Buy ecommerce </a></li>
+            
         </ul>
         <!-- .cd-dropdown-content -->
     </nav>
     <div class="cp_navi_main_wrapper index2_header_wrapper index3_header_wrapper float_left">
         <div class="container-fluid">
             <div class="cp_logo_wrapper">
-                <a href="index.html">
-                    <img src="images/logo5.png" alt="logo">
+                <a href="/">
+                    <img src="images/logo5.png" alt="beta souk">
                 </a>
             </div>
             <!-- mobile menu area start -->
@@ -201,7 +124,7 @@ Author: Webstrot
                     <ul>
                    
                         <li>
-                            <a href="buy.php">Buy Ecommerce </a> </li>
+                            <a href="buy.php">Get started </a> </li>
                         <li>
                             <a href="buy-login.php">Login</a> </li>
                     </ul>
@@ -212,134 +135,15 @@ Author: Webstrot
             <div class="cp_navigation_wrapper">
                 <div class="mainmenu d-xl-block d-lg-block d-md-none d-sm-none d-none">
                     <ul class="main_nav_ul">
-                        <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation active_class">index <i class="fas fa-caret-down"></i></a>
-                            <ul class="navi_2_dropdown">
-                                <li class="parent">
-                                    <a href="index.html"><i class="fas fa-caret-right"></i>index I</a>
-                                </li>
-                                <li class="parent">
-                                    <a href="index2.html"><i class="fas fa-caret-right"></i>index II</a>
-                                </li>
-								<li class="parent">
-                                    <a href="index3.html"><i class="fas fa-caret-right"></i>index III</a>
-                                </li> 								
-                            </ul>
+                        <li class="has-mega gc_main_navigation"><a href="/" class="gc_main_navigation active_class">Home 
+                           
                         </li>   
-                        <li><a href="about_us.html" class="gc_main_navigation">about us</a></li>
-                        <li><a href="investment.html" class="gc_main_navigation">investment plan</a></li>
-                        <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">pages <i class="fas fa-caret-down"></i></a>
-                            <ul class="navi_2_dropdown">
-                                <li class="parent">
-                                    <a href="faq.html"><i class="fas fa-caret-right"></i>FAQ</a>
-                                </li>
-                                <li class="parent">
-                                    <a href="admin"><i class="fas fa-caret-right"></i>login</a>
-                                </li>
-                                <li class="parent">
-                                    <a href="register.php"><i class="fas fa-caret-right"></i>register</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">dashboard <i class="fas fa-caret-down"></i></a>
-                            <ul class="navi_2_dropdown">
-
-                                <li class="parent">
-                                    <a href="#"><i class="fas fa-caret-right"></i>my account<span><i class="fas fa-caret-right"></i>
-									</span></a>
-                                    <ul class="dropdown-menu-right">
-                                        <li>
-                                            <a href="my_account.html"> <i class="fas fa-caret-right"></i>my account </a>
-                                        </li>
-                                        <li>
-                                            <a href="view_profile.html"> <i class="fas fa-caret-right"></i> my profile</a>
-                                        </li>
-                                        <li>
-                                            <a href="email_notification.html"><i class="fas fa-caret-right"></i>email notification </a>
-                                        </li>
-                                        <li>
-                                            <a href="change_password.html"><i class="fas fa-caret-right"></i>change password</a>
-                                        </li>
-                                        <li>
-                                            <a href="change_pin.html"><i class="fas fa-caret-right"></i>change pin</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="parent">
-                                    <a href="#"> <i class="fas fa-caret-right"></i>finance<span> <i class="fas fa-caret-right"></i>
-									</span></a>
-                                    <ul class="dropdown-menu-right">
-                                        <li>
-                                            <a href="make_deposit.html"> <i class="fas fa-caret-right"></i>make deposit</a>
-                                        </li>
-                                        <li>
-                                            <a href="deposit_list.html"> <i class="fas fa-caret-right"></i> deposit lists</a>
-                                        </li>
-                                        <li>
-                                            <a href="payment_request.html"><i class="fas fa-caret-right"></i>payment request</a>
-                                        </li>
-                                        <li>
-                                            <a href="exchange_money.html"><i class="fas fa-caret-right"></i>exchange money</a>
-                                        </li>
-                                        <li>
-                                            <a href="transfer_fund.html"><i class="fas fa-caret-right"></i>fund transfer</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="parent">
-                                    <a href="#"> <i class="fas fa-caret-right"></i>reports<span> <i class="fas fa-caret-right"></i>
-									</span></a>
-                                    <ul class="dropdown-menu-right">
-                                        <li>
-                                            <a href="all_transactions.html"> <i class="fas fa-caret-right"></i>all transactions</a>
-                                        </li>
-                                        <li>
-                                            <a href="deposit_history.html"> <i class="fas fa-caret-right"></i> deposit history</a>
-                                        </li>
-                                        <li>
-                                            <a href="pending_history.html"><i class="fas fa-caret-right"></i>pending history</a>
-                                        </li>
-                                        <li>
-                                            <a href="exchange_history.html"><i class="fas fa-caret-right"></i>exchange history</a>
-                                        </li>
-                                        <li>
-                                            <a href="earnings_history.html"><i class="fas fa-caret-right"></i>earning history</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="parent">
-                                    <a href="#"> <i class="fas fa-caret-right"></i>referrals<span> <i class="fas fa-caret-right"></i>
-									</span></a>
-                                    <ul class="dropdown-menu-right">
-                                        <li>
-                                            <a href="referrals.html"> <i class="fas fa-caret-right"></i>my referrals</a>
-                                        </li>
-                                        <li>
-                                            <a href="banners.html"> <i class="fas fa-caret-right"></i> promotionals banners</a>
-                                        </li>
-                                        <li>
-                                            <a href="referral_earnings.html"><i class="fas fa-caret-right"></i>referral earnings</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="parent">
-                                    <a href="tickets.html"><i class="fas fa-caret-right"></i>view tickets</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">blog <i class="fas fa-caret-down"></i></a>
-                            <ul class="navi_2_dropdown">
-                                <li class="parent">
-                                    <a href="blog_category.html"><i class="fas fa-caret-right"></i>blog category</a>
-                                </li>
-                                <li class="parent">
-                                    <a href="blog_single.html"><i class="fas fa-caret-right"></i> blog single</a>
-                                </li>
-                            </ul>
-                        </li> -->
-                        <li><a href="contact_us.html" class="gc_main_navigation">contact us</a></li>
+                        <li><a href="#about" class="gc_main_navigation">About us</a></li>
+                        <li><a href="#package" class="gc_main_navigation">Package</a></li>
+                        <li><a href="#affiliate"> Become an affiliate </a></li>
+                        <li><a href="#faq" class="gc_main_navigation">FAQ</a></li>
+                      
+                       
                     </ul>
                 </div>
                 <!-- mainmenu end -->

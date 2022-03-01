@@ -38,7 +38,7 @@ if(mysqli_num_rows($query) == 0){
     exit();
 }
 
-include('../incs-marketing/header.php');
+
 
 ?>
 
@@ -132,7 +132,7 @@ if(empty($signup_errors)){
          'email' => $email,
          'amount' => $price*10,
          'reference' => $reference_num,
-         'callback_url' => GEN_WEBSITE.'/buy-verify-payment.php'
+         'callback_url' => GEN_WEBSITE.'/refered-verify-payment.php'
      ];
     
      $url = "https://api.paystack.co/transaction/initialize";
@@ -193,7 +193,7 @@ trigger_error('You could not be registered due to a system error. We apologize f
 
 }
 
-
+include('../incs-marketing/header.php');
 
 
 

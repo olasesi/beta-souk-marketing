@@ -57,7 +57,7 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
   
         $query = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_username='".$username."'") or die(db_conn_error);
         
-       
+       if(mysqli_num_rows($query) == 1){
       while($row = mysqli_fetch_array($query)){
       
 
@@ -113,7 +113,18 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
       
         }
     }
+     
+}else{
       
+      
+      
+    $signup_errors['wrong_detail'] = 'You entered an incorrect login details.';
+   
+
+  }
+
+
+
     }
 
 
@@ -191,8 +202,11 @@ include('../incs-marketing/header.php');
 
                         </div>
                         <div class="form-group icon_form comments_form">
-
-                            <input type="text" class="form-control require" name="username" value="" placeholder="Username">
+                        <?php if (array_key_exists('wrong_detail', $signup_errors)) {
+	                    echo '<p class="text-danger">'.$signup_errors['wrong_detail'].'</p>';
+	                    }
+                    ?>
+                            <input type="text" class="form-control require" name="username" value="<?php if(isset($_POST['username'])){echo $_POST['username'];}?>" placeholder="Username">
 
                         </div>
                         <div class="form-group icon_form comments_form">

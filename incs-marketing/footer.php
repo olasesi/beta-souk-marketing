@@ -8,10 +8,12 @@
         <div class="col-lg-4 col-md-6 col-12 col-sm-12">
             <div class="wrapper_second_about">
                 <div class="wrapper_first_image">
-                    <a href="index.html"><img src="images/logo.png" class="img-responsive" alt="logo" /></a>
+                    <a href="index.html"><img src="images/logo5.png" class="img-responsive" alt="beta souk" /></a>
                 </div>
-                <p>We are a full service Digital Marketing Agency all the foundational tool you need.</p>
-                <div class="counter-section">
+                <p>Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales.
+
+</p>
+                <!-- <div class="counter-section">
                     <div class="ft_about_icon float_left">
                         <i class="flaticon-user"></i>
                         <div class="ft_abt_text_wrapper">
@@ -28,7 +30,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -37,20 +39,22 @@
                 <h4>usefull links </h4>
 
                 <ul>
-                    <li><a href="#"><i class="fa fa-angle-right"></i>About us</a>
+               
+
+                    <li><a href="#about"><i class="fa fa-angle-right"></i>About us</a>
                     </li>
 
-                    <li><a href="#"><i class="fa fa-angle-right"></i>contact </a>
+                    <li><a href="#package"><i class="fa fa-angle-right"></i>Package </a>
                     </li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i>services</a>
+                    <li><a href="#Affiliate"><i class="fa fa-angle-right"></i>Affilliate</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i>news</a> </li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i>blog</a> </li>
+                    <li><a href="#faq"><i class="fa fa-angle-right"></i>FAQ</a> </li>
+                   
                 </ul>
 
             </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-12 col-sm-4">
+        <!-- <div class="col-lg-2 col-md-3 col-12 col-sm-4">
             <div class="wrapper_second_useful wrapper_second_links">
 
                 <ul>
@@ -66,7 +70,7 @@
                 </ul>
 
             </div>
-        </div>
+        </div> -->
 
         <div class="col-lg-4 col-md-6 col-12 col-sm-12">
             <div class="wrapper_second_useful wrapper_second_useful_2">
@@ -74,14 +78,16 @@
 
                 <ul>
                     <li>
-                        <h1>+800 568 322</h1>
+                        <h1>08052835221</h1>
                     </li>
-                    <li><a href="#"><i class="flaticon-mail"></i>savehyip@example.com</a>
+                    <li>
+                        <h1>08121030707</h1>
                     </li>
-                    <li><a href="#"><i class="flaticon-language"></i>www.example.com</a>
+                    <li><a><i class="flaticon-mail"></i>sales@betasouk.com</a>
                     </li>
+                   
 
-                    <li><i class="flaticon-placeholder"></i>110, B Street Kalani Bagh Dewas, Madhya Pradesh, INDIA #455001
+                    <li><i class="flaticon-placeholder"></i>Plot 12, Oladele Kadiri Close, nob-oluwa street, Ogba-Ikeja Lagos
                     </li>
                 </ul>
             </div>
@@ -90,7 +96,7 @@
         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
             <div class="copyright_wrapper float_left">
                 <div class="copyright">
-                    <p>Copyright <i class="far fa-copyright"></i> 2019 <a href="index.html"> SaveHyip</a>. all right reserved - design by <a href="index.html">webstrot</a></p>
+                    <p>Copyright <i class="far fa-copyright"></i> 2022 <a> Beta Souk</a>. all right reserved </p>
                 </div>
                 <div class="social_link_foter">
 

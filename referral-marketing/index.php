@@ -1,7 +1,6 @@
 <?php
 require_once('../incs-marketing/config.php');
 require_once('../incs-marketing/gen_serv_con.php');
-
 if(isset($_SESSION['user_id_marketer'])) {
     header('Location:'.GEN_WEBSITE.'/my_account.php');
        exit;
@@ -15,8 +14,6 @@ if(isset($_SESSION['user_id'])) {
     header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
        exit();
 }
-
-
 include('../incs-marketing/header.php');
 ?>
     <!-- slider wrapper start -->
@@ -37,20 +34,22 @@ include('../incs-marketing/header.php');
                                 <div class="col-xl-6 col-lg-10 col-md-12 col-sm-12 col-12">
                                     <div class="content">
 
-                                        <h2 data-animation="animated bounceInUp">Often Have Small</h2>
+                                        <h2 data-animation="animated bounceInUp">It's time to make sales</h2>
 
-                                        <h3 data-animation="animated bounceInUp">Invest Your Money  <br>
-For <span>Future</span></h3>
+                                        <h3 data-animation="animated bounceInUp">CREATE, PROMOTE, <br>
+                                       <span> START SELLING!!
+</span></h3>
 
-                                        <p data-animation="animated bounceInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut enim ad minim veniam Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute an irure dolor in voluptate velit.</p>
+                                        <h6 data-animation="animated bounceInUp">Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales.
+</h6>
 
                                         <div class="slider_btn index2_sliderbtn index3_sliderbtn float_left">
                                             <ul>
                                                 <li data-animation="animated bounceInLeft">
-                                                    <a href="register.php">Affiliate register</a>
+                                                    <a href="buy.php">Get started</a>
                                                 </li>
                                                 <li data-animation="animated bounceInLeft">
-                                                    <a href="login.php">Affiliate login</a>
+                                                    <a href="login-buy.php">Login</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -178,7 +177,7 @@ For <span>Future</span></h3>
     </div>
     <!-- slider wrapper End -->
     <!--about us wrapper start -->
-    <div class="about_us_wrapper index2_about_us_wrapper index3_about_us float_left">
+    <div class="about_us_wrapper index2_about_us_wrapper index3_about_us float_left" id="about">
         <div class="container">
             <div class="row">
 
@@ -186,23 +185,24 @@ For <span>Future</span></h3>
                     <div class="about_content_wrapper">
                         <div class="sv_heading_wraper index2_heading index3_heading index3_headung2">
                             <h4>who we are</h4>
-                            <h3>Welcome to SaveHyip</h3>
+                            <h3>Welcome to Betasouk</h3>
                             <div class="line_shape line_shape2"></div>
                         </div>
                         <div class="welcone_savehiyp float_left">
-                            <p>Put your investing ideas into action with full range of investments. Duis auteir ure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Enjoy real benefits and rewards on your accrue investing. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut enim ad an minim veniam Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis auteirure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p>Beta souk provides a ready made e-commerce website for business owners to expand their market base and make more sales. 
+ </p>
+                            <p>The aim is to give business owners an edge by offering them a digital solution platform with the use of social media marketing and a user friendly website. Customers have the opportunity to patronize your business while you make more profits on sales. </p>
                             <div class="welcome_save_inpvate_wrapper index3_welcome_checkbox">
                                 <ul>
-                                    <li class="purple_inovate"><a href="#"><i class="flaticon-check-box"></i> We Innovate </a></li>
-                                    <li class="blue_inovate"><a href="#"><i class="flaticon-check-box"></i> Licenced & Certified </a></li>
-                                    <li class="green_inovate"><a href="#"><i class="flaticon-check-box"></i>Saving & Investments </a></li>
+                                    <li class="purple_inovate"><a><i class="flaticon-check-box"></i> Create </a></li>
+                                    <li class="blue_inovate"><a><i class="flaticon-check-box"></i> Promote </a></li>
+                                    <li class="green_inovate"><a ><i class="flaticon-check-box"></i>Sell </a></li>
                                 </ul>
                             </div>
                             <div class="about_btn index3_about_btn float_left">
                                 <ul>
                                     <li>
-                                        <a href="#">get more</a>
+                                        <a href="buy.php">Get started</a>
                                     </li>
                                 </ul>
                             </div>
@@ -222,7 +222,7 @@ For <span>Future</span></h3>
     </div>
     <!-- about us wrapper end -->
     <!--investment plan wrapper start -->
-    <div class="investment_plans index2_investment_plans index3_investment_plans float_left">
+    <div class="investment_plans index2_investment_plans index3_investment_plans float_left" id="package">
 
         <div class="container">
             <div class="row">
@@ -230,36 +230,12 @@ For <span>Future</span></h3>
                 <div class="col-md-12 col-lg-12 col-sm-12 col-12">
                     <div class="sv_heading_wraper heading_wrapper_dark dark_heading index2_heading index2_heading_center index3_heading ">
                         <h4> our plans </h4>
-                        <h3>our investment plans </h3>
+                        <h3>Our Packages </h3>
                         <div class="line_shape line_shape2"></div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6 col-lg-6 col-sm-6 col-12">
-                    <div class="investment_box_wrapper index2_investment_box_Wraper index3_investment_box_Wraper float_left">
-                        <img src="images/in1.png" alt="img">
-                        <div class="investment_icon_circle">
-                            <i class="flaticon-bar-chart"></i>
-                        </div>
-                        <div class="investment_border_wrapper"></div>
-                        <div class="investment_content_wrapper">
-                            <h1><a href="#">silver plan</a></h1>
-                            <div class="line_shape line_shape2"></div>
-                            <p>Up to 5% for 20 Hourly
-                                <br> Compound Available
-                                <br> Down to 5% for 20 Hourly
-                                <br> Principal Return
-                                <br> Up to 5% for 20 Hourly</p>
-                        </div>
-                        <div class="about_btn plans_btn index2_investment_btn">
-                            <ul>
-                                <li>
-                                    <a href="#">read more</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-lg-6 col-sm-6 col-12">
+               
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12 col-12">
                     <div class="investment_box_wrapper index2_investment_box_Wraper index3_investment_box_Wraper float_left">
                         <img src="images/in2.png" alt="img">
                         <div class="investment_icon_circle red_info_circle">
@@ -267,24 +243,32 @@ For <span>Future</span></h3>
                         </div>
                         <div class="investment_border_wrapper red_border_wrapper"></div>
                         <div class="investment_content_wrapper red_content_wrapper">
-                            <h1><a href="#">Bronze Plan</a></h1>
+                            <h1><a>Basic (&#8358;60,000)</a></h1>
                             <div class="line_shape line_shape2"></div>
-                            <p>Up to 5% Daily for 5 Days
-                                <br> Min deposit: $2020
-                                <br> Max deposit: $101010
-                                <br> Principal Return
-                                <br> Compound Available</p>
+                            <p>Admin page (to control your shop yourself)  
+                                <br> Add to cart features
+                                <br> Payment gateway |  Shop page
+                                 <br>Product description page
+                                <br>Create Discount Price for your products
+                                <br> Deal of the day | Slider banner
+                                <br> Product categories creation
+                                <br>Cross sells / ups  
+                               <br> Whatsapp chat with customers  
+                                <br> Automatic Product share to social media
+                                <br> Analytics of Customers/Visitor 
+                                                            
+                            </p>
                         </div>
-                        <div class="about_btn plans_btn red_btn_plans index2_investment_btn">
+                        <!-- <div class="about_btn plans_btn red_btn_plans index2_investment_btn">
                             <ul>
                                 <li>
                                     <a href="#">read more</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6 col-lg-6 col-sm-6 col-12">
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12 col-12">
                     <div class="investment_box_wrapper index2_investment_box_Wraper index3_investment_box_Wraper float_left">
                         <img src="images/in4.png" alt="img">
                         <div class="investment_icon_circle blue_icon_circle">
@@ -292,24 +276,24 @@ For <span>Future</span></h3>
                         </div>
                         <div class="investment_border_wrapper blue_border_wrapper"></div>
                         <div class="investment_content_wrapper blue_content_wrapper">
-                            <h1><a href="#">copper plan</a></h1>
+                            <h1><a href="#">Essential (&#8358;150,000)</a></h1>
                             <div class="line_shape line_shape2"></div>
-                            <p>Up to 3% Hourly for 10 Hourly
-                                <br> Min deposit: $300
-                                <br> Max deposit: $3000
-                                <br> Principal Not Return
-                                <br> Compound Not Available</p>
+                            <p><h4><b>(Basic + essential)</b></h4>
+                                <br> Custom email
+                                <br> Sub – categories
+                                <br> Logistics / delivery
+                                <br> Top banner for promo</p>
                         </div>
-                        <div class="about_btn plans_btn blue_btn_plans index2_investment_btn">
+                        <!-- <div class="about_btn plans_btn blue_btn_plans index2_investment_btn">
                             <ul>
                                 <li>
                                     <a href="#">read more</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6 col-lg-6 col-sm-6 col-12">
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12 col-12">
                     <div class="investment_box_wrapper index2_investment_box_Wraper index3_investment_box_Wraper float_left">
                         <img src="images/in3.png" alt="img">
                         <div class="investment_icon_circle green_info_circle">
@@ -317,21 +301,29 @@ For <span>Future</span></h3>
                         </div>
                         <div class="investment_border_wrapper green_border_wrapper"></div>
                         <div class="investment_content_wrapper green_content_wrapper">
-                            <h1><a href="#">gold plan</a></h1>
+                            <h1><a href="#">Premium (&#8358;300,000)</a></h1>
                             <div class="line_shape line_shape2"></div>
-                            <p>Up to 7% for 30 days
-                                <br> Min deposit: $500
-                                <br> Max deposit: $3000
-                                <br> Principal Not Return
-                                <br> Compound Available</p>
+                            <p><h4><b>(Essential + premium)</b></h4>
+                                <br> Wishlist
+                                <br> Newsletter
+                                <br> Product review
+                                <br> Promo / coupon
+                                <br> Compare products
+                                <br> Inventory
+                                <br> Customers data
+                                <br> Referral system
+                            
+                            
+                            
+                            </p>
                         </div>
-                        <div class="about_btn plans_btn green_plan_btn index2_investment_btn">
+                        <!-- <div class="about_btn plans_btn green_plan_btn index2_investment_btn">
                             <ul>
                                 <li>
                                     <a href="#">read more</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -341,238 +333,7 @@ For <span>Future</span></h3>
         <div class="investment_overlay"></div>
     </div>
     <!--investment plan wrapper end -->
-    <!-- transaction wrapper start -->
-    <div class="transaction_wrapper float_left">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-
-                    <div class="sv_heading_wraper heading_wrapper_dark dark_heading index2_heading index2_heading_center index3_heading ">
-                        <h4>who we are</h4>
-                        <h3>Our Latest Transaction</h3>
-                        <div class="line_shape line_shape2"></div>
-
-                    </div>
-                    <div class="x_offer_tabs_wrapper index3_offer_tabs">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home"> deposits</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#menu2">withdraw</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-12">
-                    <div class="tab-content">
-                        <div id="home" class="tab-pane active">
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="table_next_race index3_table_race league_table overflow-scroll">
-                                        <table>
-                                            <tr>
-                                                <th class="form_table_resp">name</th>
-                                                <th>date</th>
-                                                <th>amount</th>
-                                                <th>currency</th>
-                                                <th>deposit</th>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem1.png" alt="img"> <span>Olympia Ripple</span></td>
-
-                                                <td>June 24,2019</td>
-                                                <td>$6,00,000.00</td>
-                                                <td>Dollar</td>
-                                                <td>03 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem4.png" alt="img"> <span>Nancee Broom</span></td>
-
-                                                <td>June 04,2019</td>
-                                                <td>$16,00,000.00</td>
-                                                <td>card</td>
-                                                <td>22 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem1.png" alt="img"> <span>Broom Nancee</span></td>
-
-                                                <td>June 24,2019</td>
-                                                <td>$6,00,000.00</td>
-                                                <td>bitcoin</td>
-                                                <td>15 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem2.png" alt="img"> <span>Ripple Alison</span></td>
-
-                                                <td>June 24,2019</td>
-                                                <td>$06,00,000.00</td>
-                                                <td>ripees</td>
-                                                <td>05 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem3.png" alt="img"> <span>Olympia Ripple</span></td>
-
-                                                <td>June 05,2019</td>
-                                                <td>$45,00,000.00</td>
-                                                <td>ETH</td>
-                                                <td>13 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem4.png" alt="img"> <span>Alison Rittichier</span></td>
-
-                                                <td>June 28,2019</td>
-                                                <td>$77,00,000.00</td>
-                                                <td>payonner</td>
-                                                <td>05 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem5.png" alt="img"> <span>Olympia Ripple</span></td>
-
-                                                <td>June 24,2019</td>
-                                                <td>$11,00,000.00</td>
-                                                <td>card</td>
-                                                <td>23 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem6.png" alt="img"> <span>Emmett Stein </span></td>
-
-                                                <td>June 21,2019</td>
-                                                <td>$66,00,000.00</td>
-                                                <td>paypal</td>
-                                                <td>53 Minutes Ago</td>
-
-                                            </tr>
-
-                                        </table>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="menu2" class="tab-pane fade">
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="table_next_race index3_table_race league_table overflow-scroll">
-                                        <table>
-                                            <tr>
-                                                <th class="form_table_resp">name</th>
-                                                <th>date</th>
-                                                <th>amount</th>
-                                                <th>currency</th>
-                                                <th>deposit</th>
-
-                                            </tr>
-
-                                            <tr>
-
-                                                <td><img src="images/mem4.png" alt="img"> <span>Nancee Broom</span></td>
-
-                                                <td>June 04,2019</td>
-                                                <td>$16,00,000.00</td>
-                                                <td>card</td>
-                                                <td>22 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem1.png" alt="img"> <span>Olympia Ripple</span></td>
-
-                                                <td>June 24,2019</td>
-                                                <td>$6,00,000.00</td>
-                                                <td>Dollar</td>
-                                                <td>03 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem2.png" alt="img"> <span>Ripple Alison</span></td>
-
-                                                <td>June 24,2019</td>
-                                                <td>$06,00,000.00</td>
-                                                <td>ripees</td>
-                                                <td>05 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem6.png" alt="img"> <span>Emmett Stein
-                                              </span></td>
-                                                <td>June 21,2019</td>
-                                                <td>$66,00,000.00</td>
-                                                <td>paypal</td>
-                                                <td>53 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem1.png" alt="img"> <span>Broom Nancee</span></td>
-
-                                                <td>June 24,2019</td>
-                                                <td>$6,00,000.00</td>
-                                                <td>bitcoin</td>
-                                                <td>15 Minutes Ago</td>
-
-                                            </tr>
-
-                                            <tr>
-
-                                                <td><img src="images/mem4.png" alt="img"> <span>Alison Rittichier</span></td>
-
-                                                <td>June 28,2019</td>
-                                                <td>$77,00,000.00</td>
-                                                <td>payonner</td>
-                                                <td>05 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem3.png" alt="img"> <span>Olympia Ripple</span></td>
-
-                                                <td>June 05,2019</td>
-                                                <td>$45,00,000.00</td>
-                                                <td>ETH</td>
-                                                <td>13 Minutes Ago</td>
-
-                                            </tr>
-                                            <tr>
-
-                                                <td><img src="images/mem5.png" alt="img"> <span>Olympia Ripple</span></td>
-
-                                                <td>June 24,2019</td>
-                                                <td>$11,00,000.00</td>
-                                                <td>card</td>
-                                                <td>23 Minutes Ago</td>
-
-                                            </tr>
-
-                                        </table>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- transaction wrapper start -->
 
     <!-- works wrapper start -->
@@ -599,15 +360,15 @@ For <span>Future</span></h3>
     </div>
     <!-- works wrapper end -->
     <!--calculator plan wrapper start -->
-    <div class="calculator_wrapper index2_calculator_wrapper index3_calculator_wrapper float_left">
+    <div class="calculator_wrapper index2_calculator_wrapper index3_calculator_wrapper float_left" id="affiliate">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-12 col-lg-12 col-sm-12 col-12">
 
                     <div class="sv_heading_wraper heading_wrapper_dark dark_heading index2_heading index2_heading_center index3_heading ">
-                        <h4> plans calculator </h4>
-                        <h3> How Much Can You Save With Plans? </h3>
+                        <h4> You can also make money by </h4>
+                        <h3> Become an affiliate </h3>
                         <div class="line_shape line_shape2"></div>
 
                     </div>
@@ -615,7 +376,7 @@ For <span>Future</span></h3>
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 calc">
                     <div class="calculator_portion index3_calc_portion float_left">
                         <div class="caluclator_text_wrapper">
-                            <p>deposit amount : <i class="fas fa-info-circle"></i></p>
+                            <p>Total cash earned : <i class="fas fa-info-circle"></i></p>
                             <p class="dollar_wrap"><i class="fa fa-rupee-sign"></i>
                                 <input type="text" id="investmentAmount" />
                             </p>
@@ -709,21 +470,28 @@ For <span>Future</span></h3>
         <div class="container">
             <div class="row">
                 <div class="global_comm_wraper index2_global_comm_wrapper index3_global_comm_wrapper">
-                    <h1>We Were Always Thinking Global Community</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut enim ad minim veniam Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <h1>BECOME AN AFFILIATE, EARN ON THE GO
+</h1>
+                    <p>Make extra cash on every product package !
+
+</p>
+<p>
+Register | Get a personalized unique link | Earn on every sale</p>
+
+
+
                 </div>
                 <div class="zero_balance_wrapper">
                     <div class="zero_commisition">
-                        <h1>Zero
-Commissions</h1>
+                        <h1>8.5% COMMISSION</h1>
                         <h4>No hidden charges*</h4>
                     </div>
                     <div class="start_invest_wrap">
-                        <h1>start invest now</h1>
+                        <h1>start now</h1>
                         <div class="about_btn index3_about_btn float_left">
                             <ul>
                                 <li>
-                                    <a href="#">buy now !</a>
+                                    <a href="register.php">Affilliate register</a>
                                 </li>
                             </ul>
                         </div>
@@ -742,7 +510,7 @@ Commissions</h1>
 
                     <div class="sv_heading_wraper heading_wrapper_dark dark_heading index2_heading index2_heading_center index3_heading ">
                         <h4> services</h4>
-                        <h3>our features</h3>
+                        <h3>Features</h3>
                         <div class="line_shape line_shape2"></div>
 
                     </div>
@@ -754,10 +522,11 @@ Commissions</h1>
                         </div>
                         <div class="investment_border_wrapper"></div>
                         <div class="investment_content_wrapper">
-                            <h1><a href="#">We're Certified</a></h1>
+                            <h1><a href="#">EASY SET UP</a></h1>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut enim ad minim veniam</p>
-                            <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span>
+                            <p>Structured with an installation programme and templates which aids web creation and upload of contents on web pages created within 24 hours max.
+</p>
+                            <!-- <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span> -->
                         </div>
 
                     </div>
@@ -769,10 +538,11 @@ Commissions</h1>
                         </div>
                         <div class="investment_border_wrapper red_border_wrapper"></div>
                         <div class="investment_content_wrapper red_content_wrapper">
-                            <h1><a href="#">We're Secure</a></h1>
+                            <h1><a href="#">USER FRIENDLY</a></h1>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut enim ad minim veniam</p>
-                            <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span>
+                            <p>Boost sales with a seamless user experience for visitors, prospects and customers through an improved web performance. 
+</p>
+                            <!-- <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span> -->
                         </div>
 
                     </div>
@@ -784,10 +554,11 @@ Commissions</h1>
                         </div>
                         <div class="investment_border_wrapper blue_border_wrapper"></div>
                         <div class="investment_content_wrapper blue_content_wrapper">
-                            <h1><a href="#">We're Profitable</a></h1>
+                            <h1><a href="#">PAYMENT INTEGRATION</a></h1>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut enim ad minim veniam</p>
-                            <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span>
+                            <p>Provision of an Integrated payment gateway that allows receival of payments from prospects and clients on every sale
+</p>
+                            <!-- <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span> -->
                         </div>
 
                     </div>
@@ -799,10 +570,11 @@ Commissions</h1>
                         </div>
                         <div class="investment_border_wrapper green_border_wrapper"></div>
                         <div class="investment_content_wrapper green_content_wrapper">
-                            <h1><a href="#">We Accept Crypto</a></h1>
+                            <h1><a href="#">CUSTOM EMAIL</a></h1>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut enim ad minim veniam</p>
-                            <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span>
+                            <p>Strengthen  businesses with web address and emails that keeps brands and businesses coordinated and coherent across all platforms 
+</p>
+                            <!-- <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span> -->
                         </div>
 
                     </div>
@@ -814,10 +586,11 @@ Commissions</h1>
                         </div>
                         <div class="investment_border_wrapper pink_border_wrapper"></div>
                         <div class="investment_content_wrapper pink_content_wrapper">
-                            <h1><a href="#">best support</a></h1>
+                            <h1><a href="#">PROMOTIONAL ADs</a></h1>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut enim ad minim veniam</p>
-                            <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span>
+                            <p>Display products and services by creating customer awareness with web promotional ads across media platforms to generate more sales. 
+</p>
+                            <!-- <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span> -->
                         </div>
 
                     </div>
@@ -829,10 +602,12 @@ Commissions</h1>
                         </div>
                         <div class="investment_border_wrapper yellow_border_wrapper"></div>
                         <div class="investment_content_wrapper yellow_content_wrapper">
-                            <h1><a href="#">We're global</a></h1>
+                            <h1><a href="#">DIRECT CONTACT / NOTIFICATIONS
+</a></h1>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut enim ad minim veniam</p>
-                            <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span>
+                            <p>Enabled customer reach via whatsapp link and notifications on every sale made. Business owners can stay in touch with prospects and clients to enhance swift buying and selling.
+</p>
+                            <!-- <span class="investment_index_icon index3_investment_index_icon"><a href="#"><i class="flaticon-arrow-pointing-to-right"></i></a></span> -->
                         </div>
 
                     </div>
@@ -844,15 +619,15 @@ Commissions</h1>
     <!--our services wrapper end -->
 
     <!-- testimonial wrapper start -->
-    <div class="testimonial_wrapper float_left">
+    <!-- <div class="testimonial_wrapper float_left">
         <div class="investment_overlay"></div>
         <div class="container">
             <div class="row">
 
                 <div class="col-md-12 col-lg-12 col-sm-12 col-12">
                     <div class="sv_heading_wraper heading_wrapper_dark index2_heading index2_heading_center index3_heading">
-                        <h4>testimonial</h4>
-                        <h3>what people says</h3>
+                        <h4></h4>
+                        <h3></h3>
                         <div class="line_shape line_shape2"></div>
                     </div>
 
@@ -902,164 +677,10 @@ Commissions</h1>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- testimonial wrapper end -->
     <!-- investors wrapper start -->
-    <div class="investors_wrapper float_left">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-
-                    <div class="sv_heading_wraper index2_heading index3_heading index3_headung2">
-                        <h4>Tranding People</h4>
-                        <h3>Our top investors</h3>
-                        <div class="line_shape line_shape2"></div>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
-                    <div class="investors_slider_wrapper index2_investors_slider_Wrapper index3_investors_slider">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item">
-
-                                <div class="inves_slider_cntn index2_inves_slider_cntnt index3_investment_box float_left">
-                                    <div class="investment_box_wrapper index_investment float_left">
-
-                                        <div class="inves_main_border float_left">
-                                            <div class="inves_img_wrapper">
-                                                <img src="images/team3.png" class="img-responsive" alt="img" />
-                                            </div>
-                                            <ul class="investment_slider_icon index3_investment_slider_icon">
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-
-                                            </ul>
-                                            <div class="investment_content_wrapper inves_heading_txt">
-                                                <h1><a href="#">akshay H.</a></h1>
-
-                                                <p>$22500.00 USD</p>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-
-                                <div class="inves_slider_cntn index2_inves_slider_cntnt index3_investment_box float_left">
-                                    <div class="investment_box_wrapper index_investment float_left">
-
-                                        <div class="inves_main_border float_left">
-                                            <div class="inves_img_wrapper">
-                                                <img src="images/team1.png" class="img-responsive" alt="img" />
-                                            </div>
-                                            <ul class="investment_slider_icon index3_investment_slider_icon">
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-
-                                            </ul>
-                                            <div class="investment_content_wrapper inves_heading_txt">
-                                                <h1><a href="#">maria F.</a></h1>
-
-                                                <p>$22500.00 USD</p>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-
-                                <div class="inves_slider_cntn index2_inves_slider_cntnt index3_investment_box float_left">
-                                    <div class="investment_box_wrapper index_investment float_left">
-
-                                        <div class="inves_main_border float_left">
-                                            <div class="inves_img_wrapper">
-                                                <img src="images/team2.png" class="img-responsive" alt="img" />
-                                            </div>
-                                            <ul class="investment_slider_icon index3_investment_slider_icon">
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-
-                                            </ul>
-                                            <div class="investment_content_wrapper inves_heading_txt">
-                                                <h1><a href="#">josep K.</a></h1>
-
-                                                <p>$22500.00 USD</p>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-
-                                <div class="inves_slider_cntn index2_inves_slider_cntnt index3_investment_box float_left">
-                                    <div class="investment_box_wrapper index_investment float_left">
-
-                                        <div class="inves_main_border float_left">
-                                            <div class="inves_img_wrapper">
-                                                <img src="images/team3.png" class="img-responsive" alt="img" />
-                                            </div>
-                                            <ul class="investment_slider_icon index3_investment_slider_icon">
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-
-                                            </ul>
-                                            <div class="investment_content_wrapper inves_heading_txt">
-                                                <h1><a href="#">liva M.</a></h1>
-
-                                                <p>$22500.00 USD</p>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-
-                                <div class="inves_slider_cntn index2_inves_slider_cntnt index3_investment_box float_left">
-                                    <div class="investment_box_wrapper index_investment float_left">
-
-                                        <div class="inves_main_border float_left">
-                                            <div class="inves_img_wrapper">
-                                                <img src="images/team4.png" class="img-responsive" alt="img" />
-                                            </div>
-                                            <ul class="investment_slider_icon index3_investment_slider_icon">
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-
-                                            </ul>
-                                            <div class="investment_content_wrapper inves_heading_txt">
-                                                <h1><a href="#">akshay H.</a></h1>
-                                              
-                                                <p>$22500.00 USD</p>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  
     <!-- investors wrapper end -->
     <!-- newsletter wrapper start -->
     <div class="global_community_wrapper newsletter_wrapper index2_newsletter index3_newsletter float_left">
@@ -1067,7 +688,7 @@ Commissions</h1>
             <div class="row">
                 <div class="global_comm_wraper news_cntnt">
                     <h1>Join Our Newsletter</h1>
-                    <p>Put your investing ideas into action with full range of investments.</p>
+                    <p>Give your business the credibility it deserves….</p>
                     <div class="save_newsletter_field">
                         <input type="text" placeholder="Enter Your Email">
                         <button type="submit">subscribe</button>
@@ -1075,13 +696,13 @@ Commissions</h1>
                 </div>
                 <div class="zero_balance_wrapper">
                     <div class="zero_commisition refreal_commison_section">
-                        <h1>Refferal Commission</h1>
-                        <p>Get On First Level Refferal Commission </p>
+                        <h1>REFERRAL COMMISSION</h1>
+                        <p></p>
                         <div class="about_btn refreal_btn index3_about_btn float_left">
-                            <h3>10%</h3>
+                            <h3>8.5%</h3>
                             <ul>
                                 <li>
-                                    <a href="#">get link</a>
+                                    <a href="register.php">Affilliate Register</a>
                                 </li>
                             </ul>
                         </div>
@@ -1113,17 +734,18 @@ Commissions</h1>
                             <img src="images/blog_img1.jpg" alt="blog_img">
                             <div class="blog_date_wrapper index2_blog_date index3_blog_date">
                                 <p>15
-                                    <br> <span>jun</span></p>
+                                    <br> <span>Feb</span></p>
                             </div>
                         </div>
                         <div class="btc_blog_indx_cont_wrapper">
 
-                            <h5> <a href="#">Aligning Resources.</a></h5>
-                            <p>Design is an evolutionary process, and filler text is just one tool in progress your pushing arsenal</p>
+                            <h5> <a href="#">USING E-COMMERCE TO CREATE A SUCCESSFUL BUSINESS
+</a></h5>
+                            <p>Get the latest industry trends, research, and insight across digital media. Utilize all platforms to engage and transact your customers.</p>
                         </div>
                         <div class="btc_blog_indx_cont_bottom">
                             <div class="btc_blog_indx_cont_bottom_left">
-                                <p><i class="fa fa-user"></i> &nbsp;<a href="#">by Akshay</a></p>
+                                <p><i class="fa fa-user"></i> &nbsp;<a href="#">by Viola</a></p>
                             </div>
                             <div class="btc_blog_indx_cont_bottom_right">
                                 <p class="comments"><i class="fa fa-comments"></i> &nbsp;<a href="#">04 comments</a></p>
@@ -1138,17 +760,20 @@ Commissions</h1>
                             <img src="images/blog_img2.jpg" alt="blog_img">
                             <div class="blog_date_wrapper index2_blog_date index3_blog_date">
                                 <p>15
-                                    <br> <span>jun</span></p>
+                                    <br> <span>Feb</span></p>
                             </div>
                         </div>
                         <div class="btc_blog_indx_cont_wrapper">
 
-                            <h5> <a href="#">filling critical data</a></h5>
-                            <p>Design is an evolutionary process, and filler text is just one tool in progress your pushing arsenal</p>
+                            <h5> <a href="#">E-COMMERCE: YOUR WAY TO SUCCESS
+</a></h5>
+                            <p>A guide to making your business stand out in the digital market. 
+
+</p>
                         </div>
                         <div class="btc_blog_indx_cont_bottom">
                             <div class="btc_blog_indx_cont_bottom_left">
-                                <p><i class="fa fa-user"></i> &nbsp;<a href="#">by Akshay</a></p>
+                                <p><i class="fa fa-user"></i> &nbsp;<a href="#">by Viola</a></p>
                             </div>
                             <div class="btc_blog_indx_cont_bottom_right">
                                 <p class="comments"><i class="fa fa-comments"></i> &nbsp;<a href="#">04 comments</a></p>
@@ -1163,17 +788,19 @@ Commissions</h1>
                             <img src="images/blog_img3.jpg" alt="blog_img">
                             <div class="blog_date_wrapper index2_blog_date index3_blog_date">
                                 <p>15
-                                    <br> <span>jun</span></p>
+                                    <br> <span>Feb</span></p>
                             </div>
                         </div>
                         <div class="btc_blog_indx_cont_wrapper">
 
-                            <h5> <a href="#">getting started</a></h5>
-                            <p>Design is an evolutionary process, and filler text is just one tool in progress your pushing arsenal</p>
+                            <h5> <a href="#">A GUIDE TO BRANDING AND DIGITAL MARKETING
+</a></h5>
+                            <p>The perfect resources for beginners to advance digitally to learn new skills or develop existing ones.
+</p>
                         </div>
                         <div class="btc_blog_indx_cont_bottom">
                             <div class="btc_blog_indx_cont_bottom_left">
-                                <p><i class="fa fa-user"></i> &nbsp;<a href="#">by Akshay</a></p>
+                                <p><i class="fa fa-user"></i> &nbsp;<a href="#">by Pelumi</a></p>
                             </div>
                             <div class="btc_blog_indx_cont_bottom_right">
                                 <p class="comments"><i class="fa fa-comments"></i> &nbsp;<a href="#">04 comments</a></p>
@@ -1186,7 +813,7 @@ Commissions</h1>
     </div>
     <!--our blog wrapper end -->
     <!-- FAQ wrapper start -->
-    <div class="faq_wrapper float_left">
+    <div class="faq_wrapper float_left" id="faq">
         <div class="investment_overlay faq_overlay"></div>
         <div class="container">
             <div class="row">
@@ -1209,7 +836,8 @@ Commissions</h1>
                             <div class="card_pagee" role="tab" id="headingOne">
                                 <h5 class="h5-md">
 								       		<a data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
-								         		How can i get help by inbound marketing?
+                                               How do I get the website?
+
 								        	</a>
 								    	 </h5>
                             </div>
@@ -1219,7 +847,7 @@ Commissions</h1>
                                 <div class="card-body">
 
                                     <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
+                                        <p>Just click the "Get started" button and enter your details. You will be contacted as soon has possible on a successful payment. Then we will begin setting up your website.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1230,7 +858,7 @@ Commissions</h1>
                             <div class="card_pagee" role="tab" id="headingTwo">
                                 <h5 class="h5-md">
 								       	    <a class="collapsed" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
-								          		What about loan programs?
+                                               How do I know which package is best for my business?
 								        	</a>
 								     	 </h5>
                             </div>
@@ -1239,7 +867,7 @@ Commissions</h1>
                                 <div class="card-body">
 
                                     <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
+                                        <p>The Basic package is for small scale business owners. The essential for medium scale business and the premuim is for large scale business owner.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1250,7 +878,7 @@ Commissions</h1>
                             <div class="card_pagee" role="tab" id="headingThree">
                                 <h5 class="h5-md">
 								        	<a class="collapsed" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
-								         		Our Happy Clients
+                                            How long will it take to set one up?
 								        	</a>
 								     	 </h5>
                             </div>
@@ -1259,7 +887,7 @@ Commissions</h1>
                                 <div class="card-body">
 
                                     <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
+                                        <p>In 24 to 28 hours, you will get your website?</p>
                                     </div>
                                 </div>
                             </div>
@@ -1270,7 +898,7 @@ Commissions</h1>
                             <div class="card_pagee" role="tab" id="heading4">
                                 <h5 class="h5-md">
 								        	<a class="collapsed" data-toggle="collapse" href="#collapse41" role="button" aria-expanded="false" aria-controls="collapse41">
-								         		Get Training From Experts
+								         		How do I become and affilliate?
 								        	</a>
 								     	 </h5>
                             </div>
@@ -1279,7 +907,7 @@ Commissions</h1>
                                 <div class="card-body">
 
                                     <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
+                                        <p>Click the "Affilliate Register" and fill up the form</p>
                                     </div>
                                 </div>
                             </div>
@@ -1290,7 +918,7 @@ Commissions</h1>
                             <div class="card_pagee" role="tab" id="heading7">
                                 <h5 class="h5-md">
 								        	<a class="collapsed" data-toggle="collapse" href="#collapseT" role="button" aria-expanded="false" aria-controls="collapseT">
-								         		User Guide: Getting Started
+								         		How much to become an affilliate?
 								        	</a>
 								     	 </h5>
                             </div>
@@ -1299,7 +927,7 @@ Commissions</h1>
                                 <div class="card-body">
 
                                     <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
+                                        <p>To become an affilliate is FREE OF CHARGE.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1315,7 +943,7 @@ Commissions</h1>
                             <div class="card_pagee" role="tab" id="headingfour">
                                 <h5 class="h5-md">
 								       		 <a class="collapsed" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
-								         		What about loan programs?
+								         		How will I earn if I refer someone and the person pays?
 								        	</a>
 								    	 </h5>
                             </div>
@@ -1325,266 +953,25 @@ Commissions</h1>
                                 <div class="card-body">
 
                                     <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
+                                        <p>You will earn 8.5% of the price of the package the person bought</p>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="card index3_card">
-
-                            <div class="card_pagee" role="tab" id="headingfive">
-                                <h5 class="h5-md">
-								       	    <a class="collapsed" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
-								          	Unlimited Features & Unique Layouts
-								        	</a>
-								     	 </h5>
-                            </div>
-
-                            <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="headingfive" data-parent="#accordion" style="">
-                                <div class="card-body">
-
-                                    <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card index3_card">
-
-                            <div class="card_pagee" role="tab" id="headingfive1">
-                                <h5 class="h5-md">
-								       	    <a class="collapsed" data-toggle="collapse" href="#collapse2u" role="button" aria-expanded="false" aria-controls="collapse2u">
-								          	Unlimited Features & Unique Layouts
-								        	</a>
-								     	 </h5>
-                            </div>
-
-                            <div id="collapse2u" class="collapse" role="tabpanel" aria-labelledby="headingfive1" data-parent="#accordion" style="">
-                                <div class="card-body">
-
-                                    <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card index3_card">
-
-                            <div class="card_pagee" role="tab" id="headingnine">
-                                <h5 class="h5-md">
-								       	    <a class="collapsed" data-toggle="collapse" href="#collapse02" role="button" aria-expanded="false" aria-controls="collapse02">
-								          Clean and Unique
-								        	</a>
-								     	 </h5>
-                            </div>
-
-                            <div id="collapse02" class="collapse" role="tabpanel" aria-labelledby="headingnine" data-parent="#accordion" style="">
-                                <div class="card-body">
-
-                                    <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card index3_card">
-
-                            <div class="card_pagee" role="tab" id="headingten">
-                                <h5 class="h5-md">
-								       	    <a class="collapsed" data-toggle="collapse" href="#collapse092" role="button" aria-expanded="false" aria-controls="collapse092">
-								        Deeply Customisable Theme
-								        	</a>
-								     	 </h5>
-                            </div>
-
-                            <div id="collapse092" class="collapse" role="tabpanel" aria-labelledby="headingten" data-parent="#accordion" style="">
-                                <div class="card-body">
-
-                                    <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card index3_card">
-
-                            <div class="card_pagee" role="tab" id="headingsiz">
-                                <h5 class="h5-md">
-								        	<a class="collapsed" data-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse3">
-								         		How do I use the features ?
-								        	</a>
-								     	 </h5>
-                            </div>
-
-                            <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="headingsiz" data-parent="#accordion">
-                                <div class="card-body">
-
-                                    <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card index3_card">
-
-                            <div class="card_pagee" role="tab" id="headingseven">
-                                <h5 class="h5-md">
-								        	<a class="collapsed" data-toggle="collapse" href="#collapse31" role="button" aria-expanded="false" aria-controls="collapse31">
-								         	Pixel perfect and responsive
-								        	</a>
-								     	 </h5>
-                            </div>
-
-                            <div id="collapse31" class="collapse" role="tabpanel" aria-labelledby="headingseven" data-parent="#accordion">
-                                <div class="card-body">
-
-                                    <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card index3_card">
-
-                            <div class="card_pagee" role="tab" id="headingeight">
-                                <h5 class="h5-md">
-								        	<a class="collapsed" data-toggle="collapse" href="#collapse32" role="button" aria-expanded="false" aria-controls="collapse32">
-								         		Imagination Is The Beginning
-								        	</a>
-								     	 </h5>
-                            </div>
-
-                            <div id="collapse32" class="collapse" role="tabpanel" aria-labelledby="headingeight" data-parent="#accordion">
-                                <div class="card-body">
-
-                                    <div class="card_cntnt">
-                                        <p>Morbi accumsan ipsum velit. Nam nec aks tel us a odio tincidunt an auctor. Proi gravida nibh vel elit ctor. This is Photoshop's version of Lorem m. Proin vida nibh vel velit auctor. Nam nec aks tel us a odio tincidunt auctor. velit auctor.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                       
+                       
+                      
+                      
+                      
+                       
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 col-md-12">
-                <div class="about_btn calc_btn faqq_btn index3_about_btn  float_left">
-                    <ul>
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#myModal">ask questions ?</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal fade question_modal index3_question_modal" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="sv_question_pop float_left">
-                                        <h1>ask questions ? </h1>
-                                        <div class="search_alert_box float_left">
-
-                                            <div class="apply_job_form">
-
-                                                <input type="text" name="full_name" placeholder="full name">
-                                            </div>
-                                            <div class="apply_job_form">
-
-                                                <input type="text" name="Email" placeholder="Enter Your Email">
-                                            </div>
-                                            <div class="apply_job_form">
-
-                                                <input type="text" name="subject" placeholder="your question">
-                                            </div>
-                                            <div class="apply_job_form">
-                                                <textarea class="form-control" name="message" placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="question_sec float_left">
-                                            <div class="about_btn calc_btn faqq_btn index3_about_btn  ques_Btn">
-                                                <ul>
-                                                    <li>
-                                                        <a href="#">apply now</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="cancel_wrapper">
-                                                <a href="#" class="" data-dismiss="modal">cancel</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+   
         </div>
     </div>
-    <!-- FAQ wrapper end -->
-    <!-- payments wrapper start -->
-    <div class="payments_wrapper float_left">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
 
-                    <div class="sv_heading_wraper index2_heading index3_heading index3_headung2">
-                        <h4>Payment Methods</h4>
-                        <h3>Accepted Payment Method</h3>
-                        <div class="line_shape line_shape2"></div>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                    <div class="payment_slider_wrapper index3_payment_slider_wrapper">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item">
-
-                                <div class="partner_img_wrapper float_left">
-                                    <img src="images/partner1.png" class="img-responsive" alt="img">
-                                </div>
-
-                            </div>
-                            <div class="item">
-
-                                <div class="partner_img_wrapper float_left">
-                                    <img src="images/partner2.png" class="img-responsive" alt="img">
-                                </div>
-
-                            </div>
-                            <div class="item">
-
-                                <div class="partner_img_wrapper float_left">
-                                    <img src="images/partner3.png" class="img-responsive" alt="img">
-                                </div>
-
-                            </div>
-                            <div class="item">
-
-                                <div class="partner_img_wrapper float_left">
-                                    <img src="images/partner4.png" class="img-responsive" alt="img">
-                                </div>
-
-                            </div>
-                            <div class="item">
-
-                                <div class="partner_img_wrapper float_left">
-                                    <img src="images/partner2.png" class="img-responsive" alt="img">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- payments wrapper end -->
     <?php
 
