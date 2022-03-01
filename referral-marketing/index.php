@@ -37,13 +37,11 @@ include('../incs-marketing/header.php');
                                         <h2 data-animation="animated bounceInUp">It's time to make sales</h2>
 
                                         <h3 data-animation="animated bounceInUp">CREATE, PROMOTE, <br>
-                                       <span> START SELLING!!
-</span></h3>
+                                       <span> START SELLING!!</span></h3>
 
-                                        <h6 data-animation="animated bounceInUp">Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales.
-</h6>
+                                        <h6 data-animation="animated bounceInUp">Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales.</h6>
 
-                                        <div class="slider_btn index2_sliderbtn index3_sliderbtn float_left">
+                                        <div class="slider_btn index2_sliderbtn index3_sliderbtn float_left mt-4">
                                             <ul>
                                                 <li data-animation="animated bounceInLeft">
                                                     <a href="buy.php">Get started</a>
@@ -54,16 +52,16 @@ include('../incs-marketing/header.php');
                                             </ul>
                                         </div>
                                         <div data-animation="animated bounceInLeft" class="social_link_foter slider_btm_icon_links">
-
+                                        
                                             <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                                <li><a href="https://www.facebook.com/BetaSoukAfrica/"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="https://twitter.com/betasoukafrica"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/company/betasoukafrica"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="https://www.instagram.com/betasoukafrica/"><i class="fab fa-instagram"></i></a></li>
 
                                             </ul>
                                         </div>
-                                        <div class="clear"></div>
+                                        <!-- <div class="clear"></div> -->
                                     </div>
                                 </div>
 
@@ -373,7 +371,8 @@ For <span>Future</span></h3>
 
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 col-12 calc">
+                <!--------------------------------------------------- Affiliate Total Cash Earned Start-------------------------------------------->
+                <!-- <div class="col-lg-4 col-md-12 col-sm-12 col-12 calc">
                     <div class="calculator_portion index3_calc_portion float_left">
                         <div class="caluclator_text_wrapper">
                             <p>Total cash earned : <i class="fas fa-info-circle"></i></p>
@@ -458,8 +457,8 @@ For <span>Future</span></h3>
                         <p class="calc-price" id="returnAmount">Rs. 34.06 L</p>
                         <p>extra returns for you </p>
                     </div>
-                </div>
-
+                </div> -->
+                <!--------------------------------------------------- Affiliate Total Cash Earned End-------------------------------------------->
             </div>
         </div>
     </div>

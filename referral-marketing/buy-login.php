@@ -148,8 +148,8 @@ include('../incs-marketing/header.php');
 
 
 
-<!-- inner header wrapper start -->
-<div class="page_title_section">
+<!------------------------------------- inner header wrapper start ---------------------------------------->
+<!-- <div class="page_title_section">
 
     <div class="page_header">
         <div class="container">
@@ -170,8 +170,8 @@ include('../incs-marketing/header.php');
             </div>
         </div>
     </div>
-</div>
-<!-- inner header wrapper end -->
+</div> -->
+<!------------------------------------------------- inner header wrapper end ----------------------------------------->
 <!-- login wrapper start -->
 <div class="login_wrapper fixed_portion float_left">
     <div class="container">
@@ -179,8 +179,8 @@ include('../incs-marketing/header.php');
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="login_top_box float_left">
                     <div class="login_banner_wrapper">
-                        <img src="images/logo2.png" alt="logo">
-                        <div class="about_btn  facebook_wrap float_left">
+                        <img src="images/logo5.png" alt="logo">
+                        <!-- <div class="about_btn  facebook_wrap float_left">
 
                             <a href="#">login with facebook <i class="fab fa-facebook-f"></i></a>
 
@@ -192,7 +192,7 @@ include('../incs-marketing/header.php');
                         </div>
                         <div class="jp_regis_center_tag_wrapper jb_register_red_or">
                             <h1>OR</h1>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="login_form_wrapper">
                         <form action="" method="POST">
@@ -225,7 +225,7 @@ include('../incs-marketing/header.php');
                         </div> -->
                         <div class="about_btn login_btn float_left">
 
-                            <button type="submit" name="login"><a>login</a></button>
+                            <button type="submit" name="login" class="button">login</button>
                         </div>
                         <div class="dont_have_account float_left">
                             <p>You want to buy ecommerce <a href="buy.php">Sign up to buy?</a></p>
@@ -239,7 +239,7 @@ include('../incs-marketing/header.php');
 </div>
 <!-- login wrapper end -->
 <!-- payments wrapper start -->
-<div class="payments_wrapper float_left">
+<!-- <div class="payments_wrapper float_left">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -291,7 +291,7 @@ include('../incs-marketing/header.php');
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- payments wrapper end -->
 <?php
 

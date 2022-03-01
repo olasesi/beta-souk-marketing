@@ -1559,6 +1559,79 @@ a:hover {
     transition: all 0.6s;
 }
 
+
+/**********************************  ******************************/
+
+.about_btn button {
+    width: 150px;
+    background: #00aaef;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    color: #fff;
+    border: 2px solid transparent;
+    line-height: 40px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: capitalize;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.6s, color 0.6s;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.about_btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #00aaef;
+    z-index: -1;
+    border-radius: inherit;
+    opacity: 0;
+    -webkit-transform: scale3d(0.6, 0.6, 1);
+    transform: scale3d(0.6, 0.6, 1);
+    -webkit-transition: -webkit-transform 0.6s, opacity 0.6s;
+    transition: transform 0.6s, opacity 0.6s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.about_btn button:hover {
+    background-color: transparent;
+    color: #00aaef;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.about_btn button:hover::before {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+}
+/**********************************  *****************************/
+
+
 .about_btn a::before {
     content: '';
     position: absolute;
@@ -4788,7 +4861,7 @@ a:hover {
     height: 50px;
     padding: 15px 23px;
     font-size: 16px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid #031b55;
     border-radius: 5px;
     box-shadow: none;
     -webkit-transition: all 0.3s ease 0s;
@@ -4812,7 +4885,7 @@ a:hover {
 .comments_form .form-control:hover {
     color: #111;
     background-color: transparent;
-    border: 1px solid #30a3f0 !important;
+    border: 1px solid #c43910 !important;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -5923,7 +5996,7 @@ dl.userdescc dd {
     left: 0;
     width: 95px;
     height: 1px;
-    background: #00aaef;
+    background: #031b55;
 }
 
 .heading_wrapper_dark h3 {
@@ -7871,7 +7944,7 @@ dl.userdescc dd {
 }
 
 .login_wrapper {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .login_banner_wrapper {
@@ -7967,9 +8040,9 @@ dl.userdescc dd {
     padding-bottom: 0;
 }
 
-.fixed_portion {
+/* .fixed_portion {
     margin-top: 210px;
-}
+} */
 
 
 /**----- index 2 wrapper css --------**/
@@ -8751,7 +8824,7 @@ dl.userdescc dd {
 }
 
 .slider_index3_wrapper .carousel-inner .carousel-item .carousel-captions .content h3 {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .slider_btm_icon_links {
