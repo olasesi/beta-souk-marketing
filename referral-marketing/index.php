@@ -11,7 +11,7 @@ if(isset($_SESSION['non_ref_users_id'])) {
 }
 
 if(isset($_SESSION['user_id'])) {
-    header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
+   header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
        exit();
 }
 include('../incs-marketing/header.php');
@@ -346,13 +346,7 @@ For <span>Future</span></h3>
                 <a class="test-popup-link button" rel='external' href='https://www.youtube.com/embed/ryzOXAO0Ss0' title='title'><i class="fa fa-play"></i></a>
                 <div class="work_content_wrap">
                     <h1>How It Works</h1>
-                    <ul class="work_checklist_wrapper">
-                        <li>
-                            <a href="#"><i class="fas fa-dollar-sign"></i>get deposit</a>
-                        </li>
-                        <li><a href="#"><i class="far fa-money-bill-alt"></i> utilize money</a></li>
-                        <li><a href="#"><i class="fas fa-plus"></i> give interest</a></li>
-                    </ul>
+                   
 
                 </div>
             </div>
@@ -388,25 +382,9 @@ For <span>Future</span></h3>
                             </p>
                         </div>
 
-                        <div class="caluclator_text_wrapper">
-                            <p>Investment Year : <i class="fas fa-info-circle"></i></p>
-                            <select class="custom-select" id="investmentYears">
-                                <option selected value="5">5 Years</option>
-                                <option value="10">10 Years</option>
-                                <option value="15">15 Years</option>
-                                <option value="20">20 Years</option>
-                                <option value="25">25 Years</option>
-                            </select>
-                        </div>
+                      
 
-                        <div class="about_btn calc_btn index3_about_btn float_left" onclick="CalCommission(); return false;">
-                            <ul>
-                                <li>
-                                    <a href="#">calculate profit</a>
-                                </li>
-                            </ul>
-                        </div>
-
+                     
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 calc">
@@ -586,7 +564,7 @@ Register | Get a personalized unique link | Earn on every sale</p>
                         </div>
                         <div class="investment_border_wrapper pink_border_wrapper"></div>
                         <div class="investment_content_wrapper pink_content_wrapper">
-                            <h1><a href="#">PROMOTIONAL ADs</a></h1>
+                            <h1><a href="#">PROMOTIONAL ADS</a></h1>
 
                             <p>Display products and services by creating customer awareness with web promotional ads across media platforms to generate more sales. 
 </p>

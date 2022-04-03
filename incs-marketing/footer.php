@@ -8,7 +8,7 @@
         <div class="col-lg-4 col-md-6 col-12 col-sm-12">
             <div class="wrapper_second_about">
                 <div class="wrapper_first_image">
-                    <a href="index.html"><img src="images/logo5.png" class="img-responsive" alt="beta souk" /></a>
+                    <a href="/"><img src="images/logo5.png" class="img-responsive" alt="beta souk" /></a>
                 </div>
                 <p>Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales.
 
@@ -36,7 +36,7 @@
 
         <div class="col-lg-2 col-md-3 col-12 col-sm-4">
             <div class="wrapper_second_useful">
-                <h4>usefull links </h4>
+                <h4>useful links </h4>
 
                 <ul>
                
@@ -54,24 +54,7 @@
 
             </div>
         </div>
-        <!-- <div class="col-lg-2 col-md-3 col-12 col-sm-4">
-            <div class="wrapper_second_useful wrapper_second_links">
-
-                <ul>
-                    <li><a href="#"><i class="fa fa-angle-right"></i>sitemap</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i>FAQ </a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i>awards </a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i>tstimonials</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i>career</a> </li>
-                </ul>
-
-            </div>
-        </div> -->
-
+      
         <div class="col-lg-4 col-md-6 col-12 col-sm-12">
             <div class="wrapper_second_useful wrapper_second_useful_2">
                 <h4>contact us</h4>

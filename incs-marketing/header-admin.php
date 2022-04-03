@@ -68,8 +68,7 @@ Author: Webstrot
                 <ul class="cd-secondary-dropdown icon_menu is-hidden">
                     <li class="go-back"><a href="#0">Menu</a></li>
                     <li><a href="index.html">index I</a></li>
-                    <li><a href="index2.html">index II</a></li>
-                    <li><a href="index3.html">index III</a></li>
+                   
                 </ul>
             </li>
             <li><a href="about_us.html"> about us </a></li>

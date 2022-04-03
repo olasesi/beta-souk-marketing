@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<!-- 
-Template Name: Savehyip
-Version: 1.0.0
-Author: Webstrot
 
--->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="zxx">
+<html lang="en">
 <!--[endif]-->
 
-
-<!-- Mirrored from webstrot.com/html/savehyip/light_version/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Feb 2022 11:02:32 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8" />
     <title>Beta Souk</title>
@@ -41,7 +34,9 @@ Author: Webstrot
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <!--favicon-->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-<script src='../../../google_analytics_auto.js'></script></head>
+<!-- <script src='../../../google_analytics_auto.js'></script> -->
+
+</head>
 
 <body>
   
@@ -51,7 +46,7 @@ Author: Webstrot
     <!-- Top Scroll End -->
     <!-- cp navi wrapper Start -->
     <nav class="cd-dropdown index3_cd_dropdown d-block d-sm-block d-md-block d-lg-none d-xl-none">
-        <h2><a href="/"> Beta Souk </a></h2>
+        <h2><a href="/">  <img src="images/logo5.png" alt="beta souk"> </a></h2>
         <a href="#0" class="cd-close">Close</a>
         <ul class="cd-dropdown-content">
             <li>
@@ -119,7 +114,7 @@ Author: Webstrot
                 <!-- .cd-dropdown-wrapper -->
             </header>
             <div class="top_header_right_wrapper top_phonecalls">
-                <p><i class="flaticon-phone-contact"></i> (+91) 123 123 4567</p>
+                <!-- <p><i class="flaticon-phone-contact"></i> 08052835221</p> -->
                 <div class="header_btn index3_header_btn">
                     <ul>
                    

@@ -254,13 +254,13 @@ trigger_error('You could not be registered due to a system error. We apologize f
 
                                     <div class="form-group icon_form comments_form">
 
-<input type="text" class="form-control require" value="<?php if(isset($_POST['username'])){echo $_POST['username'];}?>" name="username" placeholder="Username">
-<?php 
-if (array_key_exists('username', $signup_errors)) {
-echo '<p class="text-danger" >'.$signup_errors['username'].'</p>';
-}
-?>
-</div>
+                    <input type="text" class="form-control require" value="<?php if(isset($_POST['username'])){echo $_POST['username'];}?>" name="username" placeholder="Username">
+                    <?php 
+                    if (array_key_exists('username', $signup_errors)) {
+                    echo '<p class="text-danger" >'.$signup_errors['username'].'</p>';
+                    }
+                    ?>
+                    </div>
 
 
                                     <div class="form-group icon_form comments_form">
@@ -310,7 +310,7 @@ echo '<p class="text-danger" >'.$signup_errors['username'].'</p>';
                         <!-- <div class="dont_have_account float_left">
                             <p>Don’t have an acount ? <a href="register.html">Sign up</a></p>
                         </div> -->
-</form>
+        </form>
                     </div>
                 </div>
             </div>

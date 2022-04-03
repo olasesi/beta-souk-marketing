@@ -44,7 +44,7 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
     if(empty($signup_errors)){
  
        
-        $query = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_username='".$username."'") or die(db_conn_error);
+        $query = mysqli_query($connect, "SELECT * FROM users WHERE u_username='".$username."'") or die(db_conn_error);
      
        if(mysqli_num_rows($query) == 1){
            
@@ -53,33 +53,33 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
 
       
        
-        if(password_verify($password,$row[6])){
+        if(password_verify($password,$row[12])){
           
           $value = md5(uniqid(rand(), true));
-          $query_confirm_sessions = mysqli_query ($connect, "SELECT non_ref_users_cookie FROM non_ref_users WHERE non_ref_users_username='".$username."'") or die(db_conn_error);
+          $query_confirm_sessions = mysqli_query ($connect, "SELECT u_cookie FROM users WHERE u_username='".$username."'") or die(db_conn_error);
           $cookie_value_if_empty = mysqli_fetch_array($query_confirm_sessions);
           
           if(empty($cookie_value_if_empty[0])){
-          mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_cookie = '".$value."' WHERE non_ref_users_username='".$username."'") or die(db_conn_error);		
-          setcookie("buy_cookie_session", $value, time() + 7*24*3600);	//7 days for cookie to expire
+          mysqli_query($connect,"UPDATE users SET u_cookie = '".$value."' WHERE u_username='".$username."'") or die(db_conn_error);		
+          setcookie("login_referred_session", $value, time() + 7*24*3600);	//7 days for cookie to expire
           
           }else if(!empty($cookie_value_if_empty[0])){
           
-          setcookie("buy_cookie_session", $cookie_value_if_empty[0], time() + 7*24*3600);	//7 days for cookie to expire
+          setcookie("login_referred_session", $cookie_value_if_empty[0], time() + 7*24*3600);	//7 days for cookie to expire
           }
       
       
-      $_SESSION['non_ref_users_id'] = $row[0];
-      $_SESSION['non_ref_users_firstname'] = $row[2];
-      $_SESSION['non_ref_users_surname'] = $row[3];
-      $_SESSION['non_ref_users_username'] = $row[4];
-      $_SESSION['non_ref_users_email'] = $row[5];
-      $_SESSION['non_ref_users_address'] = $row[7];
-      $_SESSION['non_ref_users_package'] = $row[8];
-      $_SESSION['non_ref_users_price'] = $row[9];
-      $_SESSION['non_ref_users_order'] = $row[10];
-      $_SESSION['non_ref_users_reference'] = $row[11];
-      $_SESSION['non_ref_users_timestamp'] = $row[13];
+      $_SESSION['users_id'] = $row[0];
+      $_SESSION['u_firstname'] = $row[3];
+      $_SESSION['u_surname'] = $row[4];
+      $_SESSION['u_username'] = $row[6];
+      $_SESSION['u_email'] = $row[5];
+      $_SESSION['u_address'] = $row[7];
+      $_SESSION['u_package'] = $row[8];
+      $_SESSION['u_price'] = $row[9];
+      $_SESSION['u_order'] = $row[10];
+      $_SESSION['u_reference'] = $row[11];
+      $_SESSION['u_timestamp'] = $row[15];
       
       header('Location:'.GEN_WEBSITE.'/dashboard.php');
        exit;

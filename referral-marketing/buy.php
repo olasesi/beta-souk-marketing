@@ -48,40 +48,40 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
 		$errors['username'] = 'Please enter valid username. Alpha-numeric letters, underscore or dash.';
 	} 
 
-if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
-	$email = mysqli_real_escape_string($connect,$_POST['email']);
-}else{
-	$errors['email'] = "Enter a valid email address";
-}
-
-
-if($_POST['password'] == $_POST['confirm_password']){
-	if(preg_match('/^.{6,255}$/i',$_POST['password'])){
-    $password =  mysqli_real_escape_string($connect,$_POST['password']);
-  }else{
-    $errors['password'] = "Minimum of 6 characters";
-  }
-}else{
-	$errors['password_match'] = "Password did not match";
-}
-
-
-if ($_POST['package'] == "Choose package") {
-    $errors['package'] = 'Please select package';
-} else{
-$package = $_POST['package'];
-}
-
-
-
-if (preg_match ('/^.{3,255}+$/i', trim($_POST['address']))) {		
-    $address = mysqli_real_escape_string ($connect, trim($_POST['address']));
-    } else {
-    $errors['address'] = 'Please enter a valid location';
+    if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+        $email = mysqli_real_escape_string($connect,$_POST['email']);
+    }else{
+        $errors['email'] = "Enter a valid email address";
     }
-    
 
-    $queries = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_username='".$username."'") or die(db_conn_error); 
+
+    if($_POST['password'] == $_POST['confirm_password']){
+        if(preg_match('/^.{6,255}$/i',$_POST['password'])){
+        $password =  mysqli_real_escape_string($connect,$_POST['password']);
+    }else{
+        $errors['password'] = "Minimum of 6 characters";
+    }
+    }else{
+        $errors['password_match'] = "Password did not match";
+    }
+
+
+    if ($_POST['package'] == "Choose package") {
+        $errors['package'] = 'Please select package';
+    } else{
+    $package = $_POST['package'];
+    }
+
+
+
+    if (preg_match ('/^.{3,255}+$/i', trim($_POST['address']))) {		
+        $address = mysqli_real_escape_string ($connect, trim($_POST['address']));
+        } else {
+        $errors['address'] = 'Please enter a valid location';
+        }
+        
+
+    $queries = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_username='".mysqli_real_escape_string ($connect, trim($_POST['username']))."'") or die(db_conn_error); 
 
     if(mysqli_num_rows($queries) == 1 ){
         $errors['username_taken'] = 'Username has been taken. Please choose another username';
@@ -114,7 +114,7 @@ if (preg_match ('/^.{3,255}+$/i', trim($_POST['address']))) {
              //Set other parameters as keys in the $postdata array
              $postdata = [
                  'email' => $email,
-                 'amount' => $price*10,
+                 'amount' => $price*100,
                  'reference' => $reference_num,
                  'callback_url' => GEN_WEBSITE.'/buy-verify-payment.php'
              ];
@@ -178,38 +178,8 @@ if (preg_match ('/^.{3,255}+$/i', trim($_POST['address']))) {
 
 
 }
-
-
-
 include('../incs-marketing/header.php');
 ?>
-
-
-<!-- inner header wrapper start -->
-<div class="page_title_section">
-
-    <div class="page_header">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-9 col-md-9 col-12 col-sm-8">
-
-                    <h1>Order</h1>
-                </div>
-                <div class="col-lg-3 col-md-3 col-12 col-sm-4">
-                    <div class="sub_title_section">
-                        <ul class="sub_title">
-                            <li> <a href="#"> Home </a>&nbsp; / &nbsp; </li>
-                            <li>Order</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- inner header wrapper end -->
-<!-- login wrapper start -->
 <div class="login_wrapper fixed_portion float_left">
     <div class="container">
         <div class="row">
@@ -293,26 +263,30 @@ echo '<p class="text-danger" >'.$errors['email'].'</p>';
 
                                     <?php        
                                         $array = array('Basic', 'Essential', 'Premium');                   
-                                                            echo "<option>Choose package</option>";
-                                                
+                                                            echo '<option>Choose package</option>';
+                                                            
                                                             if(isset($_POST['package'])){
+                                                           
                                                                 foreach ($array as $one_package){
-                                                                $sel = ($one_package==$_POST['package'])?"Selected='selected'":"";
-                                                                echo "<option $sel>$one_package</option>";}
+                                                                $sel = ($one_package==$_POST['package'])?'selected="selected"':'';
+                                                                echo '<option '.$sel.'>'.$one_package.'</option>';}
                                                             }else{
+                                                               
                                                             foreach ($array as $one_package){
-                                                            echo "<option>$one_package</option>";
+                                                            echo '<option>'.$one_package.'</option>';
                                                             }
                                                             }
-                                                            ?>     
-                                    <?php 
-                                                    if (array_key_exists('package', $errors)) {
-                                                        echo '<p class="text-danger" >'.$errors['package'].'</p>';
-                                                        }
+
+                                                         
+                                                     
+
+                                                       
                                                     ?>
 
                                     </select>
-
+<?php   if (array_key_exists('package', $errors)){
+                                                        echo '<p class="text-danger">'.$errors['package'].'</p>';
+                                                        } ?>
                                                         </div>
                                                                        
                                     
@@ -371,6 +345,10 @@ echo '<p class="text-danger" >'.$errors['email'].'</p>';
                                                             <!-- <div class="dont_have_account float_left">
                                                                 <p>Don’t have an acount ? <a href="register.html">Sign up</a></p>
                                                             </div> -->
+
+ 
+
+
 </form>
                     
                     </div>

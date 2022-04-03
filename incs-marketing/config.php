@@ -18,7 +18,7 @@ define( 'DB_PASSWORD', '' );//eQD}TXM#kVEj
 define( 'DB_HOST', 'localhost' );
 
 
-define ('GEN_WEBSITE', 'http://localhost/beta-souk-marketing/referral-marketing');	//
+define ('GEN_WEBSITE', 'https://localhost/beta-souk-marketing/referral-marketing');	//
 
 define ('DOMAIN_NAME', 'betasouk.com');	//
 
@@ -32,7 +32,7 @@ define ('PREMIUM', 300000);
 
 $now = new DateTime();					
 
-define('API_KEY', 'Bearer sk_test_*********************************');
+define('API_KEY', 'Bearer sk_test_4cab8d4d937b1ab5f847c78c0014a2f6a6e3405c');
 
 
 
