@@ -17,14 +17,6 @@ if(isset($_SESSION['user_id'])) {
     header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
        exit();
 }
-
-
-
-
-
-
-
-
 ?>
 <?php
 $errors = array();
@@ -114,7 +106,7 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
              //Set other parameters as keys in the $postdata array
              $postdata = [
                  'email' => $email,
-                 'amount' => $price*10,
+                 'amount' => $price*100,
                  'reference' => $reference_num,
                  'callback_url' => GEN_WEBSITE.'/buy-verify-payment.php'
              ];
