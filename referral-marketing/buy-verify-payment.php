@@ -20,6 +20,35 @@ if(mysqli_num_rows($query_select) == 0){
 
 
 
+$result = array();
+//The parameter after verify/ is the transaction reference to be verified
+$url = 'https://api.paystack.co/transaction/verify/'.$_GET['reference'];
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt(
+$ch, CURLOPT_HTTPHEADER, [
+'Authorization: '.API_KEY]
+);
+$request = curl_exec($ch);
+curl_close($ch);
+
+if ($request) {
+$result = json_decode($request, true);
+}
+
+if (array_key_exists('data', $result) && array_key_exists('status', $result['data']) && ($result['data']['status'] === 'success')) {
+
+    mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_order='1' WHERE non_ref_users_reference = '".$_GET['reference']."'") or die(db_conn_error);
+
+  
+}else{
+    header('Location:'.GEN_WEBSITE);
+    exit();
+}
+
+
 include('../incs-marketing/header2.php');
 
 
@@ -41,7 +70,7 @@ echo '
 
 ?>
 <?php
-$query_users = mysqli_query($connect, "SELECT user_id_marketer FROM users WHERE u_reference  = '".mysqli_real_escape_string ($connect, $_GET['reference'])."' AND u_order='1'") or die(db_conn_error);
+//$query_users = mysqli_query($connect, "SELECT user_id_marketer FROM users WHERE u_reference  = '".mysqli_real_escape_string ($connect, $_GET['reference'])."' AND u_order='1'") or die(db_conn_error);
 
 
 ?>
