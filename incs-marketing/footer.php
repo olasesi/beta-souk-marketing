@@ -11,9 +11,10 @@
 							<p>Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales.</p>
 						</div>
 						<div class="aplpg-footer-socials">
-							<a href="#"><i class="fab fa-facebook"></i></a>
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
 							<a href="#"><i class="fab fa-twitter"></i></a>
 							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
 						</div>
 					</div>
 				</div>
@@ -50,15 +51,10 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="aplpg-footer-widget" data-wow-delay="0.6s">
-						<div class="aplpg-headline">
-							<h6>Buy Ecommerce</h6>
-						</div>
 						<div class="aplpg-footer-buttons">
-							<a href="#" class="aplpg-google-btn">
-								<span>Get Started</span>
-							</a>
+							<img src="img/app-landing/betasouk_webinar.png" alt="..." class="img-thumbnail">
 							<a href="#" class="aplpg-apple-btn">
-								<span>Free Trial</span>
+								<span>Get Free E-book</span>
 							</a>
 						</div>
 					</div>

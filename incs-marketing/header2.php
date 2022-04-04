@@ -7,7 +7,7 @@ Author: Duromedia
 -->
 <head>
 	<meta charset="UTF-8">
-	<title>App Landing- One Page</title>
+	<title>Beta Souk - Utilizing Digital Platforms For Businesses</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="description" content="Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales." />
     <meta name="keywords" content="Ecommerce, online store, beta souk, digital platforms, businesses, promote, business, sercives, sales, profit" />
@@ -56,12 +56,11 @@ Author: Duromedia
 				<div class="col-lg-7 appl-desktop-menu">
 					<div class="aplpg-nav-menu">
 						<ul>
-							<li><a class="nav-link" href="#aplpg_banner" class="active">Home</a></li>
-							<li><a class="nav-link" href="#aplpg_process">How it works</a></li>
-							<li><a class="nav-link" href="#aplpg_about">About</a></li>
-							<li><a class="nav-link" href="#aplpg_pricing">Pricing</a></li>
-							<li><a class="nav-link" href="#aplpg_blog">Blog</a></li>
-							<li class="btn btn-danger btn-sm rounded-pill mx-3"><a href="">Get Started</a></li>
+							<li><a class="nav-link" href="/#banner" class="active">Home</a></li>
+							<li><a class="nav-link" href="/#about">About</a></li>
+							<li><a class="nav-link" href="/#webinar">webinar</a></li>
+							<li><a class="nav-link" href="/#pricing">Pricing</a></li>
+							<li><a class="nav-link" href="/#blog">Blog</a></li>
 						</ul>
 					</div>
 				</div>
@@ -86,11 +85,12 @@ Author: Duromedia
 			<a href="#" class="aplpg-mobile-menu-close"><i class="fas fa-times"></i></a>
 			<nav>
 				<ul>
-					<li><a href="#aplpg_banner" class="active">Home</a></li>
-					<li><a href="#aplpg_process">How it works</a></li>
-					<li><a href="#aplpg_about">About</a></li>
-					<li><a href="#aplpg_pricing">Pricing</a></li>
-					<li><a href="#aplpg_blog">Blog</a></li>
+					<li><a class="nav-link" href="#banner" class="active">Home</a></li>
+					<li><a class="nav-link" href="#about">About</a></li>
+					<li><a class="nav-link" href="#webinar">webinar</a></li>
+					<li><a class="nav-link" href="#pricing">Pricing</a></li>
+					<li><a class="nav-link" href="#blog">Blog</a></li>
+					<li class="btn btn-danger btn-sm rounded-pill mx-3"><a href="">Get Started</a></li>
 				</ul>
 			</nav>
 		</div>

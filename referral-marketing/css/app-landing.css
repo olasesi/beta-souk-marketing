@@ -1559,11 +1559,7 @@ a.aplpg-secondary-btn:hover .aplpg-gradient-border {
 
 .aplpg-feature-right .aplpg-feature-column .aplpg-icon-wrapper span i {
   line-height: 0;
-  background-image: -webkit-linear-gradient(137deg, #ca4e28 0%, #d67558 100%);
-  background-image: -o-linear-gradient(137deg, #ca4e28 0%, #d67558 100%);
-  background-image: linear-gradient(313deg, #ca4e28 0%, #d67558 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #d67558;
 }
 
 .aplpg-feature-right .aplpg-feature-column .aplpg-feature-content {

@@ -134,10 +134,10 @@ include('../incs-marketing/header2.php');
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="row login_top_box float_left">
-                    <div class="login_banner_wrapper align-items-center">
+                    <div class="col-lg-6 col-md-12 col-sm-12 login_banner_wrapper align-items-center">
                         <!-- <img src="img/app-landing/logo5.png" alt="logo"> -->
                     </div>
-                    <div class="login_form_wrapper">
+                    <div class="col-lg-6 col-md-12 col-sm-12 login_form_wrapper">
                         <form action="" method="POST">
                         <div class="sv_heading_wraper heading_wrapper_dark dark_heading hwd">
 

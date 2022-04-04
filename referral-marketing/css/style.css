@@ -4977,7 +4977,7 @@ a:hover {
 .login_form_wrapper {
   float: left;
   padding: 60px;
-  width: 55%;
+  /* width: 55%; */
   padding: 80px 100px 78px 100px;
   text-align: center;
 }
@@ -7924,7 +7924,7 @@ dl.userdescc dd {
 
 .login_banner_wrapper {
   float: left;
-  width: 45%;
+  /* width: 45%; */
   background-image: url(../img/app-landing/betasouk_productlist.png);
   height: 100%;
   background-position: center 0;

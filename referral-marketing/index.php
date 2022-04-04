@@ -20,16 +20,17 @@ include('../incs-marketing/header.php');
     <!-- Hero Slider Area 
 	============================================= -->
 	
-	<section class="aplpg-hero-slider-area" id="aplpg_banner">
+	<section class="aplpg-hero-slider-area" id="banner">
 		<div class="aplpg-hero-single-slide" data-background="img/app-landing//betasouk_banner-slide.png">
 			<div class="aplpg-social-left">
 				<div class="aplpg-social-links">
-					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
 					<a href="#"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<div class="aplpg-scroll-btn">
-					<a href="#aplpg_process"><i class="fas fa-arrow-left"></i>Scroll Down</a>
+					<a href="#process"><i class="fas fa-arrow-left"></i>Scroll Down</a>
 				</div>
 			</div>
 			<div class="container">
@@ -70,12 +71,13 @@ include('../incs-marketing/header.php');
 		<div class="aplpg-hero-single-slide" data-background="img/app-landing/betasouk_banner-slide.png">
 			<div class="aplpg-social-left">
 				<div class="aplpg-social-links">
-					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
 					<a href="#"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<div class="aplpg-scroll-btn">
-					<a href="#aplpg_process"><i class="fas fa-arrow-left"></i>Scroll Down</a>
+					<a href="#process"><i class="fas fa-arrow-left"></i>Scroll Down</a>
 				</div>
 			</div>
 			<div class="container">
@@ -122,12 +124,12 @@ include('../incs-marketing/header.php');
 	<!-- Process Section 
 	============================================= -->
 	
-	<section class="aplpg-process-section" id="aplpg_process">
+	<section class="aplpg-process-section" id="process">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-2">
 					<div class="aplpg-title-area text-center wow fadeInUp">
-						<span class="aplpg-subtitle">How it works</span>
+						<span class="aplpg-subtitle">Benefits</span>
 						<div class="aplpg-headline p-30">
 							<h3>Improved design and performance of high level ecommerce platform</h3>
 						</div>
@@ -139,7 +141,7 @@ include('../incs-marketing/header.php');
 					<div class="col-lg-4 col-md-6">
 						<div class="aplpg-process-column wow fadeInUp">
 							<div class="aplpg-icon-wrapper">
-								<i class="flaticon-download"></i>
+								<i class="fas fa-rocket"></i>
 							</div>
 							<div class="aplpg-headline">
 								<h5>Boost your sales</h5>
@@ -186,7 +188,7 @@ include('../incs-marketing/header.php');
 	<!-- About Section 
 	============================================= -->
 	
-	<section class="aplpg-about-section" id="aplpg_about">
+	<section class="aplpg-about-section" id="about">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-6">
@@ -338,7 +340,7 @@ include('../incs-marketing/header.php');
 							<div class="col-lg-6 col-md-6">
 								<div class="aplpg-feature-column wow fadeInUp">
 									<div class="aplpg-icon-wrapper">
-										<span><i class="flaticon-download"></i></span>
+										<span><i class="flaticon-customize"></i></span>
 									</div>
 									<div class="aplpg-feature-content">
 										<div class="aplpg-headline">
@@ -368,7 +370,8 @@ include('../incs-marketing/header.php');
 							<div class="col-lg-6 col-md-6">
 								<div class="aplpg-feature-column wow fadeInUp" data-wow-delay="0.4s">
 									<div class="aplpg-icon-wrapper">
-										<span><i class="flaticon-team"></i></span>
+										<span><i class="fas fa-money-bill"></i></span>
+										
 									</div>
 									<div class="aplpg-feature-content">
 										<div class="aplpg-headline">
@@ -383,7 +386,7 @@ include('../incs-marketing/header.php');
 							<div class="col-lg-6 col-md-6">
 								<div class="aplpg-feature-column wow fadeInUp" data-wow-delay="0.6s">
 									<div class="aplpg-icon-wrapper">
-										<span><i class="flaticon-phone-call"></i></span>
+										<span><i class="fas fa-envelope"></i></span>
 									</div>
 									<div class="aplpg-feature-content">
 										<div class="aplpg-headline">
@@ -490,7 +493,7 @@ include('../incs-marketing/header.php');
 	<!-- Webinar Section 
 	============================================= -->
 	
-	<section class="aplpg-brand-section">
+	<section class="aplpg-brand-section" id="webinar">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-5 col-md-10 order-lg-1 order-2">
@@ -597,7 +600,7 @@ include('../incs-marketing/header.php');
 	<!-- Pricing Table  
 	============================================= -->
 	
-	<section class="aplpg-pricing-table" id="aplpg_pricing" data-background="img/app-landing/pricing-bg.jpg">
+	<section class="aplpg-pricing-table" id="pricing" data-background="img/app-landing/pricing-bg.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-8 offset-md-2 offset-lg-3">
@@ -696,7 +699,7 @@ include('../incs-marketing/header.php');
 				</div>
 				<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
 					<defs>
-						<filter id="aplpg_round">
+						<filter id="round">
 							<feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />    
 							<feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
 							<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
@@ -921,7 +924,7 @@ include('../incs-marketing/header.php');
 	<!-- Blog Section 
 	============================================= -->
 	
-	<section class="aplpg-blog-section" id="aplpg_blog">
+	<section class="aplpg-blog-section" id="blog">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2">
@@ -933,97 +936,11 @@ include('../incs-marketing/header.php');
 					</div>
 				</div>
 			</div>
-			<div class="aplpg-blog-content">
-				<div class="aplpg-blog-slider">
-					<div class="col-lg-4">
-						<div class="aplpg-blog-column">
-							<div class="aplpg-img-wrapper">
-								<img src="img/app-landing/blog/01.jpg" alt="">
-							</div>
-							<div class="aplpg-blog-meta">
-								<span><i class="fas fa-user"></i>By Admin</span>
-								<span><i class="fas fa-calendar-alt"></i>June5,2021</span>
-							</div>
-							<div class="aplg-blog-column-txt">
-								<div class="aplpg-headline">
-									<a href="#"><h6>Aerial Photograhpy of Snowy Mountain Ranges</h6></a>
-								</div>
-								<div class="aplpg-pera-txt">
-									<p>iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-								</div>
-							</div>
-							<div class="aplpg-readmore-btn">
-								<a href="#"><i class="fas fa-plus"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="aplpg-blog-column">
-							<div class="aplpg-img-wrapper">
-								<img src="img/app-landing/blog/02.jpg" alt="">
-							</div>
-							<div class="aplpg-blog-meta">
-								<span><i class="fas fa-user"></i>By Admin</span>
-								<span><i class="fas fa-calendar-alt"></i>June5,2021</span>
-							</div>
-							<div class="aplg-blog-column-txt">
-								<div class="aplpg-headline">
-									<a href="#"><h6>Journeys are Best Measured in New Friends</h6></a>
-								</div>
-								<div class="aplpg-pera-txt">
-									<p>iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-								</div>
-							</div>
-							<div class="aplpg-readmore-btn">
-								<a href="#"><i class="fas fa-plus"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="aplpg-blog-column">
-							<div class="aplpg-img-wrapper">
-								<img src="img/app-landing/blog/03.jpg" alt="">
-							</div>
-							<div class="aplpg-blog-meta">
-								<span><i class="fas fa-user"></i>By Admin</span>
-								<span><i class="fas fa-calendar-alt"></i>June5,2021</span>
-							</div>
-							<div class="aplg-blog-column-txt">
-								<div class="aplpg-headline">
-									<a href="#"><h6>Assorted Color Buildings and Sea in Riomaggiore</h6></a>
-								</div>
-								<div class="aplpg-pera-txt">
-									<p>iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-								</div>
-							</div>
-							<div class="aplpg-readmore-btn">
-								<a href="#"><i class="fas fa-plus"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="aplpg-blog-column">
-							<div class="aplpg-img-wrapper">
-								<img src="img/app-landing/blog/03.jpg" alt="">
-							</div>
-							<div class="aplpg-blog-meta">
-								<span><i class="fas fa-user"></i>By Admin</span>
-								<span><i class="fas fa-calendar-alt"></i>June5,2021</span>
-							</div>
-							<div class="aplg-blog-column-txt">
-								<div class="aplpg-headline">
-									<a href="#"><h6>Aerial Photograhpy of Snowy Mountain Ranges</h6></a>
-								</div>
-								<div class="aplpg-pera-txt">
-									<p>iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-								</div>
-							</div>
-							<div class="aplpg-readmore-btn">
-								<a href="#"><i class="fas fa-plus"></i></a>
-							</div>
-						</div>
-					</div>
+			<div class="aplpg-blog-content" id="medium">
+				<div class="row aplpg-blog-slider" id="jsonContent">
+					
 				</div>
+
 			</div>
 		</div>
 	</section>

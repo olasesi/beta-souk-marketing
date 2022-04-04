@@ -190,10 +190,10 @@ include('../incs-marketing/header2.php');
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="row login_top_box float_left align-items-center">
-                    <div class="login_banner_wrapper align-items-center ">
+                    <div class="col-lg-6 col-md-12 col-sm-12 login_banner_wrapper align-items-center ">
                         <!-- <img src="img/app-landing/logo5.png" alt="logo"> -->
                     </div>
-                    <div class="login_form_wrapper">
+                    <div class="col-lg-6 col-md-12 col-sm-12 login_form_wrapper">
                         <form action="" method="POST">
                         <div class="sv_heading_wraper heading_wrapper_dark dark_heading hwd">
 
@@ -295,41 +295,38 @@ include('../incs-marketing/header2.php');
 
                                     ?>
                                     </div>
-                                                                        <div class="form-group icon_form comments_form">
+                                                <div class="form-group icon_form comments_form">
 
-                                                                        <input type="text" class="form-control require" value="<?php if(isset($_POST['address'])){echo $_POST['address'];}?>" name="address" placeholder="location">
-                                                                        <?php 
-                                                    if (array_key_exists('address', $errors)) {
-                                                        echo '<p class="text-danger" >'.$errors['address'].'</p>';
-                                                        }
-                                                    ?>
+                                                <input type="text" class="form-control require" value="<?php if(isset($_POST['address'])){echo $_POST['address'];}?>" name="address" placeholder="location">
+                                                <?php 
+                            if (array_key_exists('address', $errors)) {
+                                echo '<p class="text-danger" >'.$errors['address'].'</p>';
+                                }
+                            ?>
 
-                                                        </div>           
-                                                                                            
-                                                            <!-- <div class="login_remember_box">
-                                                                <label class="control control--checkbox">Remember me
-                                                                        <input type="checkbox">
-                                                                        <span class="control__indicator"></span>
-                                                                    </label>
-                                                                <a href="#" class="forget_password">
-                                                                        Forgot Password
-                                                                    </a>
-                                                            </div> -->
+                                </div>           
+                                                                    
+                                    <!-- <div class="login_remember_box">
+                                        <label class="control control--checkbox">Remember me
+                                                <input type="checkbox">
+                                                <span class="control__indicator"></span>
+                                            </label>
+                                        <a href="#" class="forget_password">
+                                                Forgot Password
+                                            </a>
+                                    </div> -->
 
-                                                            <div class="about_btn login_btn float_left">
+                                    <div class="about_btn login_btn float_left">
 
-                                                                <button type="submit" name="order"><a>Continue</a></button>
-                                                            </div> 
-                                                           
-                                                            <div class="dont_have_account float_left">
-                                                                <p>Already have an account ? <a href="buy-login.php">Login</a></p>
-                                                            </div>
+                                        <button type="submit" name="order"><a>Continue</a></button>
+                                    </div> 
+                                    
+                                    <div class="dont_have_account float_left">
+                                        <p>Already have an account ? <a href="buy-login.php">Login</a></p>
+                                    </div>
 
- 
+                                    </form>
 
-
-</form>
-                    
                     </div>
                 </div>
             </div>

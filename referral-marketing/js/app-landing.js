@@ -231,7 +231,7 @@ Last change:    00/00/00
               youtube: {
                 index: "youtube.com/",
                 id: "v=",
-                src: "https://youtu.be/KRc47o8uDhk",
+                src: "https://www.youtube.com/embed/%id%?autoplay=1",
               },
             },
           },

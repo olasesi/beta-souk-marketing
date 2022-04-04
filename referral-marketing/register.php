@@ -158,7 +158,7 @@ trigger_error('You could not be registered due to a system error. We apologize f
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="row login_top_box float_left align-items-center">
-                    <div class="login_banner_wrapper">
+                    <div class="col-lg-6 col-md-12 col-sm-12 login_banner_wrapper">
                         <!-- <img src="img/app-landing/logo5.png" alt="logo"> -->
                         <!-- <div class="about_btn  facebook_wrap float_left">
 
@@ -172,7 +172,7 @@ trigger_error('You could not be registered due to a system error. We apologize f
                             <h1>OR</h1>
                         </div> -->
                     </div>
-                    <div class="login_form_wrapper">
+                    <div class="col-lg-6 col-md-12 col-sm-12 login_form_wrapper">
                         <form action="" method="POST">
                         <div class="sv_heading_wraper heading_wrapper_dark dark_heading hwd">
                             <h3>Affiliate Registration</h3>
