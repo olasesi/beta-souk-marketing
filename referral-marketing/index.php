@@ -982,7 +982,7 @@ include('../incs-marketing/header.php');
 										<i class="fas fa-envelope"></i>
 									</div>
 									<div class="aplpg-pera-txt">
-										<p>sales@betasouk.com</p>
+										<p><a href="mailto:sales@betasouk.com">sales@betasouk.com</a></p>
 									</div>
 								</div>
 								<div class="aplpg-contact-item wow fadeInUp" data-wow-delay="0.6s">
@@ -990,8 +990,8 @@ include('../incs-marketing/header.php');
 										<i class="fas fa-phone"></i>
 									</div>
 									<div class="aplpg-pera-txt">
-										<p>234 805 283 5221</p>
-										<p>234 708 929 2535</p>
+										<p><a href="tel:+234 805 283 5221">234 805 283 5221</a></p>
+										<p><a href="tel:+234 708 929 2535">234 708 929 2535</a></p>
 									</div>
 								</div>
 							</div>

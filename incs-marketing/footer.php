@@ -11,10 +11,10 @@
 							<p>Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales.</p>
 						</div>
 						<div class="aplpg-footer-socials">
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-instagram"></i></a>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="https://facebook.com/betasoukafrica"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://twitter.com/betasoukafrica"><i class="fab fa-twitter"></i></a>
+							<a href="https://instagram.com/betasoukafrica"><i class="fab fa-instagram"></i></a>
+							<a href="https://linkedin.com/company/betasoukafrica"><i class="fab fa-linkedin-in"></i></a>
 						</div>
 					</div>
 				</div>
