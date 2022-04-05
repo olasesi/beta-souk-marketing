@@ -39,29 +39,9 @@ $result = json_decode($request, true);
 
 if (array_key_exists('data', $result) && array_key_exists('status', $result['data']) && ($result['data']['status'] === 'success')) {
 
-    // $query_term_start_end = mysqli_query($connect, "SELECT choose_term, school_session FROM term_start_end ORDER BY term_start_end_id DESC LIMIT 1") or die(db_conn_error);
+ mysqli_query($connect, "UPDATE users SET u_order='1' WHERE u_reference = '".$_GET['reference']."'") or die(db_conn_error);
+
   
-    // while($whiling_term_start_end = mysqli_fetch_array($query_term_start_end)){
-
-    //   $term = $whiling_term_start_end['choose_term'];
-    //   $session = $whiling_term_start_end['school_session'];
-    // }
-
-
-    mysqli_query($connect, "UPDATE users SET u_order='1' WHERE u_reference = '".$_GET['reference']."'") or die(db_conn_error);
-
-    // if(mysqli_affected_rows($connect) == 1){
-    
-    
-    // }
-
-    
-
-    
-    // header('Location:'.GEN_WEBSITE.'/school-payment.php?ref='.$_GET['reference'].'&status='.$result['data']['status']);
-    // exit();
-   
-//Perform necessary action
 }else{
     header('Location:'.GEN_WEBSITE);
     exit();
