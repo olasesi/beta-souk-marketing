@@ -24,10 +24,10 @@ include('../incs-marketing/header.php');
 		<div class="aplpg-hero-single-slide" data-background="img/app-landing//betasouk_banner-slide.png">
 			<div class="aplpg-social-left">
 				<div class="aplpg-social-links">
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>
-					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+				<a href="https://facebook.com/betasoukafrica"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://twitter.com/betasoukafrica"><i class="fab fa-twitter"></i></a>
+							<a href="https://instagram.com/betasoukafrica"><i class="fab fa-instagram"></i></a>
+							<a href="https://linkedin.com/company/betasoukafrica"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<div class="aplpg-scroll-btn">
 					<a href="#process"><i class="fas fa-arrow-left"></i>Scroll Down</a>
@@ -45,7 +45,7 @@ include('../incs-marketing/header.php');
 								<p>Utilizing Digital Platforms For Businesses To Promote Their Products<br> And Services, Create A Great First Impression And Generate More Sales.</p>
 							</div>
 							<div class="aplpg-slider-form">
-								<a href="#" class="aplpg-primary-btn">See All Feature</a>
+								<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-primary-btn">See All Feature</a>
 							</div>
 						</div>
 					</div>
@@ -60,9 +60,6 @@ include('../incs-marketing/header.php');
 									<img src="img/app-landing/clients.png" alt="">
 								</div>
 							</div> -->
-							<span class="aplpg-dot-object">
-								<img src="img/app-landing/dot-object.png" alt="">
-							</span>
 						</div>
 					</div>
 				</div>
@@ -71,10 +68,10 @@ include('../incs-marketing/header.php');
 		<div class="aplpg-hero-single-slide" data-background="img/app-landing/betasouk_banner-slide.png">
 			<div class="aplpg-social-left">
 				<div class="aplpg-social-links">
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>
-					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://facebook.com/betasoukafrica"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://twitter.com/betasoukafrica"><i class="fab fa-twitter"></i></a>
+					<a href="https://instagram.com/betasoukafrica"><i class="fab fa-instagram"></i></a>
+					<a href="https://linkedin.com/company/betasoukafrica"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<div class="aplpg-scroll-btn">
 					<a href="#process"><i class="fas fa-arrow-left"></i>Scroll Down</a>
@@ -92,7 +89,7 @@ include('../incs-marketing/header.php');
 								<p>BetaSouk provides a ready-made e-commerce website for business <br> owners to make more sales</p>
 							</div>
 							<div class="aplpg-slider-form">
-								<a href="#" class="aplpg-primary-btn">See All Feature</a>
+								<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-primary-btn">See All Feature</a>
 							</div>
 						</div>
 					</div>
@@ -107,9 +104,6 @@ include('../incs-marketing/header.php');
 									<img src="img/app-landing/clients.png" alt="">
 								</div>
 							</div> -->
-							<span class="aplpg-dot-object">
-								<img src="img/app-landing/dot-object.png" alt="">
-							</span>
 						</div>
 					</div>
 				</div>
@@ -330,7 +324,7 @@ include('../incs-marketing/header.php');
 							</div>
 						</div>
 						<div class="wow fadeInUp" data-wow-delay="0.2s">
-							<a href="#" class="aplpg-primary-btn">See All Feature</a>
+							<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-primary-btn">See All Feature</a>
 						</div>
 					</div>
 				</div>
@@ -433,7 +427,7 @@ include('../incs-marketing/header.php');
 							</div>
 						</div>
 						<div class="aplpg-explore-btns">
-							<a href="#" class="aplpg-primary-btn wow fadeInUp">Discover Now</a>
+							<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-primary-btn wow fadeInUp">Discover Now</a>
 							<a href="#" class="aplpg-secondary-btn wow fadeInUp" data-wow-delay="0.2s"><span class="aplpg-gradient-border">Free Trial</span></a>
 						</div>
 					</div>
@@ -542,7 +536,7 @@ include('../incs-marketing/header.php');
 					</div>
 				</div>
 				<div class="aplpg-apps-btns">
-					<a href="#" class="aplpg-google-btn">
+					<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-google-btn">
 						<span>Get Started</span>
 					</a>
 					<a href="#" class="aplpg-apple-btn">
@@ -664,7 +658,7 @@ include('../incs-marketing/header.php');
 									<li>Product categories + sub-category creation</li>
 								</ul>
 								<div class="aplpg-pricing-btn">
-									<a href="#">Choose Plan</a>
+									<a href="/beta-souk-marketing/referral-marketing/buy.php">Choose Plan</a>
 								</div>
 							</div>
 						</div>
@@ -691,7 +685,7 @@ include('../incs-marketing/header.php');
 									<li>Whatsapp chat with customers</li>
 								</ul>
 								<div class="aplpg-pricing-btn">
-									<a href="#">Choose Plan</a>
+									<a href="/beta-souk-marketing/referral-marketing/buy.php">Choose Plan</a>
 								</div>
 							</div>
 						</div>

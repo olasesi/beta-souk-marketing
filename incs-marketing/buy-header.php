@@ -1,606 +1,101 @@
 <!DOCTYPE html>
-<!-- 
-Template Name: Betasouk
-Version: 1.0.0
-Author: Duromedia
--->
+<html lang="en"> 
 <head>
-    <meta charset="utf-8" />
-    <title>Beta Souk - Utilizing Digital Platforms For Businesses</title>
+    <meta charset="UTF-8">
+	<title>Beta Souk - Utilizing Digital Platforms For Businesses</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="description" content="Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales." />
     <meta name="keywords" content="Ecommerce, online store, beta souk, digital platforms, businesses, promote, business, sercives, sales, profit" />
     <meta name="author" content="Beta Souk" />
     <meta name="MobileOptimized" content="320" />
-    <!--Template style -->
-    <link rel="stylesheet" type="text/css" href="css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="css/flaticon2.css" />
-	<link rel="stylesheet" type="text/css" href="css/dropify.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="css/nice-select.css" />
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
-	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="css/datatables.css" />
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-	 <!--favicon-->
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-<script src='../../../google_analytics_auto.js'></script></head>
-<!-- color picker start -->
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    
+    <!-- FontAwesome CSS-->
+	<link rel="stylesheet" type="text/css" href="../referral-marketing/css/font-awesome.css">
+    
+    <!-- App CSS -->  
+    <link id="theme-style" rel="stylesheet" href="../referral-marketing/assets/css/portal.css">
 
-<body>
-  <!-- preloader Start -->
-    <!-- <div id="preloader">
-        <div id="status">
-            <img src="images/loader.gif" id="preloader_image" alt="loader">
-        </div>
-    </div> -->
-    <div class="cursor"></div>
-    <!-- Top Scroll Start -->
-    <a href="javascript:" id="return-to-top"> <i class="fas fa-angle-double-up"></i></a>
-    <!-- Top Scroll End -->
-    <!-- cp navi wrapper Start -->
-    <nav class="cd-dropdown d-block d-sm-block d-md-block d-lg-none d-xl-none">
-        <h2><a href="index.html"> savehyip </a></h2>
-        <a href="#0" class="cd-close">Close</a>
-         <ul class="cd-dropdown-content">
-          
-              <li class="has-children">
-                <a href="#">index</a>
-                <ul class="cd-secondary-dropdown icon_menu is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                    <li><a href="index.html">index I</a></li>
-                    <li><a href="index2.html">index II</a></li>
-                    <li><a href="index3.html">index III</a></li>
-                </ul>
-            </li>
-            <li><a href="about_us.html"> about us </a></li>
-            <li><a href="investment.html"> investment plan </a></li>
-			<li><a href="faq.html"> FAQ </a></li>
-			<li class="has-children">
-              <a href="#">dashboard</a>
-                <ul class="cd-secondary-dropdown icon_menu is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                      <li>
-                      <a href="all_transactions.html">all transactions</a>
-					</li>
-                    <li>
-                      <a href="banners.html">banners</a>
-					</li> 
-				   <li>
-                      <a href="change_password.html">change password</a>
-					</li>
-					<li>
-                      <a href="change_pin.html">change pin</a>
-					</li>
-					<li>
-                      <a href="deposit_history.html">deposit history</a>
-                  </li>
-					<li>
-                      <a href="deposit_list.html">deposit list</a>
-                  </li>
-					<li>
-                      <a href="earnings_history.html">earnings history</a>
-                  </li>
-					<li>
-                      <a href="email_notification.html">email notification</a>
-                  </li>   
-					<li>
-                      <a href="exchange_history.html">exchange history</a>
-                  </li>  
-					<li>
-						<a href="exchange_money.html">exchange money</a>
-                  </li> 
-					<li>
-                      <a href="make_deposit.html">make deposit</a>
-                  </li> 	
-					<li>
-                      <a href="my_account.html">my account</a>
-                  </li> 	
-					<li>
-                      <a href="payment_request.html">payment request</a>
-                  </li> 	
-					<li>
-                      <a href="pending_history.html">pending history</a>
-                  </li> 	
-					<li>
-                      <a href="referral_earnings.html">referral earnings</a>
-                  </li> 	
-					<li>
-                      <a href="referrals.html">referrals</a>
-                  </li> 
-					<li>
-                      <a href="tickets.html">tickets</a>
-                  </li> 	
-					<li>
-                      <a href="transfer_fund.html">transfer fund</a>
-                  </li>
-				<li>
-                      <a href="view_profile.html">view profile</a>
-                  </li> 									
-              </ul>
-             </li>  
-				<li class="has-children">
-                <a href="#">blog</a>
-                <ul class="cd-secondary-dropdown icon_menu is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                    <li><a href="blog_category.html">blog category</a></li>
-                    <li><a href="blog_single.html">blog single</a></li>
-                </ul>
-			
-            </li>   
-            <li><a href="contact_us.html"> contact us </a></li>
-            <li><a href="buy-logout.php"> logout </a></li>
-            <!-- <li><a href="register.html"> register </a></li> -->
-        </ul>
-        <!-- .cd-dropdown-content -->
-    </nav>
-	 <div class="cp_navi_main_wrapper inner_header_wrapper dashboard_header_middle float_left">
-        <div class="container-fluid">
-              <div class="cp_logo_wrapper">
-                <a href="index.html">
-                    <img src="img/app-landing/logo5.png" alt="logo">
-                </a>
-            </div>
-            <!-- mobile menu area start -->
-            <header class="mobail_menu d-block d-sm-block d-md-block d-lg-none d-xl-none">
-                <div class="container-fluid">
-                    <div class="row">				
-                       <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="cd-dropdown-wrapper">
-                                <a class="house_toggle inner_toggle" href="#0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.177 31.177" style="enable-background:new 0 0 31.177 31.177;" xml:space="preserve" width="25px" height="25px">
-                                        <g>
-                                            <g>
-                                                <path class="menubar" d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z" fill="#004165" />
-                                            </g>
-                                            <g>
-                                                <path class="menubar" d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z" fill="#004165" />
-                                            </g>
-                                            <g>
-                                                <path class="menubar" d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z" fill="#004165" />
-                                            </g>
-                                            <g>
-                                                <path class="menubar" d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z" fill="#004165" />
-                                            </g>
-                                            <g>
-                                                <path class="menubar" d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z" fill="#004165" />
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </a>
-                                <!-- .cd-dropdown -->
+</head> 
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- .cd-dropdown-wrapper -->
-            </header>
-            <div class="top_header_right_wrapper dashboard_right_Wrapper">
-               <div class="crm_message_dropbox_wrapper">
-                        <div class="nice-select budge_noti_wrapper" tabindex="0"> <span class="current"><i class="flaticon-envelope"></i></span>
-                            <div class="budge_noti">4</div>
-                            <ul class="list">
-                                <li><a href="#">2 New Messages</a>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_main_box_wrapper">
-                                        <div class="crm_mess_img_wrapper">
-                                            <img src="images/mess1.jpg" alt="img">
-                                        </div>
-                                        <div class="crm_mess_img_cont_wrapper">
-                                            <h4>Mr.ajay <span>01:30PM</span></h4>
-                                            <p>I'm Leaving early</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_main_box_wrapper">
-                                        <div class="crm_mess_img_wrapper">
-                                            <img src="images/mess1.jpg" alt="img">
-                                        </div>
-                                        <div class="crm_mess_img_cont_wrapper">
-                                            <h4>Mr.ajay <span>01:30PM</span></h4>
-                                            <p>I'm Leaving early</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_main_box_wrapper">
-                                        <div class="crm_mess_img_wrapper">
-                                            <img src="images/mess1.jpg" alt="img">
-                                        </div>
-                                        <div class="crm_mess_img_cont_wrapper">
-                                            <h4>Mr.akshay <span>01:30PM</span></h4>
-                                            <p>I'm Leaving early</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_main_box_wrapper">
-                                        <div class="crm_mess_img_wrapper">
-                                            <img src="images/mess1.jpg" alt="img">
-                                        </div>
-                                        <div class="crm_mess_img_cont_wrapper">
-                                            <h4>Mr.john <span>01:30PM</span></h4>
-                                            <p>I'm Leaving early</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_all_main_box_wrapper">
-                                        <p><a href="#">See All</a>
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-					        <div class="crm_message_dropbox_wrapper crm_notify_dropbox_wrapper">
-                        <div class="nice-select budge_noti_wrapper" tabindex="0"> <span class="current"><i class="flaticon-notification"></i></span>
-                            <div class="budge_noti">4</div>
-                            <ul class="list">
-                                <li><a href="#">2 New Messages</a>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_main_box_wrapper">
-                                        <div class="crm_mess_img_wrapper">
-                                            <img src="images/mess1.jpg" alt="img">
-                                        </div>
-                                        <div class="crm_mess_img_cont_wrapper">
-                                            <h4>Mr.Farhan <span>01:30PM</span></h4>
-                                            <p>I'm Leaving early</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_main_box_wrapper">
-                                        <div class="crm_mess_img_wrapper">
-                                            <img src="images/mess1.jpg" alt="img">
-                                        </div>
-                                        <div class="crm_mess_img_cont_wrapper">
-                                            <h4>Mr.ajay <span>01:30PM</span></h4>
-                                            <p>I'm Leaving early</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_main_box_wrapper">
-                                        <div class="crm_mess_img_wrapper">
-                                            <img src="images/mess1.jpg" alt="img">
-                                        </div>
-                                        <div class="crm_mess_img_cont_wrapper">
-                                            <h4>Mr.akshay <span>01:30PM</span></h4>
-                                            <p>I'm Leaving early</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_main_box_wrapper">
-                                        <div class="crm_mess_img_wrapper">
-                                            <img src="images/mess1.jpg" alt="img">
-                                        </div>
-                                        <div class="crm_mess_img_cont_wrapper">
-                                            <h4>Mr.john <span>01:30PM</span></h4>
-                                            <p>I'm Leaving early</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="crm_mess_all_main_box_wrapper">
-                                        <p><a href="#">See All</a>
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="crm_profile_dropbox_wrapper">
-                        <div class="nice-select" tabindex="0"> <span class="current"><img src="images/avatar.png" alt="img"> hi, jenny ! <span class="hidden_xs_content"></span></span>
-                            <ul class="list">
-
-                                <li><a href="#"><i class="flaticon-profile"></i> Profile</a>
-                                </li>
-                                <li><a href="#"><i class="flaticon-purse"></i> My Balance</a>
-                                </li>
-                                <li><a href="#"><i class="flaticon-file"></i> My Task</a>
-                                </li>
-                                <li><a href="#"><i class="flaticon-calendar"></i> My Calender</a>
-                                </li>
-                                <li><a href="#"><i class="flaticon-envelope"></i> Inbox</a>
-                                </li>
-                                <li><a href="#"><i class="flaticon-settings"></i> Setting</a>
-                                </li>
-                                <li><a href="#"><i class="flaticon-help"></i> Help</a>
-                                </li>
-                                <li><a href="#"><i class="flaticon-padlock"></i> Lock Screen</a>
-                                </li>
-                                <li><a href="#"><i class="flaticon-turn-off"></i> Logout</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="cp_navigation_wrapper main_top_wrapper dashboard_header">
-                <div class="mainmenu d-xl-block d-lg-block d-md-none d-sm-none d-none">
-                     <ul class="main_nav_ul">             
-                        <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation active_class">index <i class="fas fa-caret-down"></i></a>
-                            <ul class="navi_2_dropdown">
-                                <li class="parent">
-                                    <a href="index.html"><i class="fas fa-caret-right"></i>index I</a>
-                                </li>
-                                <li class="parent">
-                                    <a href="index2.html"><i class="fas fa-caret-right"></i>index II</a>
-                                </li>
-								<li class="parent">
-                                    <a href="index3.html"><i class="fas fa-caret-right"></i>index III</a>
-                                </li> 								
-                            </ul>
-                        </li>   
-                        <li><a href="about_us.html" class="gc_main_navigation">about us</a></li>
-                        <li><a href="investment.html" class="gc_main_navigation">investment plan</a></li>  
-						<li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">pages <i class="fas fa-caret-down"></i></a>
-                            <ul class="navi_2_dropdown">
-                                <li class="parent">
-                                    <a href="faq.html"><i class="fas fa-caret-right"></i>FAQ</a>
-                                </li>
-                                <li class="parent">
-                                    <a href="buy-logout.php"><i class="fas fa-caret-right"></i>logout</a>
-                                </li>  
-														
-                            </ul>
-                        </li>
-						<li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">dashboard <i class="fas fa-caret-down"></i></a>
-                            <ul class="navi_2_dropdown">
-                              
-                                <li class="parent">
-                                    <a href="#"><i class="fas fa-caret-right"></i>my account<span><i class="fas fa-caret-right"></i>
-									</span></a>
-                                    <ul class="dropdown-menu-right">
-                                        <li>
-                                            <a href="my_account.html"> <i class="fas fa-caret-right"></i>my account  </a>
-                                        </li>
-                                        <li>
-                                            <a href="view_profile.html"> <i class="fas fa-caret-right"></i> my profile</a>
-                                        </li>
-                                        <li>
-                                            <a href="email_notification.html"><i class="fas fa-caret-right"></i>email notification </a>
-                                        </li>
-                                        <li>
-                                            <a href="change_password.html"><i class="fas fa-caret-right"></i>change password</a>
-                                        </li>
-                                        <li>
-                                            <a href="change_pin.html"><i class="fas fa-caret-right"></i>change pin</a>
-                                        </li>
-                                     
-                                    </ul>
-                                </li>
-                                <li class="parent">
-                                    <a href="#"> <i class="fas fa-caret-right"></i>finance<span> <i class="fas fa-caret-right"></i>
-									</span></a>
-                                    <ul class="dropdown-menu-right">
-                                         <li>
-                                            <a href="make_deposit.html"> <i class="fas fa-caret-right"></i>make deposit</a>
-                                        </li>
-                                        <li>
-                                            <a href="deposit_list.html"> <i class="fas fa-caret-right"></i> deposit lists</a>
-                                        </li>
-                                        <li>
-                                            <a href="payment_request.html"><i class="fas fa-caret-right"></i>payment request</a>
-                                        </li>
-                                        <li>
-                                            <a href="exchange_money.html"><i class="fas fa-caret-right"></i>exchange money</a>
-                                        </li>
-                                        <li>
-                                            <a href="transfer_fund.html"><i class="fas fa-caret-right"></i>fund transfer</a>
-                                        </li>
-                                     
-                                    </ul>
-                                </li>
-								<li class="parent">
-                                    <a href="#"> <i class="fas fa-caret-right"></i>reports<span> <i class="fas fa-caret-right"></i>
-									</span></a>
-                                    <ul class="dropdown-menu-right">
-                                         <li>
-                                            <a href="all_transactions.html"> <i class="fas fa-caret-right"></i>all transactions</a>
-                                        </li>
-                                        <li>
-                                            <a href="deposit_history.html"> <i class="fas fa-caret-right"></i> deposit history</a>
-                                        </li>
-                                        <li>
-                                            <a href="pending_history.html"><i class="fas fa-caret-right"></i>pending history</a>
-                                        </li>
-                                        <li>
-                                            <a href="exchange_history.html"><i class="fas fa-caret-right"></i>exchange history</a>
-                                        </li>
-                                        <li>
-                                            <a href="earnings_history.html"><i class="fas fa-caret-right"></i>earning history</a>
-                                        </li>
-                                     
-                                    </ul>
-                                </li>
-								<li class="parent">
-                                    <a href="#"> <i class="fas fa-caret-right"></i>referrals<span> <i class="fas fa-caret-right"></i>
-									</span></a>
-                                    <ul class="dropdown-menu-right">
-                                         <li>
-                                            <a href="referrals.html"> <i class="fas fa-caret-right"></i>my referrals</a>
-                                        </li>
-                                        <li>
-                                            <a href="banners.html"> <i class="fas fa-caret-right"></i> promotionals banners</a>
-                                        </li>
-                                        <li>
-                                            <a href="referral_earnings.html"><i class="fas fa-caret-right"></i>referral earnings</a>
-                                        </li>
-                                      
-                                    </ul>
-                                </li>
-								<li class="parent">
-                                    <a href="tickets.html"><i class="fas fa-caret-right"></i>view tickets</a></li>
-                            </ul>
-                        </li>						
-						    						
-                        <li class="has-mega gc_main_navigation"><a href="#" class="gc_main_navigation">blog <i class="fas fa-caret-down"></i></a>
-                            <ul class="navi_2_dropdown">
-                                <li class="parent">
-                                    <a href="blog_category.html"><i class="fas fa-caret-right"></i>blog category</a>
-                                </li>
-                                <li class="parent">
-                                    <a href="blog_single.html"><i class="fas fa-caret-right"></i> blog single</a>
-                                </li>                   
-                            </ul>
-                        </li>     
-                        <li><a href="contact_us.html" class="gc_main_navigation">contact us</a></li>
-                    </ul>
-                </div>
-                <!-- mainmenu end -->
-            </div>
-        </div>
-    </div>
-
-    <!-- navi wrapper End -->
-        <!-- inner header wrapper start -->
-        <div class="page_title_section dashboard_title">
-
-<div class="page_header">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-xl-9 col-lg-7 col-md-7 col-12 col-sm-7">
-
-                <h1>My Account </h1>
-            </div>
-            <div class="col-xl-3 col-lg-5 col-md-5 col-12 col-sm-5">
-                <div class="sub_title_section">
-                    <ul class="sub_title">
-                        <li> <a href="#"> Home </a>&nbsp; / &nbsp; </li>
-                        <li>My Account</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!-- inner header wrapper end -->
-<div class="l-sidebar">
-    <div class="l-sidebar__content">
-        <nav class="c-menu js-menu" id="mynavi">
-            <ul class="u-list crm_drop_second_ul">
-                <li class="crm_navi_icon">
-                    <div class="c-menu__item__inner"><a href="my_account.html"><i class="flaticon-four-grid-layout-design-interface-symbol"></i></a>
-                        <ul class="crm_hover_menu">
-                           
-                            <li><a href="view_profile.html"><i class="fa fa-circle"></i> my profile</a>
-                            </li>                      
-                           
-                        </ul>
-                    </div>
-                </li>
-                <li class="c-menu__item is-active has-sub crm_navi_icon_cont">
-                    <a href="my_account.html">
-                        <div class="c-menu-item__title"><span>my account</span><i class="no_badge">5</i>
-                        </div>
-                    </a>
-                    <ul>
-                         <li><a href="my_account.html"><i class="fa fa-circle"></i> my account</a>
-                         </li>
-                        
-                    </ul>
-                </li>
-            </ul>
-           
-            <!-- <ul class="u-list crm_drop_second_ul">
-                <li class="crm_navi_icon">
-                    <div class="c-menu__item__inner"><a href="transfer_fund.html"><i class="flaticon-progress-report"></i></a>
-                    </div>
-                </li>
-                <li class="c-menu__item crm_navi_icon_cont">
-                    <a href="transfer_fund.html">
-                        <div class="c-menu-item__title">fund transfer</div>
-                    </a>
-                </li>
-            </ul>          -->
-            <!-- <ul class="u-list crm_drop_second_ul">
-                <li class="crm_navi_icon">
-                    <div class="c-menu__item__inner"><a href="referrals.html"><i class="flaticon-settings"></i></a>
-                        <ul class="crm_hover_menu">
-                            <li><a href="referrals.html"><i class="fa fa-circle"></i> my referrals </a>
-                            </li>
-                            <li>
-                                <a href="banners.html"> <i class="fa fa-circle"></i>promotionals banners</a>
-                            </li>
-                             <li>
-                                <a href="referral_earnings.html"> <i class="fa fa-circle"></i>referral earnings</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="c-menu__item is-active has-sub crm_navi_icon_cont">
-                    <a href="#">
-                        <div class="c-menu-item__title"><span>referrals</span><i class="no_badge purple">2</i>
-                        </div>
-                    </a>
-                    <ul>
-                        <li><a href="referrals.html"><i class="fa fa-circle"></i> my referrals </a>
-                        </li>
-                        <li>
-                          <a href="banners.html"> <i class="fa fa-circle"></i>promotionals banners</a>
-                        </li>
-                        <li>
-                          <a href="referral_earnings.html"> <i class="fa fa-circle"></i>referral earnings</a>
-                         </li>
-                    </ul>
-                </li>
-            </ul> -->
-            <!-- <ul class="u-list crm_drop_second_ul">
-                <li class="crm_navi_icon">
-                    <div class="c-menu__item__inner"><a href="make_deposit.html"><i class="flaticon-profile"></i></a>
-                    </div>
-                </li>
-                <li class="c-menu__item crm_navi_icon_cont">
-                    <a href="make_deposit.html">
-                        <div class="c-menu-item__title">deposit</div>
-                    </a>
-                </li>
-            </ul> -->
-            <ul class="u-list crm_drop_second_ul">
-                <li class="crm_navi_icon">
-                    <div class="c-menu__item__inner"><a href="all_transactions.html"><i class="flaticon-help"></i></a>
-                        <ul class="crm_hover_menu">
-                            <li><a href="all_transactions.html"><i class="fa fa-circle"></i> all transactions</a>
-                            </li>
-                            <li><a href="deposit_history.html"><i class="fa fa-circle"></i>deposit history</a>
-                            </li>
-                             <li><a href="pending_history.html"><i class="fa fa-circle"></i>pending history</a>
-                            </li>
-                             <li><a href="exchange_history.html"><i class="fa fa-circle"></i>exchange history</a>
-                            </li>
-                             <li><a href="earnings_history.html"><i class="fa fa-circle"></i>earning history</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="c-menu__item is-active has-sub crm_navi_icon_cont">
-                    <a href="#">
-                        <div class="c-menu-item__title"><span>Log Out</span><i class="no_badge purple"></i>
-                        </div>
-                    </a>
-                    <ul>
-                      <li><a href="buy-logout.php"><i class="fa fa-circle"></i> log out</a>
-                            </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
-
-
+<body class="app">   	
+    <header class="app-header fixed-top">	   	            
+        <div class="app-header-inner">  
+	        <div class="container-fluid py-2">
+		        <div class="app-header-content"> 
+		            <div class="row justify-content-between align-items-center">
+			        
+				    <div class="col-auto">
+					    <a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="#">
+						    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+					    </a>
+				    </div><!--//col-->
+		            
+		            <div class="app-utilities col-auto">		            
+			            <div class="app-utility-item app-user-dropdown dropdown">
+				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="../referral-marketing/assets/images/user.png" alt="user profile"></a>
+				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
+								<li><a class="dropdown-item" href="/beta-souk-marketing/referral-marketing/dashboard.php">Overview</a></li>
+								<li><a class="dropdown-item" href="/beta-souk-marketing/referral-marketing/help.php">Help</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/beta-souk-marketing/referral-marketing/logout.php">Log Out</a></li>
+							</ul>
+			            </div><!--//app-user-dropdown--> 
+		            </div><!--//app-utilities-->
+		        </div><!--//row-->
+	            </div><!--//app-header-content-->
+	        </div><!--//container-fluid-->
+        </div><!--//app-header-inner-->
+        <div id="app-sidepanel" class="app-sidepanel"> 
+	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
+	        <div class="sidepanel-inner d-flex flex-column">
+		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
+		        <div class="app-branding">
+		            <a class="app-logo" href="index.html"><img class="" src="../referral-marketing/img/app-landing/logo5.png" alt="logo"></a>
+	
+		        </div><!--//app-branding-->  
+		        
+			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
+				    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
+					    <li class="nav-item">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <a class="nav-link active" href="/beta-souk-marketing/referral-marketing/dashboard.php">
+						        <span class="nav-icon">
+						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+								<path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+								</svg>
+						         </span>
+		                         <span class="nav-link-text">Overview</span>
+					        </a><!--//nav-link-->
+					    </li><!--//nav-item-->
+					    <li class="nav-item">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <a class="nav-link" href="/beta-souk-marketing/referral-marketing/help.php">
+						        <span class="nav-icon">
+						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+								<path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+								</svg>
+						         </span>
+		                         <span class="nav-link-text">Help</span>
+					        </a><!--//nav-link-->
+                        </li><!--//nav-item-->	
+                        <li class="nav-item">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <a class="nav-link" href="/beta-souk-marketing/referral-marketing/logout.php">
+						        <span class="nav-icon">
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+								<path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+								</svg>
+						         </span>
+		                         <span class="nav-link-text">Log-out</span>
+					        </a><!--//nav-link-->
+					    </li><!--//nav-item-->					    
+				    </ul><!--//app-menu-->
+			    </nav><!--//app-nav-->
+		       
+	        </div><!--//sidepanel-inner-->
+	    </div><!--//app-sidepanel-->
+    </header><!--//app-header-->

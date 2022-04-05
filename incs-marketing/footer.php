@@ -40,7 +40,7 @@
 							<h6>Buy Ecommerce</h6>
 						</div>
 						<div class="aplpg-footer-buttons">
-							<a href="#" class="aplpg-google-btn">
+							<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-google-btn">
 								<span>Get Started</span>
 							</a>
 							<a href="#" class="aplpg-apple-btn">

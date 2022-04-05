@@ -60,7 +60,7 @@ Author: Duromedia
 			<div class="row align-items-center">
 				<div class="col-lg-3 col-6">
 					<div class="aplpg-logo-wrapper">
-						<a href="#" style="width:208px"><img src="img/app-landing/logo5.png" alt="" height="55px"></a>
+						<a href="/beta-souk-marketing/referral-marketing" style="width:208px"><img src="img/app-landing/logo5.png" alt="" height="55px"></a>
 					</div>
 				</div>
 				<div class="col-lg-7 appl-desktop-menu">
@@ -76,7 +76,7 @@ Author: Duromedia
 				</div>
 				<div class="col-lg-2 col-6">
 					<div class="aplpg-header-btns">
-						<a href="#" class="aplpg-rg-btn">Get Started</a>
+						<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-rg-btn">Get Started</a>
 						<a href="#" class="aplpg-mobile-menu-btn"><i class="fas fa-bars"></i></a>
 					</div>
 				</div>
@@ -100,7 +100,7 @@ Author: Duromedia
 					<li><a class="nav-link" href="#webinar">webinar</a></li>
 					<li><a class="nav-link" href="#pricing">Pricing</a></li>
 					<li><a class="nav-link" href="#blog">Blog</a></li>
-					<li class="btn btn-danger btn-sm rounded-pill mx-3"><a href="">Get Started</a></li>
+					<li class="btn btn-danger btn-sm rounded-pill mx-3"><a href="/beta-souk-marketing/referral-marketing/buy.php">Get Started</a></li>
 				</ul>
 			</nav>
 			

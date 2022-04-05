@@ -25,18 +25,29 @@ include('../incs-marketing/header2.php');
 
 echo '
           
-<div class="global_community_wrapper newsletter_wrapper index2_newsletter index3_newsletter float_left">
 <div class="container">
-    <div class="row">
-        <div class="global_comm_wraper news_cntnt">
-            <h1> Congratulations for the Successful Payment</h1>
-            <p> You can now login to your dashboard.</p>
-          
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <div class="aplpg-slide-left">
+                <div class="aplpg-headline">
+                    <h1 style="font-size:30px; color:#ca4e28;">Congratulations for the Successful Payment</h1>
+                </div>
+                <div class="aplpg-pera-txt" style="margin:10px 0 20px;">
+                    <p>You can now login to your dashboard..</p>
+                </div>
+                <div class="aplpg-slider-form">
+                    <a href="" class="aplpg-primary-btn">Log in here</a>
+                    <i class="fas fa-whatsapp"></i>
+                </div>
+            </div>
         </div>
-   
+        <div class="col-lg-6">
+            <div class="">
+                <img class="img-thumbnail" src="img/app-landing/congratulations-stamp.png" alt="">
+            </div>
+        </div>
     </div>
-</div>
-</div>            
+</div>         
 ';
 
 ?>
