@@ -10,10 +10,6 @@ if(!isset($_SESSION['non_ref_users_id'])) {
        exit();
 }
 
-echo $_SESSION['non_ref_users_email'];
-echo $_SESSION['non_ref_users_price'];
-echo $_SESSION['non_ref_users_reference'];
-
 
 if(isset($_POST['complete_order']) AND $_SERVER['REQUEST_METHOD'] == "POST"){
     
@@ -22,7 +18,11 @@ if(isset($_POST['complete_order']) AND $_SERVER['REQUEST_METHOD'] == "POST"){
 	$result = array();
 
              //Set other parameters as keys in the $postdata array
-          
+			$_SESSION['non_ref_users_reference'] = genReference(10);
+			mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_reference = '".$_SESSION['non_ref_users_reference']."' WHERE non_ref_users_id ='".$_SESSION['non_ref_users_id']."'") or die(db_conn_error);		
+       
+
+
 			$postdata = [
                   'email' => $_SESSION['non_ref_users_email'],
                   'amount' => $_SESSION['non_ref_users_price']*100,
@@ -73,7 +73,10 @@ include('../incs-marketing/buy-header.php');
             <div class="account_overlay"></div>
             <div class="useriimg"><img src="images/user.png" alt="users"></div>
             <div class="userdet uderid"> 
-            
+            <?php if(isset($_GET['confirm']) && $_GET['confirm'] == 1){
+echo 'Payment was successful';
+
+			} ?>
                 <h3><?= $_SESSION['non_ref_users_firstname'].' '. $_SESSION['non_ref_users_surname'];  ?></h3>
 
                 <dl class="userdescc">

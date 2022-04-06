@@ -41,7 +41,11 @@ $result = json_decode($request, true);
 if (array_key_exists('data', $result) && array_key_exists('status', $result['data']) && ($result['data']['status'] === 'success')) {
 
     mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_order='1' WHERE non_ref_users_reference = '".$_GET['reference']."'") or die(db_conn_error);
+if(isset($_SESSION['non_ref_users_id'])){
+    header('Location:'.GEN_WEBSITE.'/dashboard.php?confirm=1');
+    exit(); 
 
+}
   
 }else{
     header('Location:'.GEN_WEBSITE);
