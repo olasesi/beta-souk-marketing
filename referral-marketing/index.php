@@ -1,7 +1,7 @@
 <?php
 require_once('../incs-marketing/config.php');
 require_once('../incs-marketing/gen_serv_con.php');
-include('../incs-marketing/cookie-session.php');
+// include('../incs-marketing/cookie-session.php');
 if(isset($_SESSION['user_id_marketer'])) {
     header('Location:'.GEN_WEBSITE.'/my_account.php');
        exit;
@@ -25,10 +25,10 @@ include('../incs-marketing/header.php');
 		<div class="aplpg-hero-single-slide" data-background="img/app-landing//betasouk_banner-slide.png">
 			<div class="aplpg-social-left">
 				<div class="aplpg-social-links">
-				<a href="https://facebook.com/betasoukafrica"><i class="fab fa-facebook-f"></i></a>
-							<a href="https://twitter.com/betasoukafrica"><i class="fab fa-twitter"></i></a>
-							<a href="https://instagram.com/betasoukafrica"><i class="fab fa-instagram"></i></a>
-							<a href="https://linkedin.com/company/betasoukafrica"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://facebook.com/betasoukafrica"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://twitter.com/betasoukafrica"><i class="fab fa-twitter"></i></a>
+					<a href="https://instagram.com/betasoukafrica"><i class="fab fa-instagram"></i></a>
+					<a href="https://linkedin.com/company/betasoukafrica"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<div class="aplpg-scroll-btn">
 					<a href="#process"><i class="fas fa-arrow-left"></i>Scroll Down</a>
@@ -554,7 +554,7 @@ include('../incs-marketing/header.php');
 	<!-- Affiliate Section 
 	============================================= -->
 	
-	<section class="aplpg-brand-section">
+	<section class="aplpg-brand-section" id="affiliate">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-5 col-md-10 order-lg-1 order-2">

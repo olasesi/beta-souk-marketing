@@ -25,10 +25,10 @@
 						</div>
 						<div class="aplpg-footer-links">
 							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Pricing</a></li>
-								<li><a href="#">Affilliate</a></li>
-								<li><a href="#">Webinar</a></li>
+								<li><a href="#about">About Us</a></li>
+								<li><a href="#webinar">Webinar</a></li>
+								<li><a href="#affiliate">Affilliate</a></li>
+								<li><a href="#pricing">Pricing</a></li>
 								<li><a href="#">Careers</a></li>
 							</ul>
 						</div>

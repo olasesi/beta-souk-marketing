@@ -4976,9 +4976,8 @@ a:hover {
 
 .login_form_wrapper {
   float: left;
-  padding: 60px;
   /* width: 55%; */
-  padding: 80px 100px 78px 100px;
+  padding: 60px;
   text-align: center;
 }
 
