@@ -66,64 +66,6 @@ if(isset($_POST['complete_order']) AND $_SERVER['REQUEST_METHOD'] == "POST"){
 include('../incs-marketing/buy-header.php');
 ?>  
 
-<div class="row align-items-center justify-content-center">
-    <div class="col-lg-11 l-main ">       
-        <!--  my account wrapper start -->
-   <div class="account_top_information">
-            <div class="account_overlay"></div>
-            <div class="useriimg"><img src="images/user.png" alt="users"></div>
-            <div class="userdet uderid"> 
-            <?php if(isset($_GET['confirm']) && $_GET['confirm'] == 1){
-echo 'Payment was successful';
-
-			} ?>
-                <h3><?= $_SESSION['non_ref_users_firstname'].' '. $_SESSION['non_ref_users_surname'];  ?></h3>
-
-                <dl class="userdescc">
-                    <dt>Order Date</dt>
-                    <dd>: &nbsp; <?=$_SESSION['non_ref_users_timestamp'];?></dd>
-                    <dt>Website Package</dt>
-                    <dd>: &nbsp; <?=$_SESSION['non_ref_users_package'];?></dd>
-                    <dt>Price</dt>
-                    <dd>: &nbsp; <?php echo '&#8358;'.number_format($_SESSION['non_ref_users_price']);?></dd>
-                    <dt>Order status</dt>
-                    <dd>: &nbsp; <?php if ($_SESSION['non_ref_users_order'] == 0){echo 'Payment was not successful';}elseif($_SESSION['non_ref_users_order'] == 1){echo 'Payment was successful';}?></dd>
-                    <dt>Payment reference</dt>
-                    <dd>: &nbsp; <?=$_SESSION['non_ref_users_reference'];?> </dd>
-                </dl>
-
-            </div>
-
-
-
-            <?php
-
-            if($_SESSION['non_ref_users_order'] == 0){
-                echo  '
-                <div class="userdet user_transcation">
-                    <h3>Order</h3>
-                    <dl class="userdescc">
-                        <form method="POST" action="">
-                            <div class="about_btn login_btn float_left">
-                                
-							
-							
-							
-							<button type="submit" name="complete_order">Pay now<button>
-                            </div>
-                        </form>
-                    </dl>
-                </div>';
-
-                }
-            ?>
-
-
-        </div>
-    </div>
-</div>
-
-
 <div class="app-wrapper">
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
@@ -161,7 +103,6 @@ echo 'Payment was successful';
 							    <h4 class="stats-type mb-1">Website Package</h4>
 							    <div class="stats-figure"><?=$_SESSION['non_ref_users_package'];?></div>
 						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
 					    </div><!--//app-card-->
 				    </div><!--//col-->
 				    <div class="col-6 col-lg-3">
@@ -170,7 +111,6 @@ echo 'Payment was successful';
 							    <h4 class="stats-type mb-1">Price</h4>
 							    <div class="stats-figure"><?php echo '&#8358;'.number_format($_SESSION['non_ref_users_price']);?></div>
 						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
 					    </div><!--//app-card-->
 				    </div><!--//col-->
 				    <div class="col-6 col-lg-3">
@@ -179,7 +119,6 @@ echo 'Payment was successful';
 							    <h4 class="stats-type mb-1">Payment Reference</h4>
 							    <div class="stats-figure"><?=$_SESSION['non_ref_users_reference'];?></div>
 						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
 					    </div><!--//app-card-->
 				    </div><!--//col-->
                     <div class="col-6 col-lg-3">
@@ -190,12 +129,15 @@ echo 'Payment was successful';
 
                                     if($_SESSION['non_ref_users_order'] == 0){
                                         echo  '
-                                    <div class="stats-figure" style="color:red;">Not Successful</div>
-                                    <a class="btn app-btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/admin-dashboard/portal-free-bootstrap-admin-dashboard-template-for-developers/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-arrow-down me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
-                                        <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
-                                        <path fill-rule="evenodd" d="M8 6a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 10.293V6.5A.5.5 0 0 1 8 6z"/>
-                                        </svg>Pay Now</a> ';
+										<div class="stats-figure" style="color:red;">Not Successful</div>
+										<form method="POST" action="">
+											<button type="submit" name="complete_order" class="btn app-btn-primary">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-arrow-down me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+											<path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
+											<path fill-rule="evenodd" d="M8 6a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 10.293V6.5A.5.5 0 0 1 8 6z"/>
+											</svg>Pay Now</button>
+										</form> ';
                                     } elseif ($_SESSION['non_ref_users_order'] == 1) {
                                         echo  '
                                         <div class="stats-figure" style="color:green;">Successful</div> 
@@ -208,7 +150,6 @@ echo 'Payment was successful';
 
                                 ?>
                             </div><!--//app-card-body-->
-                            <a class="app-card-link-mask" href="#"></a>
                         </div><!--//app-card-->
                     </div><!--//col-->
 			    </div><!--//row-->

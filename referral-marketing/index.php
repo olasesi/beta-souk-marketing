@@ -1,11 +1,8 @@
 <?php
 require_once('../incs-marketing/config.php');
 require_once('../incs-marketing/gen_serv_con.php');
-<<<<<<< HEAD
 // include('../incs-marketing/cookie-session.php');
-=======
-//include('../incs-marketing/cookie-session.php');
->>>>>>> 83debdfe040fb482abc34e42cfb050530abb3372
+
 if(isset($_SESSION['user_id_marketer'])) {
     header('Location:'.GEN_WEBSITE.'/my_account.php');
        exit;
