@@ -4,21 +4,43 @@ require_once('../incs-marketing/gen_serv_con.php');
 //include('../incs-marketing/cookie-session.php');
 
 
-if(isset($_SESSION['user_id_marketer'])) {
-    header('Location:'.GEN_WEBSITE.'/my_account.php');
-       exit;
-}
-if(isset($_SESSION['non_ref_users_id'])) {
-    header('Location:'.GEN_WEBSITE.'/dashboard.php');
-       exit();
-}
+// if(isset($_SESSION['user_id_marketer'])) {
+//     header('Location:'.GEN_WEBSITE.'/my_account.php');
+//        exit;
+// }
+ if(isset($_SESSION['non_ref_users_id'])) {
+     header('Location:'.GEN_WEBSITE.'/dashboard.php');
+        exit();
+ }
 
-if(isset($_SESSION['user_id'])) {
-    header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
-       exit();
-}
+// if(isset($_SESSION['user_id'])) {
+//     header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
+//        exit();
+// }
 ?>
 <?php
+//  if(isset($_SESSION['non_ref_users_id'])){
+//     $query_select = mysqli_query ($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_id='".$_SESSION['non_ref_users_id']."'") or die(db_conn_error);
+//     if(mysqli_num_rows($query_select) == 1){
+//       while($rows = mysqli_fetch_array($query_select)){
+        
+//        $firstname = $_SESSION['non_ref_users_firstname'];
+//        $surename = $_SESSION['non_ref_users_surname'];
+//        $username = $_SESSION['non_ref_users_username'];
+//        $email = $_SESSION['non_ref_users_email'];
+//        $address = $_SESSION['non_ref_users_address'];
+//        $package = $_SESSION['non_ref_users_package'];
+//        $price = $_SESSION['non_ref_users_price'];
+//        $order = $_SESSION['non_ref_users_order'];
+//        $ref = $_SESSION['non_ref_users_reference'];
+//       }
+    
+//     }      
+//      }
+?>
+<?php
+//if(!isset($_SESSION['non_ref_users_id'])){
+
 $errors = array();
 if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
 
@@ -80,7 +102,9 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
 
     }
 
-            if(empty($errors)){
+
+
+ if(empty($errors)){
             if($package=='Basic'){
                 $price = BASIC;
             }elseif($package=='Essential'){
@@ -93,52 +117,13 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
             
             $encrypted = password_hash($password, PASSWORD_DEFAULT);
 
-
-
-
-
-   $q = mysqli_query($connect,"INSERT INTO non_ref_users (non_ref_users_firstname, non_ref_users_surname, non_ref_users_username, non_ref_users_email, non_ref_users_password, non_ref_users_address, non_ref_users_package, non_ref_users_price, non_ref_users_reference) VALUES ('".$firstname."','".$surname."', '".$username."', '".$email."', '".$encrypted."', '".$address."', '".$package."', '".$price."', '".$reference_num."')") or die(mysqli_error($connect));
+$q = mysqli_query($connect,"INSERT INTO non_ref_users (non_ref_users_firstname, non_ref_users_surname, non_ref_users_username, non_ref_users_email, non_ref_users_password, non_ref_users_address, non_ref_users_package, non_ref_users_price, non_ref_users_reference) VALUES ('".$firstname."','".$surname."', '".$username."', '".$email."', '".$encrypted."', '".$address."', '".$package."', '".$price."', '".$reference_num."')") or die(mysqli_error($connect));
 
             if(mysqli_affected_rows($connect) == 1){
 
-             $result = array();
 
-             //Set other parameters as keys in the $postdata array
-             $postdata = [
-                 'email' => $email,
-                 'amount' => $price*100,
-                 'reference' => $reference_num,
-                 'callback_url' => GEN_WEBSITE.'/buy-verify-payment.php'
-             ];
-            
-             $url = "https://api.paystack.co/transaction/initialize";
-            
-             $ch = curl_init();
-             curl_setopt($ch, CURLOPT_URL, $url);
-             curl_setopt($ch, CURLOPT_POST, 1);
-             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postdata));  //Post Fields
-             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      
-             $headers = [
-                 'Authorization: '.API_KEY,
-                 'Content-Type: application/json',
-            
-             ];
-             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-            
-             $request = curl_exec($ch);
-            
-             curl_close($ch);
-            
-             if ($request) {
-            
-                 $result = json_decode($request, true);
-            
-                 header('Location: ' . $result['data']['authorization_url']);
-            
-             }
-    
-                exit();          
+            include('../incs-marketing/pay.php');  
+                      
 
 
   }else{
@@ -171,7 +156,7 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
 
 }
 
-
+//}
 
 include('../incs-marketing/header2.php');
 ?>

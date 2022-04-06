@@ -1,6 +1,7 @@
 <?php 
 require_once('../incs-marketing/config.php');
 require_once('../incs-marketing/gen_serv_con.php');
+//include('../incs-marketing/cookie-session.php');
 ?>
 <?php
 
@@ -9,50 +10,56 @@ if(!isset($_SESSION['non_ref_users_id'])) {
        exit();
 }
 
+echo $_SESSION['non_ref_users_email'];
+echo $_SESSION['non_ref_users_price'];
+echo $_SESSION['non_ref_users_reference'];
+
+
 if(isset($_POST['complete_order']) AND $_SERVER['REQUEST_METHOD'] == "POST"){
+    
 
-    $result = array();
+	
+	$result = array();
 
-    //Set other parameters as keys in the $postdata array
-    $postdata = [
-        'email' => $_SESSION['non_ref_users_email'],
-        'amount' => $_SESSION['non_ref_users_price']*10,
-        'reference' => $_SESSION['non_ref_users_reference'],
-        'callback_url' => GEN_WEBSITE.'/buy-verify-payment.php'
-    ];
-   
-    $url = "https://api.paystack.co/transaction/initialize";
-   
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postdata));  //Post Fields
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+             //Set other parameters as keys in the $postdata array
+          
+			$postdata = [
+                  'email' => $_SESSION['non_ref_users_email'],
+                  'amount' => $_SESSION['non_ref_users_price']*100,
+                  'reference' => $_SESSION['non_ref_users_reference'],
+                  'callback_url' => GEN_WEBSITE.'/buy-verify-payment.php'
+              ];
+			
+            
+             $url = "https://api.paystack.co/transaction/initialize";
+            
+             $ch = curl_init();
+             curl_setopt($ch, CURLOPT_URL, $url);
+             curl_setopt($ch, CURLOPT_POST, 1);
+             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postdata));  //Post Fields
+             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      
+             $headers = [
+                 'Authorization: '.API_KEY,
+                 'Content-Type: application/json',
+            
+             ];
+             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            
+             $request = curl_exec($ch);
+            
+             curl_close($ch);
+            
+             if ($request) {
+            
+                 $result = json_decode($request, true);
+            
+                 header('Location: ' . $result['data']['authorization_url']);
+            
+             }
+    
+                exit();          
 
-    $headers = [
-        'Authorization: '.API_KEY,
-        'Content-Type: application/json',
-   
-    ];
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-   
-    $request = curl_exec($ch);
-   
-    curl_close($ch);
-   
-    if ($request) {
-   
-        $result = json_decode($request, true);
-   
-        header('Location: ' . $result['data']['authorization_url']);
-   
-    }
-
-
-
-
-
-exit();
 
 }
 
@@ -62,7 +69,7 @@ include('../incs-marketing/buy-header.php');
 <div class="row align-items-center justify-content-center">
     <div class="col-lg-11 l-main ">       
         <!--  my account wrapper start -->
-        <!-- <div class="account_top_information">
+   <div class="account_top_information">
             <div class="account_overlay"></div>
             <div class="useriimg"><img src="images/user.png" alt="users"></div>
             <div class="userdet uderid"> 
@@ -95,7 +102,11 @@ include('../incs-marketing/buy-header.php');
                     <dl class="userdescc">
                         <form method="POST" action="">
                             <div class="about_btn login_btn float_left">
-                                <button type="button" name="complete_order">Pay now<button>
+                                
+							
+							
+							
+							<button type="submit" name="complete_order">Pay now<button>
                             </div>
                         </form>
                     </dl>
@@ -105,7 +116,7 @@ include('../incs-marketing/buy-header.php');
             ?>
 
 
-        </div> -->
+        </div>
     </div>
 </div>
 
