@@ -42,6 +42,7 @@ if (array_key_exists('data', $result) && array_key_exists('status', $result['dat
 
     mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_order='1' WHERE non_ref_users_reference = '".$_GET['reference']."'") or die(db_conn_error);
 if(isset($_SESSION['non_ref_users_id'])){
+    $_SESSION['non_ref_users_order'] = '1';
     header('Location:'.GEN_WEBSITE.'/dashboard.php?confirm=1');
     exit(); 
 
