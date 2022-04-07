@@ -222,7 +222,7 @@ include('../incs-marketing/header.php');
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="aplpg-video-content">
-						<img src="img/app-landing/video-bg.jpg" alt="">
+						<img src="img/app-landing/video-bg.png" alt="">
 						<div class="aplpg-video-btn">
 							<a href="https://www.youtube.com/watch?v=myjEoDypUD8"><i class="fas fa-play"></i></a>
 						</div>
