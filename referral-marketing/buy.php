@@ -133,25 +133,7 @@ $q = mysqli_query($connect,"INSERT INTO non_ref_users (non_ref_users_firstname, 
 
 
 
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
 
 
 }

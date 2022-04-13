@@ -67,11 +67,9 @@ echo '
                     <h1 style="font-size:30px; color:#ca4e28;">Congratulations for the Successful Payment</h1>
                 </div>
                 <div class="aplpg-pera-txt" style="margin:10px 0 20px;">
-                    <p>You can now login to your dashboard..</p>
-                </div>
-                <div class="aplpg-slider-form">
-                    <a href="" class="aplpg-primary-btn">Log in here</a>
-                    <i class="fas fa-whatsapp"></i>
+                    <p>You can now <a href="buy-login.php" style="color:#041760; text-decoration:underline;">Login</a> to your dashboard..</p>
+                    <br>
+                    <p>For Enquiry <a href="https://wa.me/2347089292535" style="color:#041760; text-decoration:underline;">Chat us on whatsapp</a></p>
                 </div>
             </div>
         </div>
