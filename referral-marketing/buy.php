@@ -153,21 +153,21 @@ include('../incs-marketing/header2.php');
                         <!-- <img src="img/app-landing/logo5.png" alt="logo"> -->
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 login_form_wrapper">
-                        <form action="" method="POST">
+                    <form action="" method="POST">
                         <div class="sv_heading_wraper heading_wrapper_dark dark_heading hwd">
 
                             <h3>Buy-Ecommerce</h3>
 
                         </div>
-                        <div class="form-group icon_form comments_form">
+                            <div class="form-group icon_form comments_form">
 
-                                        <input type="text" class="form-control require" value="<?php if(isset($_POST['firstname'])){echo $_POST['firstname'];}?>" name="firstname" placeholder="Firstname">
+                            <input type="text" class="form-control require" value="<?php if(isset($_POST['firstname'])){echo $_POST['firstname'];}?>" name="firstname" placeholder="Firstname">
                             <?php 
                             if (array_key_exists('firstname', $errors)) {
                                 echo '<p class="text-danger" >'.$errors['firstname'].'</p>';
                                 }
                             ?>
-                                    </div>
+                            </div>
 
                                     <div class="form-group icon_form comments_form">
 
@@ -284,7 +284,7 @@ include('../incs-marketing/header2.php');
                                         <p>Already have an account ? <a href="buy-login.php">Login</a></p>
                                     </div>
 
-                                    </form>
+                    </form>
 
                     </div>
                 </div>

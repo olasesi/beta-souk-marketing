@@ -20,4 +20,4 @@ Author: Duromedia
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 </head>
-<body class="app app-login p-0">    	
+<body class="app p-0">    	

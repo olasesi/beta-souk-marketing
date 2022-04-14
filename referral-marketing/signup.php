@@ -44,22 +44,10 @@ require_once('../incs-marketing/gen_serv_con.php');
 $errors = array();
 if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
 
-  if (preg_match ('/^[a-zA-Z]{3,20}$/i', trim($_POST['firstname']))) {		//only 20 characters are allowed to be inputted
-		$firstname = mysqli_real_escape_string ($connect, trim($_POST['firstname']));
+  	if (preg_match ('/^[a-zA-Z" "]{3,60}$/i', trim($_POST['fullname']))) {		//only 30 characters are allowed to be inputted
+		$fullname = mysqli_real_escape_string ($connect, trim($_POST['fullname']));
 	} else {
-		$errors['firstname'] = 'Please enter valid firstname';
-	} 
-
-  if (preg_match ('/^[a-zA-Z]{3,20}$/i', trim($_POST['surname']))) {		//only 20 characters are allowed to be inputted
-		$surname = mysqli_real_escape_string ($connect, trim($_POST['surname']));
-	} else {
-		$errors['surname'] = 'Please enter valid surname';
-	} 
-
-    if (preg_match ('/^[a-zA-Z-_]{3,20}$/i', trim($_POST['username']))) {		//only 20 characters are allowed to be inputted
-		$username = mysqli_real_escape_string ($connect, trim($_POST['username']));
-	} else {
-		$errors['username'] = 'Please enter valid username. Alpha-numeric letters, underscore or dash.';
+		$errors['fullname'] = 'Please enter valid Name';
 	} 
 
     if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
@@ -68,70 +56,46 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
         $errors['email'] = "Enter a valid email address";
     }
 
-
-    if($_POST['password'] == $_POST['confirm_password']){
-        if(preg_match('/^.{6,255}$/i',$_POST['password'])){
-        $password =  mysqli_real_escape_string($connect,$_POST['password']);
-    }else{
-        $errors['password'] = "Minimum of 6 characters";
-    }
-    }else{
-        $errors['password_match'] = "Password did not match";
-    }
+	if (preg_match ('/^[0-9]{11}$/i', trim($_POST['phonenumber']))) {		//only 11 characters are allowed to be inputted
+		$phonenumber = mysqli_real_escape_string ($connect, trim($_POST['phonenumber']));
+	} else {
+		$errors['phonenumber'] = 'Please enter valid number';
+	} 
 
 
-    if ($_POST['package'] == "Choose package") {
-        $errors['package'] = 'Please select package';
-    } else{
-    $package = $_POST['package'];
-    }
-
-
-
-    if (preg_match ('/^.{3,255}+$/i', trim($_POST['address']))) {		
-        $address = mysqli_real_escape_string ($connect, trim($_POST['address']));
-        } else {
-        $errors['address'] = 'Please enter a valid location';
-        }
+    if(preg_match('/^.{6,255}$/i',$_POST['password'])){
+		$password =  mysqli_real_escape_string($connect,$_POST['password']);
+	}else{
+		$errors['password'] = "Minimum of 6 characters";
+	}
         
 
-    $queries = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_username='".mysqli_real_escape_string ($connect, trim($_POST['username']))."'") or die(db_conn_error); 
+    $queries = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_email='".mysqli_real_escape_string ($connect, filter_var($_POST['email']))."'") or die(db_conn_error); 
 
     if(mysqli_num_rows($queries) == 1 ){
-        $errors['username_taken'] = 'Username has been taken. Please choose another username';
+        $errors['email_taken'] = 'Email already exist';
 
     }
 
 
 
-     if(empty($errors)){
-            if($package=='Basic'){
-                $price = BASIC;
-            }elseif($package=='Essential'){
-                $price = ESSENTIAL;
-            }else{
-                $price = PREMIUM; 
-            }
+	if(empty($errors)){
 
-            $reference_num = genReference(10);
-            
-            $encrypted = password_hash($password, PASSWORD_DEFAULT);
+		$reference_num = genReference(10);
+		
+		$encrypted = password_hash($password, PASSWORD_DEFAULT);
 
-            $q = mysqli_query($connect,"INSERT INTO non_ref_users (non_ref_users_firstname, non_ref_users_surname, non_ref_users_username, non_ref_users_email, non_ref_users_password, non_ref_users_address, non_ref_users_package, non_ref_users_price, non_ref_users_reference) VALUES ('".$firstname."','".$surname."', '".$username."', '".$email."', '".$encrypted."', '".$address."', '".$package."', '".$price."', '".$reference_num."')") or die(mysqli_error($connect));
+		$q = mysqli_query($connect,"INSERT INTO non_ref_users (non_ref_users_fullname, non_ref_users_email, non_ref_users_password, non_ref_users_phone) VALUES ('".$fullname."', '".$email."', '".$encrypted."', '".$phonenumber."')") or die(mysqli_error($connect));
 
-            if(mysqli_affected_rows($connect) == 1) {
+		if(mysqli_affected_rows($connect) == 1){
 
+            include('package.php');  
 
-            include('../incs-marketing/pay.php');  
-                      
+		} else{
+		trigger_error('You could not be registered due to a system error. We apologize for any inconvenience.');
 
-
-        }else{
-        trigger_error('You could not be registered due to a system error. We apologize for any inconvenience.');
-
-        }
-
-    }
+		}
+	}
 
 
 }
@@ -147,21 +111,51 @@ include('../incs-marketing/header-auth.php');
 		    <div class="d-flex flex-column align-content-end">
 			    <div class="app-auth-body mx-auto">	
 				    <div class="app-auth-branding mb-4"><a class="app-logo" href="index.html" style="width:208px"><img src="img/app-landing/logo5.png" alt="logo"></a></div>
-					<h2 class="auth-heading text-center mb-4">Sign up to Portal</h2>					
+					<!-- <h2 class="auth-heading text-center mb-4">Sign up to Portal</h2>					 -->
 	
 					<div class="auth-form-container text-start mx-auto">
-						<form class="auth-form auth-signup-form">         
+						<form class="auth-form auth-signup-form" action="" method="POST">         
 							<div class="email mb-3">
-								<label class="sr-only" for="signup-email">Your Name</label>
-								<input id="signup-name" name="signup-name" type="text" class="form-control signup-name" placeholder="Full name" required="required">
+								<label class="sr-only" for="fullname">Your Name</label>
+								<input id="fullname" value="<?php if(isset($_POST['fullname'])){echo $_POST['fullname'];}?>" name="fullname" type="text" class="form-control fullname" placeholder="Full name">
+								<?php 
+								if (array_key_exists('fullname', $errors)) {
+									echo '<p class="text-danger" >'.$errors['fullname'].'</p>';
+									}
+								?>
 							</div>
 							<div class="email mb-3">
-								<label class="sr-only" for="signup-email">Your Email</label>
-								<input id="signup-email" name="signup-email" type="email" class="form-control signup-email" placeholder="Email" required="required">
+								<label class="sr-only" for="email">Your Email</label>
+								<input id="email" value="<?php if(isset($_POST['email'])){echo $_POST['email'];}?>" name="email" type="text" class="form-control email" placeholder="Email">
+								<?php 
+								if (array_key_exists('email', $errors)) {
+									echo '<p class="text-danger" >'.$errors['email'].'</p>';
+									}
+								?>
+								<?php 
+									if (array_key_exists('email_taken', $errors)) {
+									echo '<p class="text-danger" >'.$errors['email_taken'].'</p>';
+									}
+								?>
 							</div>
+							<div class="email mb-3">
+								<label class="sr-only" for="phonenumber">Phone Number</label>
+								<input id="phonenumber" value="<?php if(isset($_POST['phonenumber'])){echo $_POST['phonenumber'];}?>" name="phonenumber" type="text" class="form-control phonenumber" placeholder="Phone number">
+								<?php 
+								if (array_key_exists('phonenumber', $errors)) {
+									echo '<p class="text-danger">'.$errors['phonenumber'].'</p>';
+									}
+								?>
+							</div>
+							
 							<div class="password mb-3">
-								<label class="sr-only" for="signup-password">Password</label>
-								<input id="signup-password" name="signup-password" type="password" class="form-control signup-password" placeholder="Create a password" required="required">
+								<label class="sr-only" for="password">Password</label>
+								<input id="password" name="password" type="password" class="form-control password" placeholder="Create a password">
+								<?php 
+								if (array_key_exists('password', $errors)) {
+									echo '<p class="text-danger" >'.$errors['password'].'</p>';
+									}
+								?>
 							</div>
 							<div class="extra mb-3">
 								<div class="form-check">
@@ -173,7 +167,7 @@ include('../incs-marketing/header-auth.php');
 							</div><!--//extra-->
 							
 							<div class="text-center">
-								<button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Sign Up</button>
+								<button type="submit" name="order" class="btn app-btn-primary w-100 theme-btn mx-auto">Sign Up</button>
 							</div>
 						</form><!--//auth-form-->
 						
@@ -194,7 +188,7 @@ include('../incs-marketing/header-auth.php');
 		    </div><!--//flex-column-->   
 	    </div><!--//auth-main-col-->
 	    <div class="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
-		    <div class="auth-background-holder">			    
+		    <div class="auth-background-holder-signup">			    
 		    </div>
 		    <div class="auth-background-mask"></div>
 		    <div class="auth-background-overlay p-3 p-lg-5">

@@ -37,10 +37,6 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
 	} 
 
 
-  
-   
-
-
     if(empty($signup_errors)){
  
        
@@ -49,8 +45,6 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
        if(mysqli_num_rows($query) == 1){
            
       while($row = mysqli_fetch_array($query)){
-      
-
       
        
         if(password_verify($password,$row[6])){
@@ -103,20 +97,7 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
   }
 
 
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
@@ -148,7 +129,7 @@ include('../incs-marketing/header2.php');
                         <?php if (array_key_exists('wrong_detail', $signup_errors)) {
 	                    echo '<p class="text-danger">'.$signup_errors['wrong_detail'].'</p>';
 	                    }
-                    ?>
+                        ?>
                      <?php if (array_key_exists('username', $signup_errors)) {
 	                    echo '<p class="text-danger">'.$signup_errors['username'].'</p>';
 	                    }
