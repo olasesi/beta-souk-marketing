@@ -43,7 +43,7 @@
 							<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-google-btn">
 								<span>Get Started</span>
 							</a>
-							<a href="#" class="aplpg-apple-btn">
+							<a href="https://forms.gle/Q5nocGYaVK3o6YTE7" class="aplpg-apple-btn">
 								<span>Free Trial</span>
 							</a>
 						</div>
@@ -52,7 +52,7 @@
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="aplpg-footer-widget" data-wow-delay="0.6s">
 						<div class="aplpg-footer-buttons">
-							<img src="img/app-landing/betasouk_webinar.png" alt="..." class="img-thumbnail">
+							<img src="img/app-landing/betasouk-ebook.png" alt="..." class="img-thumbnail">
 							<a href="#" class="aplpg-apple-btn">
 								<span>Get Free E-book</span>
 							</a>
