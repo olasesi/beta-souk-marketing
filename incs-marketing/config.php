@@ -27,8 +27,16 @@ session_start();
 
 //Packgage
 define ('BASIC', 60000);
+define ('PACKAGE1', 'Basic');
+
+
 define ('ESSENTIAL', 150000);
+define ('PACKAGE2', 'Essential');
+
+
 define ('PREMIUM', 300000);
+define ('PACKAGE3', 'Premium');
+//$packages = array('basic'=>'60000', 'essential'=>'150000', 'premium'=>'300000');
 
 $now = new DateTime();					
 

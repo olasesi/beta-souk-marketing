@@ -85,12 +85,31 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
 		
 		$encrypted = password_hash($password, PASSWORD_DEFAULT);
 
-		$q = mysqli_query($connect,"INSERT INTO non_ref_users (non_ref_users_fullname, non_ref_users_email, non_ref_users_password, non_ref_users_phone) VALUES ('".$fullname."', '".$email."', '".$encrypted."', '".$phonenumber."')") or die(mysqli_error($connect));
+		$q = mysqli_query($connect,"INSERT INTO non_ref_users (non_ref_users_fullname, non_ref_users_email, non_ref_users_password, non_ref_users_phone, non_ref_users_reference) VALUES ('".$fullname."', '".$email."', '".$encrypted."', '".$phonenumber."', '".$reference_num."')") or die(mysqli_error($connect));
 
 		if(mysqli_affected_rows($connect) == 1){
 
-            include('package.php');  
 
+			$value = md5(uniqid(rand(), true));
+			$query_confirm_sessions = mysqli_query ($connect, "SELECT non_ref_users_cookie FROM non_ref_users WHERE non_ref_users_email='".$email."'") or die(db_conn_error);
+			$cookie_value_if_empty = mysqli_fetch_array($query_confirm_sessions);
+			
+			if (empty($cookie_value_if_empty[0])){
+			mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_cookie = '".$value."' WHERE non_ref_users_email='".$email."'") or die(db_conn_error);		
+			setcookie("remember_me", $value, time() + 4*24*3600);	//4 days for cookie to expire
+			
+			}else if(!empty($cookie_value_if_empty[0])){
+			
+			setcookie("remember_me", $cookie_value_if_empty[0], time() + 4*24*3600);	//4 days for cookie to expire
+			}
+    
+
+
+			$_SESSION['email'] = $email;
+			$_SESSION['reference'] = $reference_num;
+      
+			header('Location:'.GEN_WEBSITE.'/package.php');
+			exit();
 		} else{
 		trigger_error('You could not be registered due to a system error. We apologize for any inconvenience.');
 

@@ -19,7 +19,7 @@ if(isset($_POST['complete_order']) AND $_SERVER['REQUEST_METHOD'] == "POST"){
 
              //Set other parameters as keys in the $postdata array
 			$_SESSION['non_ref_users_reference'] = genReference(10);
-			mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_reference = '".$_SESSION['non_ref_users_reference']."' WHERE non_ref_users_id ='".$_SESSION['non_ref_users_id']."'") or die(db_conn_error);		
+			mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_reference = '".$_SESSION['non_ref_users_reference']."',  WHERE non_ref_users_id ='".$_SESSION['non_ref_users_id']."'") or die(db_conn_error);		
        
 
 
@@ -76,7 +76,7 @@ include('../incs-marketing/buy-header.php');
 			    <div class="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
 				    <div class="inner">
 					    <div class="app-card-body p-3 p-lg-4">
-						    <h3 class="mb-3">Welcome, <?= $_SESSION['non_ref_users_firstname'].' '. $_SESSION['non_ref_users_surname'];  ?></h3>
+						    <h3 class="mb-3">Welcome, <?= $_SESSION['non_ref_users_fullname'];  ?></h3>
 						    <div class="row gx-5 gy-3">
 						        <div class="col-12 col-lg-9">
 							        
@@ -101,7 +101,7 @@ include('../incs-marketing/buy-header.php');
 					    <div class="app-card app-card-stat shadow-sm h-100">
 						    <div class="app-card-body p-3 p-lg-4">
 							    <h4 class="stats-type mb-1">Website Package</h4>
-							    <div class="stats-figure"><?=$_SESSION['non_ref_users_package'];?></div>
+							    <div class="stats-figure"><?=$_SESSION['package'];?></div>
 						    </div><!--//app-card-body-->
 					    </div><!--//app-card-->
 				    </div><!--//col-->
@@ -109,7 +109,7 @@ include('../incs-marketing/buy-header.php');
 					    <div class="app-card app-card-stat shadow-sm h-100">
 						    <div class="app-card-body p-3 p-lg-4">
 							    <h4 class="stats-type mb-1">Price</h4>
-							    <div class="stats-figure"><?php echo '&#8358;'.number_format($_SESSION['non_ref_users_price']);?></div>
+							    <div class="stats-figure"><?php echo '&#8358;'.number_format($_SESSION['price']);?></div>
 						    </div><!--//app-card-body-->
 					    </div><!--//app-card-->
 				    </div><!--//col-->

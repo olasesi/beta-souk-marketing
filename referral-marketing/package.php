@@ -19,6 +19,7 @@ require_once('../incs-marketing/gen_serv_con.php');
 // }
 ?>
 <?php
+
 //  if(isset($_SESSION['non_ref_users_id'])){
 //     $query_select = mysqli_query ($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_id='".$_SESSION['non_ref_users_id']."'") or die(db_conn_error);
 //     if(mysqli_num_rows($query_select) == 1){
@@ -37,70 +38,24 @@ require_once('../incs-marketing/gen_serv_con.php');
     
 //     }      
 //      }
-?>
-<?php
-//if(!isset($_SESSION['non_ref_users_id'])){
-
-$errors = array();
-if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
-
-  	if (preg_match ('/^[a-zA-Z" "]{3,60}$/i', trim($_POST['fullname']))) {		//only 30 characters are allowed to be inputted
-		$fullname = mysqli_real_escape_string ($connect, trim($_POST['fullname']));
-	} else {
-		$errors['fullname'] = 'Please enter valid Name';
-	} 
-
-    if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
-        $email = mysqli_real_escape_string($connect,$_POST['email']);
-    }else{
-        $errors['email'] = "Enter a valid email address";
-    }
-
-	if (preg_match ('/^[0-9]{11}$/i', trim($_POST['phonenumber']))) {		//only 11 characters are allowed to be inputted
-		$phonenumber = mysqli_real_escape_string ($connect, trim($_POST['phonenumber']));
-	} else {
-		$errors['phonenumber'] = 'Please enter valid number';
-	} 
 
 
-    if(preg_match('/^.{6,255}$/i',$_POST['password'])){
-		$password =  mysqli_real_escape_string($connect,$_POST['password']);
-	}else{
-		$errors['password'] = "Minimum of 6 characters";
-	}
-        
+if(isset($_POST['package']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
 
-    $queries = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_email='".mysqli_real_escape_string ($connect, filter_var($_POST['email']))."'") or die(db_conn_error); 
+    if (trim($_POST['package'])) {		//only 30 characters are allowed to be inputted
+      $package = mysqli_real_escape_string ($connect, trim($_POST['package']));
+  }
 
-    if(mysqli_num_rows($queries) == 1 ){
-        $errors['email_taken'] = 'Email already exist';
-
-    }
-
-
-
-	if(empty($errors)){
-
-		$reference_num = genReference(10);
-		
-		$encrypted = password_hash($password, PASSWORD_DEFAULT);
-
-		$q = mysqli_query($connect,"INSERT INTO non_ref_users (non_ref_users_fullname, non_ref_users_email, non_ref_users_password, non_ref_users_phone) VALUES ('".$fullname."', '".$email."', '".$encrypted."', '".$phonenumber."')") or die(mysqli_error($connect));
-
-		if(mysqli_affected_rows($connect) == 1){
-
-            include('package.php');  
-
-		} else{
-		trigger_error('You could not be registered due to a system error. We apologize for any inconvenience.');
-
-		}
-	}
-
+  if(trim($_POST['price'])){
+      $price = mysqli_real_escape_string($connect, trim($_POST['price']));
+  }
 
 }
 
+mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$package."', non_ref_users_price = '".$price."'  WHERE non_ref_users_id = '".$SESSION['non_ref_users_id']."'") or die(db_conn_error);	
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -169,7 +124,11 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
                                 </div>
                             </li>
                         </ul>
-                        <button type="button" class="btn btn-primary mb-3">Start free trial</button>
+                        <form action="payment.php" method="post">
+                        <input type="hidden" name="package" value="<?php echo PACKAGE1;?>">    
+                            <input type="hidden" name="price" value="<?php echo BASIC;?>">
+                            <button type="submit" name="package" class="btn btn-primary mb-3">Start free trial</button>
+                        </form>
                     </div>
                     <div class="card-footer">
                         <a href="#!" class="text-light">Request a demo</a>
@@ -220,7 +179,11 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
                                 </div>
                             </li>
                         </ul>
-                        <button type="button" class="btn btn-secondary mb-3">Start free trial</button>
+                        <form action="payment.php" method="post">
+                            <input type="hidden" name="package" value="<?php echo PACKAGE2;?>">
+                            <input type="hidden" name="price" value="<?php echo ESSENTIAL;?>">
+                            <button type="submit" name="package" class="btn btn-secondary mb-3">Start free trial</button>
+                        </form>
                     </div>
                     <div class="card-footer bg-transparent">
                         <a href="#!" class="text-white">Contact sales</a>

@@ -40,13 +40,32 @@ $result = json_decode($request, true);
 
 if (array_key_exists('data', $result) && array_key_exists('status', $result['data']) && ($result['data']['status'] === 'success')) {
 
-    mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_order='1' WHERE non_ref_users_reference = '".$_GET['reference']."'") or die(db_conn_error);
-if(isset($_SESSION['non_ref_users_id'])){
-    $_SESSION['non_ref_users_order'] = '1';
-    header('Location:'.GEN_WEBSITE.'/dashboard.php?confirm=1');
-    exit(); 
+    $query = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_cookie='".$_COOKIE['remember_me']."' && non_ref_users_email='".$_SESSION['email']."'" )or die(db_conn_error);
 
-}
+    if(mysqli_num_rows($query) == 1 ){
+        while($row = mysqli_fetch_array($query)) {
+            $_SESSION['non_ref_users_id'] = $row['non_ref_users_id']; 
+            $_SESSION['non_ref_users_fullname'] = $row['non_ref_users_fullname'];
+            $_SESSION['non_ref_users_email'] = $row['non_ref_users_email'];
+            $_SESSION['non_ref_users_phone'] = $row['non_ref_users_phone'];
+
+       
+            $_SESSION['non_ref_users_reference'] = $row['non_ref_users_reference'];
+        }
+        mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_package = '".$_SESSION['package']."', non_ref_users_price = '".$_SESSION['price']."', non_ref_users_order = '1'  WHERE non_ref_users_id = '".$row['non_ref_users_id']."'") or die(db_conn_error);	
+
+        header('Location:'.GEN_WEBSITE.'/dashboard.php');
+			exit();
+    }
+
+    
+    //     mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_order='1' WHERE non_ref_users_reference = '".$_GET['reference']."'") or die(db_conn_error);
+    // if(isset($_SESSION['non_ref_users_id'])){
+    //     $_SESSION['non_ref_users_order'] = '1';
+    //     header('Location:'.GEN_WEBSITE.'/dashboard.php?confirm=1');
+    //     exit(); 
+
+    // }
   
 }else{
     header('Location:'.GEN_WEBSITE);
