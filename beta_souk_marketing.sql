@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 04, 2022 at 06:35 PM
--- Server version: 10.4.19-MariaDB
+-- Host: localhost:3306
+-- Generation Time: Apr 15, 2022 at 02:21 PM
+-- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,13 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `admin_id` int(11) NOT NULL,
-  `admin_active` int(1) NOT NULL DEFAULT 1,
+  `admin_active` int(1) NOT NULL DEFAULT '1',
   `admin_firstname` varchar(20) NOT NULL,
   `admin_lastname` varchar(20) NOT NULL,
   `admin_username` varchar(30) NOT NULL,
   `admin_email` varchar(255) NOT NULL,
   `admin_password` varchar(255) NOT NULL,
-  `admin_timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `admin_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -47,7 +47,7 @@ CREATE TABLE `admin` (
 CREATE TABLE `marketer` (
   `user_id_marketer` int(11) NOT NULL,
   `m_type` varchar(10) NOT NULL DEFAULT 'member',
-  `m_confirm_email` int(1) NOT NULL DEFAULT 0,
+  `m_confirm_email` int(1) NOT NULL DEFAULT '0',
   `m_firstname` varchar(20) NOT NULL,
   `m_surname` varchar(20) NOT NULL,
   `m_username` varchar(30) NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE `marketer` (
   `m_acc_name` varchar(100) NOT NULL DEFAULT '0',
   `m_cookie_session` varchar(255) NOT NULL,
   `m_remember_pass` varchar(255) NOT NULL,
-  `m_timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `m_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -76,34 +76,39 @@ INSERT INTO `marketer` (`user_id_marketer`, `m_type`, `m_confirm_email`, `m_firs
 
 CREATE TABLE `non_ref_users` (
   `non_ref_users_id` int(11) NOT NULL,
-  `non_ref_users_active` int(1) NOT NULL DEFAULT 1,
-  `non_ref_users_firstname` varchar(20) NOT NULL,
-  `non_ref_users_surname` varchar(20) NOT NULL,
-  `non_ref_users_username` varchar(20) NOT NULL,
+  `non_ref_users_active` int(1) NOT NULL DEFAULT '1',
+  `non_ref_users_fullname` varchar(60) NOT NULL,
   `non_ref_users_email` varchar(255) NOT NULL,
   `non_ref_users_password` varchar(255) NOT NULL,
-  `non_ref_users_address` varchar(255) NOT NULL,
-  `non_ref_users_package` varchar(20) NOT NULL,
-  `non_ref_users_price` varchar(10) NOT NULL,
-  `non_ref_users_order` int(1) NOT NULL DEFAULT 0,
+  `non_ref_users_phone` varchar(11) NOT NULL DEFAULT '0',
+  `non_ref_users_address` varchar(255) NOT NULL DEFAULT '0',
+  `non_ref_users_package` varchar(20) NOT NULL DEFAULT '0',
+  `non_ref_users_price` varchar(10) NOT NULL DEFAULT '0',
+  `non_ref_users_order` int(1) NOT NULL DEFAULT '0',
   `non_ref_users_reference` varchar(10) NOT NULL DEFAULT '0',
-  `non_ref_users_cookie` varchar(255) NOT NULL,
-  `non_ref_users_timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `non_ref_users_cookie` varchar(255) NOT NULL DEFAULT '0',
+  `non_ref_users_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `non_ref_users`
 --
 
-INSERT INTO `non_ref_users` (`non_ref_users_id`, `non_ref_users_active`, `non_ref_users_firstname`, `non_ref_users_surname`, `non_ref_users_username`, `non_ref_users_email`, `non_ref_users_password`, `non_ref_users_address`, `non_ref_users_package`, `non_ref_users_price`, `non_ref_users_order`, `non_ref_users_reference`, `non_ref_users_cookie`, `non_ref_users_timestamp`) VALUES
-(1, 1, 'Ahmed', 'Olusesi', 'olasesi', 'ola.sesi@yahoo.com', '$2y$10$OagjH08p6ITf6YoSmzop1eE9YXjgHlK.NYB3I.ZMH5F2S/oeawgCS', 'Ikeja', 'Premium', '300000', 0, 'HQWUY0BDE3', '', '2022-03-16 11:36:02'),
-(2, 1, 'Ahmed', 'Olusesi', 'sesi', 'ola.sesi@yahoo.com', '$2y$10$WHwAdUyHi/cO1EcYlzwVdeA/CdK6RFMcqnIlCruGatqV81UyrfAja', 'Ikeja', 'Basic', '60000', 0, 'PTXHM5X1IL', '', '2022-03-15 07:01:15'),
-(3, 1, 'Ahmed', 'Olusesi', 'anita', 'test@gmail.com', '$2y$10$LlOc0Qd7OXgj2.nfUx0.JeoMiIfYVBXDFix6ViWW0x6JtdX2FB1YW', 'ikeja', 'Premium', '300000', 0, 'ZPWQGHABGO', '', '2022-03-15 07:08:58'),
-(4, 1, 'Ahmed', 'Olusesi', 'eniola', 'ola.sesi@yahoo.com', '$2y$10$seq/8/obCdofpe/hMf/dN.TiLI3QZxLNnCJxkCy29y.AvoI1H7hra', 'ikeja', 'Essential', '150000', 1, 'JGEOD25V2J', '', '2022-03-15 16:01:41'),
-(5, 1, 'Ahmed', 'Olusesi', 'olasesi_', 'ola.sesi@yahoo.com', '$2y$10$16qZxSVg6GXB8uiNAditEeX9wUSFicJengOQUIttMd0wiIUE4xvCW', 'Ikeja', 'Premium', '300000', 1, 'MDYOV95EXV', '', '2022-03-19 05:44:17'),
-(6, 1, 'Ahmed', 'Olusesi', 'aaliyah', 'anita@gmail.com', '$2y$10$SjxatFfNvgCmsGtL18ftFu1aAaxCo5vSWN15bE7KsPbz6YhzpmbZq', 'Ikeja', 'Essential', '150000', 1, 'O1XE6J54CU', '', '2022-03-16 09:11:33'),
-(7, 1, 'eniola', 'olusesi', 'tester', 'olusesieniola@gmail.com', '$2y$10$MMG2JLCu82c8kMKVbryLBOVa.QI8mmZIZVOck3yNPFHKiFe5lF56u', 'ikorodu', 'Essential', '150000', 0, 'OMWXIBMHPS', '', '2022-04-04 16:03:44'),
-(8, 1, 'eniola', 'olusesi', 'testing', 'olusesieniola@gmail.com', '$2y$10$Qz4hp1RZvHVhXdyYyLbhWeI9QHiAf7ANwVeiyW3WkIwNKxDP4iJ.e', 'ikorodu', 'Essential', '150000', 0, '2WM7SCI0BO', '', '2022-04-04 16:13:08');
+INSERT INTO `non_ref_users` (`non_ref_users_id`, `non_ref_users_active`, `non_ref_users_fullname`, `non_ref_users_email`, `non_ref_users_password`, `non_ref_users_phone`, `non_ref_users_address`, `non_ref_users_package`, `non_ref_users_price`, `non_ref_users_order`, `non_ref_users_reference`, `non_ref_users_cookie`, `non_ref_users_timestamp`) VALUES
+(34, 1, 'Shobola Faruq', 're@me.com', '$2y$10$6J9pZ2QjG0CMdSC2nqJLe.7hqFwgrYdgDXAGEW7LzgJ3rPm/Cd8d2', '09090000000', '0', '0', '0', 0, 'X1QIXE5FMU', '', '2022-04-14 16:44:57'),
+(38, 1, 'Shobola Faruq Taiwo', 'gt@gn.com', '$2y$10$.6iGfpHetyM6pmiQZIv1GeZsjIn8dtpdB/15DlwD0VeF6G6kF9DK6', '09090000000', '0', '0', '0', 0, '44LOPHBMXK', '', '2022-04-15 10:20:19'),
+(39, 1, 'Shobola Faizol Kehinde', 'me@yoot.com', '$2y$10$pSVrgNUs/SUM3f9Th/K/2uZdG7yEYEEsXr21DSM.Mei7pGKSwThWi', '08074574512', '0', '0', '0', 0, 'XQV8IRC5VR', 'be99eb4356445019df0f5d92a15b0f02', '2022-04-15 10:20:44'),
+(40, 1, 'Shobola Faruq', 'hey@gmail.com', '$2y$10$4orxvvoH8r1DNAKL3oc9aOPtbpcdP59T7MZNzDUOg/xR8yDLLl4IO', '08074574512', '0', '0', '0', 0, '9EKPSH24JT', '89295c12ab1d1cc6fc32bd2e9f4c0e17', '2022-04-15 10:31:46'),
+(41, 1, 'Shobola Faruq', 'me@name.com', '$2y$10$vhzqZaSBziUD9JqDuy/mMeR9Tr41pdlTscapqrAVU7irsFFcgaKr6', '09090000000', '0', '0', '0', 0, 'VZIZWK57WZ', 'f2c8f8a799e0e3945b0b3abe47c6d984', '2022-04-15 10:33:03'),
+(42, 1, 'Shobola Faizol Kehinde', 'me@yoou.hey', '$2y$10$tSuF6Dvzw/VoViuUEk6CsOTc4ERc6AxmjtAPBEuoX.s8Hr.RgV3k2', '09876578655', '0', '0', '0', 0, '1SZ5FAHAWM', 'f12f9cd12178680cbfdedf6ad6f17f1a', '2022-04-15 10:50:04'),
+(43, 1, 'Shobola Faruq', 'me@name.cot', '$2y$10$Z5vKO1DJrGyuJvLlj66YM.ZQjqOYW6dlrPcPMSXjtLXY3Olw8GOKG', '09876578655', '0', '0', '0', 0, 'YV1D4Y65FW', 'efea58efacf3f270f4b53bf1c3b031fd', '2022-04-15 11:05:40'),
+(44, 1, 'Shobola Faizol', 'ade@email.com', '$2y$10$iUE5ZvroNMVUE3yJhb8zbekL8vjsYo3.IixO2enAPVwyNY7mVRyLm', '08080034000', '0', '0', '0', 0, '696X7MFIOK', 'fada45190be5b2dbc6c6b4199654b9f5', '2022-04-15 11:13:15'),
+(45, 1, 'Shobola Faizol', 'faizol@email.com', '$2y$10$VjzaT/gFjzY5QHSsWvUiWeemXMFBsnDzD9ES5rz3TPiCa/kP8oSWO', '08080034000', '0', '0', '0', 0, 'PF6DKXF7Q7', '', '2022-04-15 11:36:34'),
+(46, 1, 'Shobola Faizol', 'faizol@gmail.com', '$2y$10$91Ad1VVFNAP8ySR/WPtM5OvEKfxzq8OAPFHVwjSZBgbm6UmWh3UoO', '08080034000', '0', '0', '0', 0, '1UZTZ2B0ZA', 'e36bdbf1a41c828aba21276fd9a3031f', '2022-04-15 11:36:58'),
+(47, 1, 'Shobola Faizol', 'ade@ymail.com', '$2y$10$GMG45tQ275TLQuB9nOQkuuLnlDwLZ36PUeTEn2uk4xgnAa4TMpMii', '08080034000', '0', '0', '0', 0, 'JAJ56GBM7A', 'b16c69ce99d09edaafe6f5c7b0ae2dab', '2022-04-15 12:02:36'),
+(48, 1, 'Shobola Faizol', 'faizol@mail.com', '$2y$10$esgzTFFIi8700ToRpmR4DOMPAJelgSI9SHSx4fxvofWU.7R6XF8ie', '08080034000', '0', '0', '0', 0, 'UR42T1K1X5', '4ae3873be479a0febe4b516bdadcda00', '2022-04-15 12:03:05'),
+(49, 1, 'Shobola Faizol', 'ade@mail.com', '$2y$10$RyqhjvYFLLX8GI2pOHQGjuUWfGLEUq5aOGpKWvt/glyiSyMT0pdhK', '08080034000', '0', '0', '0', 0, 'LRW226VAXE', 'e58f23bdfc06291c13fca470913beba7', '2022-04-15 12:07:15'),
+(50, 1, 'Shobola Faizol', 'ade@hmail.com', '$2y$10$axVFvlQ/cwsjgU/ToLLJVOmAUPKSBLwlYDmhLEJ0Z8N4.YAY0a9mi', '08080034000', '0', '0', '0', 0, '0QBFMP8WH8', '247c4bfb6c1becee03ffd0844d1240bc', '2022-04-15 12:07:58');
 
 -- --------------------------------------------------------
 
@@ -113,7 +118,7 @@ INSERT INTO `non_ref_users` (`non_ref_users_id`, `non_ref_users_active`, `non_re
 
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
-  `u_active` int(1) NOT NULL DEFAULT 1,
+  `u_active` int(1) NOT NULL DEFAULT '1',
   `user_id_marketer` varchar(20) NOT NULL,
   `u_firstname` varchar(20) NOT NULL,
   `u_surname` varchar(20) NOT NULL,
@@ -122,12 +127,12 @@ CREATE TABLE `users` (
   `u_address` varchar(255) NOT NULL,
   `u_package` varchar(20) NOT NULL,
   `u_price` varchar(10) NOT NULL,
-  `u_order` int(1) NOT NULL DEFAULT 0,
+  `u_order` int(1) NOT NULL DEFAULT '0',
   `u_reference` varchar(10) NOT NULL,
   `u_password` varchar(255) NOT NULL,
   `u_commission` varchar(6) NOT NULL DEFAULT '8.3333',
   `u_cookie` varchar(255) NOT NULL,
-  `u_timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `u_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -139,7 +144,7 @@ CREATE TABLE `users` (
 CREATE TABLE `website_info` (
   `website_info_id` int(11) NOT NULL,
   `website_info_owner_id` int(11) NOT NULL,
-  `website_info_id_status` int(11) NOT NULL DEFAULT 0,
+  `website_info_id_status` int(11) NOT NULL DEFAULT '0',
   `website_info_web_name` varchar(255) NOT NULL,
   `website_info_about` text NOT NULL,
   `website_info_phone1` varchar(15) NOT NULL,
@@ -155,7 +160,7 @@ CREATE TABLE `website_info` (
   `website_info_colour1` varchar(15) NOT NULL,
   `website_info_colour2` varchar(15) NOT NULL,
   `website_info_colour3` varchar(15) NOT NULL,
-  `website_info_timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `website_info_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -212,7 +217,7 @@ ALTER TABLE `marketer`
 -- AUTO_INCREMENT for table `non_ref_users`
 --
 ALTER TABLE `non_ref_users`
-  MODIFY `non_ref_users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `non_ref_users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `users`
