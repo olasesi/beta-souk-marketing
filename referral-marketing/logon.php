@@ -5,19 +5,19 @@ require_once('../incs-marketing/gen_serv_con.php');
 ?>
 <?php
 
-if(isset($_SESSION['user_id_marketer'])) {
-    header('Location:'.GEN_WEBSITE.'/my_account.php');
-       exit;
-}
+// if(isset($_SESSION['user_id_marketer'])) {
+//     header('Location:'.GEN_WEBSITE.'/my_account.php');
+//        exit;
+// }
 if(isset($_SESSION['non_ref_users_id'])) {
     header('Location:'.GEN_WEBSITE.'/dashboard.php');
        exit();
 }
 
-if(isset($_SESSION['user_id'])) {
-    header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
-       exit();
-}
+// if(isset($_SESSION['user_id'])) {
+//     header('Location:'.GEN_WEBSITE.'/referred-to-buy.php');
+//        exit();
+// }
 
 ?>
 <?php
@@ -47,7 +47,7 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
       while($row = mysqli_fetch_array($query)){
       
        
-        if(password_verify($password,$row[6])){
+        if(password_verify($password,$row[4])){
           
           $value = md5(uniqid(rand(), true));
           $query_confirm_sessions = mysqli_query ($connect, "SELECT non_ref_users_cookie FROM non_ref_users WHERE non_ref_users_email='".$email."'") or die(db_conn_error);
@@ -63,16 +63,16 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
           }
       
       
-    //   $_SESSION['non_ref_users_id'] = $row[0];
-    //   $_SESSION['non_ref_users_fullname'] = $row[2];
-    //   $_SESSION['non_ref_users_email'] = $row[4];
-    //   $_SESSION['non_ref_users_address'] = $row[7];
-    //   $_SESSION['non_ref_users_phone'] = $row[7];
-    //   $_SESSION['non_ref_users_package'] = $row[8];
-    //   $_SESSION['non_ref_users_price'] = $row[9];
-    //   $_SESSION['non_ref_users_order'] = $row[10];
-    //   $_SESSION['non_ref_users_reference'] = $row[11];
-    //   $_SESSION['non_ref_users_timestamp'] = $row[13];
+       $_SESSION['non_ref_users_id'] = $row[0];
+       $_SESSION['non_ref_users_fullname'] = $row[2];
+       $_SESSION['non_ref_users_email'] = $row[3];
+       $_SESSION['non_ref_users_address'] = $row[6];
+   $_SESSION['non_ref_users_phone'] = $row[5];
+       $_SESSION['package'] = $row[7];
+       $_SESSION['price'] = $row[8];
+       $_SESSION['non_ref_users_order'] = $row[9];
+       $_SESSION['non_ref_users_reference'] = $row[10];
+       $_SESSION['non_ref_users_timestamp'] = $row[12];
       
       header('Location:'.GEN_WEBSITE.'/dashboard.php');
        exit;
@@ -80,7 +80,7 @@ if(isset($_POST['login']) AND $_SERVER['REQUEST_METHOD']== "POST" ){
       
       
       
-          $signup_errors['email'] = 'You entered an incorrect login details.';
+          $signup_errors['email'] = 'You entered an incorrect email.';
          
       
         }

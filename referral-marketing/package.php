@@ -40,19 +40,6 @@ require_once('../incs-marketing/gen_serv_con.php');
 //      }
 
 
-if(isset($_POST['package']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
-
-    if (trim($_POST['package'])) {		//only 30 characters are allowed to be inputted
-      $package = mysqli_real_escape_string ($connect, trim($_POST['package']));
-  }
-
-  if(trim($_POST['price'])){
-      $price = mysqli_real_escape_string($connect, trim($_POST['price']));
-  }
-
-}
-
-mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$package."', non_ref_users_price = '".$price."'  WHERE non_ref_users_id = '".$SESSION['non_ref_users_id']."'") or die(db_conn_error);	
 
 ?>
 
@@ -127,7 +114,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                         <form action="payment.php" method="post">
                         <input type="hidden" name="package" value="<?php echo PACKAGE1;?>">    
                             <input type="hidden" name="price" value="<?php echo BASIC;?>">
-                            <button type="submit" name="package" class="btn btn-primary mb-3">Start free trial</button>
+                            <button type="submit" class="btn btn-primary mb-3">Start free trial</button>
                         </form>
                     </div>
                     <div class="card-footer">
@@ -182,7 +169,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                         <form action="payment.php" method="post">
                             <input type="hidden" name="package" value="<?php echo PACKAGE2;?>">
                             <input type="hidden" name="price" value="<?php echo ESSENTIAL;?>">
-                            <button type="submit" name="package" class="btn btn-secondary mb-3">Start free trial</button>
+                            <button type="submit" class="btn btn-secondary mb-3">Start free trial</button>
                         </form>
                     </div>
                     <div class="card-footer bg-transparent">
