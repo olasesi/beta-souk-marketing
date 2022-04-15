@@ -430,7 +430,7 @@ include('../incs-marketing/header.php');
 						</div>
 						<div class="aplpg-explore-btns">
 							<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-primary-btn wow fadeInUp">Discover Now</a>
-							<a href="#" class="aplpg-secondary-btn wow fadeInUp" data-wow-delay="0.2s"><span class="aplpg-gradient-border">Free Trial</span></a>
+							<a href="https://forms.gle/b1qWJRPR66z8wA5J6" class="aplpg-secondary-btn wow fadeInUp" data-wow-delay="0.2s"><span class="aplpg-gradient-border">Free Trial</span></a>
 						</div>
 					</div>
 				</div>
@@ -541,7 +541,7 @@ include('../incs-marketing/header.php');
 					<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-google-btn">
 						<span>Get Started</span>
 					</a>
-					<a href="#" class="aplpg-apple-btn">
+					<a href="https://forms.gle/b1qWJRPR66z8wA5J6" class="aplpg-apple-btn">
 						<span>Free Trial</span>
 					</a>
 				</div>
@@ -575,7 +575,7 @@ include('../incs-marketing/header.php');
 							</div>
 						</div>
 						<div class="aplpg-brand-btn wow fadeInUp" data-wow-delay="0.2s">
-							<a href="#" class="aplpg-primary-btn">Register</a>
+							<a href="https://forms.gle/fG2YbFsP2SCGvhs79" class="aplpg-primary-btn">Register</a>
 						</div>
 					</div>
 				</div>
@@ -613,61 +613,6 @@ include('../incs-marketing/header.php');
 					<div class="col-lg-4 col-md-6">
 						<div class="aplpg-pricing-column">
 							<div class="aplpg-pricing-top aplpg-headline">
-								<h3>Free</h3>
-								<span class="aplpg-subtitle"></span>
-								<span class="aplpg-triangle-shape"></span>
-							</div>
-							<div class="aplpg-pricing-list-content">
-								<div class="aplpg-headline">
-									<h6></h6>
-								</div>
-								<ul>
-									<li>Admin page</li>
-									<li>Cross sells / ups</li>
-									<li>Payment gateway</li>
-									<li>Create Discount Price</li>
-									<li>Product categories creation</li>
-									<li>Product share to social media</li>
-									<li>Whatsapp chat with customers</li>
-								</ul>
-								<div class="aplpg-pricing-btn">
-									<a href="#">Choose Plan</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="aplpg-pricing-column popular-package">
-							<div class="aplpg-pricing-top aplpg-headline">
-								<h3>&#x20A6;150K</h3>
-								<span class="aplpg-subtitle"></span>
-								<span class="aplpg-triangle-shape"></span>
-								<span class="aplpg-second-title">Essential Package</span>
-							</div>
-							<div class="aplpg-pricing-list-content">
-								<div class="aplpg-headline">
-									<h6></h6>
-								</div>
-								<ul>
-									<li>Admin page</li>
-									<li>Custom email</li>
-									<li>Cross sells / ups</li>
-									<li>Payment gateway</li>
-									<li>Top banner for promo</li>
-									<li>Create Discount Price</li>
-									<li>Product share to social media</li>
-									<li>Whatsapp chat with customers</li>
-									<li>Product categories + sub-category creation</li>
-								</ul>
-								<div class="aplpg-pricing-btn">
-									<a href="/beta-souk-marketing/referral-marketing/buy.php">Choose Plan</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="aplpg-pricing-column">
-							<div class="aplpg-pricing-top aplpg-headline">
 								<h3>&#x20A6;60K</h3>
 								<span class="aplpg-subtitle"></span>
 								<span class="aplpg-triangle-shape"></span>
@@ -690,8 +635,42 @@ include('../incs-marketing/header.php');
 									<a href="/beta-souk-marketing/referral-marketing/buy.php">Choose Plan</a>
 								</div>
 							</div>
+							<div class="card-footer text-center">
+								<a href="https://forms.gle/Q5nocGYaVK3o6YTE7" class="text-black-50">Request a demo</a>
+							</div>
 						</div>
 					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="aplpg-pricing-column popular-package">
+							<div class="aplpg-pricing-top aplpg-headline">
+								<h3>&#x20A6;150K</h3>
+								<span class="aplpg-subtitle"></span>
+								<span class="aplpg-triangle-shape"></span>
+								<span class="aplpg-second-title">Essential Package</span>
+							</div>
+							<div class="aplpg-pricing-list-content">
+								<div class="aplpg-headline">
+									<h6></h6>
+								</div>
+								<ul>
+									<li>Admin page</li>
+									<li>Custom email</li>
+									<li>Cross sells / ups</li>
+									<li>Payment gateway</li>
+									<li>Top banner for promo</li>
+									<li>Create Discount Price</li>
+									<li>Logistics Integration</li>
+									<li>Product share to social media</li>
+									<li>Whatsapp chat with customers</li>
+									<li>Product categories + sub-category creation</li>
+								</ul>
+								<div class="aplpg-pricing-btn">
+									<a href="/beta-souk-marketing/referral-marketing/buy.php">Choose Plan</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 				<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
 					<defs>
@@ -933,7 +912,7 @@ include('../incs-marketing/header.php');
 				</div>
 			</div>
 			<div class="aplpg-blog-content" id="medium">
-				<div class="row aplpg-blog-slider" id="jsonContent">
+				<div class="d-flex aplpg-blog-slider" id="jsonContent">
 					
 				</div>
 
