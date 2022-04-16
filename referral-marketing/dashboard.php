@@ -12,53 +12,12 @@ if(!isset($_SESSION['non_ref_users_id'])) {
 
 
 if(isset($_POST['complete_order']) AND $_SERVER['REQUEST_METHOD'] == "POST"){
-    
-
-	
-	$result = array();
-
-             //Set other parameters as keys in the $postdata array
-			$_SESSION['non_ref_users_reference'] = genReference(10);
-			mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_reference = '".$_SESSION['non_ref_users_reference']."',  WHERE non_ref_users_id ='".$_SESSION['non_ref_users_id']."'") or die(db_conn_error);		
-       
+	$email =  $_SESSION['non_ref_users_email'];
+	$price = $_SESSION['price'];
+	$reference_num = $_SESSION['non_ref_users_reference'];
 
 
-			$postdata = [
-                  'email' => $_SESSION['non_ref_users_email'],
-                  'amount' => $_SESSION['non_ref_users_price']*100,
-                  'reference' => $_SESSION['non_ref_users_reference'],
-                  'callback_url' => GEN_WEBSITE.'/buy-verify-payment.php'
-              ];
-			
-            
-             $url = "https://api.paystack.co/transaction/initialize";
-            
-             $ch = curl_init();
-             curl_setopt($ch, CURLOPT_URL, $url);
-             curl_setopt($ch, CURLOPT_POST, 1);
-             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postdata));  //Post Fields
-             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      
-             $headers = [
-                 'Authorization: '.API_KEY,
-                 'Content-Type: application/json',
-            
-             ];
-             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-            
-             $request = curl_exec($ch);
-            
-             curl_close($ch);
-            
-             if ($request) {
-            
-                 $result = json_decode($request, true);
-            
-                 header('Location: ' . $result['data']['authorization_url']);
-            
-             }
-    
-                exit();          
+	require_once('../incs-marketing/pay.php');
 
 
 }

@@ -4,12 +4,27 @@ require_once('../incs-marketing/gen_serv_con.php');
 //include('../incs-marketing/cookie-session.php');
 
 
+if(isset($_SESSION['user_id_marketer'])){
+    header('Location:'.GEN_WEBSITE);
+    exit(); 
+}
+
 if(!isset($_GET['reference'])){
     header('Location:'.GEN_WEBSITE);
     exit(); 
 }
 
-$query_select = mysqli_query($connect, "SELECT non_ref_users_reference FROM non_ref_users WHERE non_ref_users_reference  = '".mysqli_real_escape_string ($connect, $_GET['reference'])."'") or die(db_conn_error);
+if(!isset($_SESSION['reference'])){
+    header('Location:'.GEN_WEBSITE);
+    exit(); 
+}
+
+if(($_SESSION['reference'] !== $_GET['reference'])){
+    header('Location:'.GEN_WEBSITE);
+    exit(); 
+}
+
+$query_select = mysqli_query($connect, "SELECT non_ref_users_reference FROM non_ref_users WHERE non_ref_users_reference  = '".mysqli_real_escape_string ($connect, $_SESSION['reference'])."' AND non_ref_users_order = '0'") or die(db_conn_error);
 
 if(mysqli_num_rows($query_select) == 0){
     header('Location:'.GEN_WEBSITE);
@@ -48,13 +63,19 @@ if (array_key_exists('data', $result) && array_key_exists('status', $result['dat
             $_SESSION['non_ref_users_fullname'] = $row['non_ref_users_fullname'];
             $_SESSION['non_ref_users_email'] = $row['non_ref_users_email'];
             $_SESSION['non_ref_users_phone'] = $row['non_ref_users_phone'];
-
-       
             $_SESSION['non_ref_users_reference'] = $row['non_ref_users_reference'];
         }
-        mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_package = '".$_SESSION['package']."', non_ref_users_price = '".$_SESSION['price']."', non_ref_users_order = '1'  WHERE non_ref_users_id = '".$row['non_ref_users_id']."'") or die(db_conn_error);	
+        mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_package = '".$_SESSION['package']."', non_ref_users_price = '".$_SESSION['price']."', non_ref_users_order = '1'  WHERE non_ref_users_id = '".$_SESSION['non_ref_users_id']."' AND non_ref_users_reference = '".$_SESSION['reference']."'") or die(db_conn_error);	
+        
 
-        header('Location:'.GEN_WEBSITE.'/dashboard.php');
+        $query_order= mysqli_query($connect, "SELECT non_ref_users_order FROM non_ref_users WHERE non_ref_users_id = '".$_SESSION['non_ref_users_id']."'" )or die(db_conn_error);
+        
+        while($row_order = mysqli_fetch_array($query_order)){
+        $_SESSION['non_ref_users_order'] = $row_order['non_ref_users_order'];
+    }
+      
+      
+         header('Location:'.GEN_WEBSITE.'/dashboard.php');
 			exit();
     }
 

@@ -2,7 +2,7 @@
 $result = array();
 
 //Set other parameters as keys in the $postdata array
-$_POST['price'];
+
 $postdata = [
     'email' => $email,
     'amount' => $price*100,
