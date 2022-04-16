@@ -60,15 +60,16 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link id="theme-style" rel="stylesheet" href="assets/css/portal.css"> -->
+<meta charset="UTF-8">
+	<title>Beta Souk - Utilizing Digital Platforms For Businesses</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Utilizing digital platforms for businesses to promote their products and services, create a great first impression and generate more sales." />
+    <meta name="keywords" content="Ecommerce, online store, beta souk, digital platforms, businesses, promote, business, sercives, sales, profit" />
+    <meta name="author" content="Beta Souk" />
+    <meta name="MobileOptimized" content="320" />
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
     <link id="theme-style" rel="stylesheet" href="assets/css/package.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
-
-
-    <title>Document</title>
 </head>
 <body>
     
@@ -81,10 +82,10 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
             <div class="pricing card-group flex-column flex-md-row mb-3">
                 <div class="card card-pricing border-0 text-center mb-4">
                     <div class="card-header bg-transparent">
-                        <h4 class="text-uppercase ls-1 text-primary py-3 mb-0">Bravo pack</h4>
+                        <h4 class="text-uppercase ls-1 text-primary py-3 mb-0">Basic pack</h4>
                     </div>
                     <div class="card-body px-lg-7">
-                        <div class="display-2">$49</div>
+                        <div class="display-2">&#8358;60K</div>
                         <span class="text-muted">per application</span>
                         <ul class="list-unstyled my-4">
                             <li>
@@ -95,7 +96,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                                         </div>
                                     </div>
                                     <div>
-                                        <span class="pl-2">Complete documentation</span>
+                                        <span class="pl-2">Cross sells / ups</span>
                                     </div>
                                 </div>
                             </li>
@@ -107,7 +108,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                                         </div>
                                     </div>
                                     <div>
-                                        <span class="pl-2">Working materials in Sketch</span>
+                                        <span class="pl-2">Payment gateway</span>
                                     </div>
                                 </div>
                             </li>
@@ -119,7 +120,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                                         </div>
                                     </div>
                                     <div>
-                                        <span class="pl-2">2GB cloud storage</span>
+                                        <span class="pl-2">Product share to social media</span>
                                     </div>
                                 </div>
                             </li>
@@ -127,7 +128,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                         <form action="payment.php" method="post">
                         <input type="hidden" name="package" value="<?php echo PACKAGE1;?>">    
                             <input type="hidden" name="price" value="<?php echo BASIC;?>">
-                            <button type="submit" name="package" class="btn btn-primary mb-3">Start free trial</button>
+                            <button type="submit" name="package" class="btn btn-primary mb-3">Choose Package</button>
                         </form>
                     </div>
                     <div class="card-footer">
@@ -136,10 +137,10 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                 </div>
                 <div class="card card-pricing bg-gradient-success zoom-in shadow-lg rounded border-0 text-center mb-4">
                     <div class="card-header bg-transparent">
-                        <h4 class="text-uppercase ls-1 text-white py-3 mb-0">Alpha pack</h4>
+                        <h4 class="text-uppercase ls-1 text-white py-3 mb-0">Essential pack</h4>
                     </div>
                     <div class="card-body px-lg-7">
-                        <div class="display-1 text-white">$199</div>
+                        <div class="display-1 text-white">&#8358;150K</div>
                         <span class="text-white">per application</span>
                         <ul class="list-unstyled my-4">
                             <li>
@@ -150,7 +151,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                                         </div>
                                     </div>
                                     <div>
-                                        <span class="pl-2 text-white">Complete documentation</span>
+                                        <span class="pl-2 text-white">Cross sells / ups</span>
                                     </div>
                                 </div>
                             </li>
@@ -162,7 +163,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                                         </div>
                                     </div>
                                     <div>
-                                        <span class="pl-2 text-white">Working materials in Sketch</span>
+                                        <span class="pl-2 text-white">Logistics Integration</span>
                                     </div>
                                 </div>
                             </li>
@@ -174,7 +175,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                                         </div>
                                     </div>
                                     <div>
-                                        <span class="pl-2 text-white">2GB cloud storage</span>
+                                        <span class="pl-2 text-white">Product share to social media</span>
                                     </div>
                                 </div>
                             </li>
@@ -182,7 +183,7 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                         <form action="payment.php" method="post">
                             <input type="hidden" name="package" value="<?php echo PACKAGE2;?>">
                             <input type="hidden" name="price" value="<?php echo ESSENTIAL;?>">
-                            <button type="submit" name="package" class="btn btn-secondary mb-3">Start free trial</button>
+                            <button type="submit" name="package" class="btn btn-secondary mb-3">Choose Package</button>
                         </form>
                     </div>
                     <div class="card-footer bg-transparent">
@@ -213,67 +214,86 @@ mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$pac
                                 <span class="font-weight-900">Features</span>
                             </th>
                             <th class="text-center bg-transparent" scope="col">
-                                <span class="font-weight-900">Bravo Pack</span>
+                                <span class="font-weight-900">Basic Pack</span>
                             </th>
                             <th class="text-center bg-transparent" scope="col">
-                                <span class="font-weight-900">Alpha Pack</span>
+                                <span class="font-weight-900">Essential Pack</span>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="px-0">IMAP/POP Support</td>
+                            <td class="px-0">Admin page</td>
                             <td class="text-center"><i class="fas fa-check text-success"></i>
                             </td>
                             <td class="text-center"><i class="fas fa-check text-success"></i>
                             </td>
                         </tr>
                         <tr>
-                            <td class="px-0">Email Forwarding</td>
-                            <td class="text-center"><i class="fas fa-check text-success"></i>
-                            </td>
-                            <td class="text-center"><i class="fas fa-check text-success"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="px-0">Active Sync</td>
-                            <td class="text-center"><i class="fas fa-check text-success"></i>
-                            </td>
-                            <td class="text-center"><i class="fas fa-check text-success"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="px-0">Multiple domain hosting</td>
-                            <td class="text-center"><i class="fas fa-check text-success"></i>
-                            </td>
-                            <td class="text-center">
-                                <span class="text-sm">Limited to 1 domain only</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="px-0">Additional storage upgrade</td>
-                            <td class="text-center"><i class="fas fa-check text-success"></i>
-                            </td>
-                            <td class="text-center"><i class="fas fa-check text-success"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="px-0">30MB Attachment Limit</td>
-                            <td class="text-center"><i class="fas fa-check text-success"></i>
-                            </td>
+                            <td class="px-0">Custom email</td>
                             <td class="text-center">-</td>
-                        </tr>
-                        <tr>
-                            <td class="px-0">Password protected / Expiry links</td>
                             <td class="text-center"><i class="fas fa-check text-success"></i>
                             </td>
-                            <td class="text-center">-</td>
                         </tr>
                         <tr>
-                            <td class="px-0">Unlimited Custom Apps</td>
+                            <td class="px-0">Cross sells / ups</td>
                             <td class="text-center"><i class="fas fa-check text-success"></i>
                             </td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-0">Payment gateway</td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-0">Create Discount Price</td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-0">Logistics Integration</td>
                             <td class="text-center">-</td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-0">Top banner for promo</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-0">Product categories</td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-0">Sub-category creation</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-0">Product share to social media</td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-0">Whatsapp chat with customers</td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
+                            <td class="text-center"><i class="fas fa-check text-success"></i>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

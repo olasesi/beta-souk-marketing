@@ -13,7 +13,7 @@ Author: Duromedia
     <meta name="keywords" content="Ecommerce, online store, beta souk, digital platforms, businesses, promote, business, sercives, sales, profit" />
     <meta name="author" content="Beta Souk" />
     <meta name="MobileOptimized" content="320" />
-
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
     <!-- FontAwesome JS-->
     <script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
         
