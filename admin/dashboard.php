@@ -73,7 +73,7 @@ include('../incs-marketing/buy-header.php');
 
                                                     }
                                                 } else{
-                                                    echo 'No referred person yet';
+                                                    echo 'No user yet';
 
                                             }
 
