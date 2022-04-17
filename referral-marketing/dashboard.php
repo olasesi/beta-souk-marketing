@@ -12,9 +12,23 @@ if(!isset($_SESSION['non_ref_users_id'])) {
 
 
 if(isset($_POST['complete_order']) AND $_SERVER['REQUEST_METHOD'] == "POST"){
+	$new_ref = genReference(12);
 	$email =  $_SESSION['non_ref_users_email'];
+	$_SESSION['non_ref_users_reference'] = $reference_num = $new_ref; 
+	
+if(isset($_POST['select_package'])){
+	if($_POST['select_package'] == BASIC){
+		$price = $_SESSION['price'] = $_POST['select_package'];
+		$_SESSION['package'] = PACKAGE1;
+	}elseif($_POST['select_package'] == ESSENTIAL){
+		$price = $_SESSION['price'] = $_POST['select_package'];
+		$_SESSION['package'] = PACKAGE2;
+	}
+}else{
+
 	$price = $_SESSION['price'];
-	$reference_num = $_SESSION['non_ref_users_reference'];
+}
+
 
 
 	require_once('../incs-marketing/pay.php');
@@ -87,10 +101,22 @@ include('../incs-marketing/buy-header.php');
                                 <?php
 
                                     if($_SESSION['non_ref_users_order'] == 0){
-                                        echo  '
+                                      
+										
+										
+										
+										echo  '
 										<div class="stats-figure" style="color:red;">Not Successful</div>
-										<form method="POST" action="">
-											<button type="submit" name="complete_order" class="btn app-btn-primary">
+										<form method="POST" action="">';
+										if($_SESSION['package'] == 0 AND $_SESSION['price'] == 0){
+										echo 
+										'<select name="select_package">
+										<option value="'.BASIC.'">'.PACKAGE1.'</option>
+										<option value="'.ESSENTIAL.'">'.PACKAGE2.'</option>
+										</select>';
+										}
+										
+										echo '<button type="submit" name="complete_order" class="btn app-btn-primary">
 											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-arrow-down me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 											<path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
 											<path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>

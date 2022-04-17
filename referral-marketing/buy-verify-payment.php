@@ -14,23 +14,25 @@ if(!isset($_GET['reference'])){
     exit(); 
 }
 
-if(!isset($_SESSION['reference'])){
+if(!isset($_SESSION['non_ref_users_reference'])){
     header('Location:'.GEN_WEBSITE);
     exit(); 
 }
 
-if(($_SESSION['reference'] !== $_GET['reference'])){
+if(($_SESSION['non_ref_users_reference'] !== $_GET['reference'])){
     header('Location:'.GEN_WEBSITE);
     exit(); 
 }
 
-$query_select = mysqli_query($connect, "SELECT non_ref_users_reference FROM non_ref_users WHERE non_ref_users_reference  = '".mysqli_real_escape_string ($connect, $_SESSION['reference'])."' AND non_ref_users_order = '0'") or die(db_conn_error);
 
-if(mysqli_num_rows($query_select) == 0){
+if(!isset($_SESSION['non_ref_users_id'])){
+    $query_select = mysqli_query($connect, "SELECT non_ref_users_reference FROM non_ref_users WHERE non_ref_users_reference  = '".mysqli_real_escape_string ($connect, $_SESSION['non_ref_users_reference'])."' AND non_ref_users_order = '0'") or die(db_conn_error);
+
+    if(mysqli_num_rows($query_select) == 0){
     header('Location:'.GEN_WEBSITE);
     exit(); 
 }
-
+}
 
 
 
@@ -54,8 +56,8 @@ $result = json_decode($request, true);
 }
 
 if (array_key_exists('data', $result) && array_key_exists('status', $result['data']) && ($result['data']['status'] === 'success')) {
-
-    $query = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_cookie='".$_COOKIE['remember_me']."' && non_ref_users_email='".$_SESSION['email']."'" )or die(db_conn_error);
+if(!isset($_SESSION['non_ref_users_id'])){
+    $query = mysqli_query($connect, "SELECT * FROM non_ref_users WHERE non_ref_users_cookie='".$_COOKIE['remember_me']."' && non_ref_users_email='".$_SESSION['non_ref_users_email']."'" )or die(db_conn_error);
 
     if(mysqli_num_rows($query) == 1 ){
         while($row = mysqli_fetch_array($query)) {
@@ -65,7 +67,7 @@ if (array_key_exists('data', $result) && array_key_exists('status', $result['dat
             $_SESSION['non_ref_users_phone'] = $row['non_ref_users_phone'];
             $_SESSION['non_ref_users_reference'] = $row['non_ref_users_reference'];
         }
-        mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_package = '".$_SESSION['package']."', non_ref_users_price = '".$_SESSION['price']."', non_ref_users_order = '1'  WHERE non_ref_users_id = '".$_SESSION['non_ref_users_id']."' AND non_ref_users_reference = '".$_SESSION['reference']."'") or die(db_conn_error);	
+        mysqli_query($connect,"UPDATE non_ref_users SET non_ref_users_package = '".$_SESSION['package']."', non_ref_users_price = '".$_SESSION['price']."', non_ref_users_order = '1' WHERE non_ref_users_id = '".$_SESSION['non_ref_users_id']."' AND non_ref_users_reference = '".$_SESSION['non_ref_users_reference']."'") or die(db_conn_error);	
         
 
         $query_order= mysqli_query($connect, "SELECT non_ref_users_order FROM non_ref_users WHERE non_ref_users_id = '".$_SESSION['non_ref_users_id']."'" )or die(db_conn_error);
@@ -77,8 +79,16 @@ if (array_key_exists('data', $result) && array_key_exists('status', $result['dat
       
          header('Location:'.GEN_WEBSITE.'/dashboard.php');
 			exit();
-    }
+          
+        }
+}elseif(isset($_SESSION['non_ref_users_id'])){
 
+    mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_package = '".$_SESSION['package']."', non_ref_users_price = '".$_SESSION['price']."', non_ref_users_reference = '".$_SESSION['non_ref_users_reference']."', non_ref_users_order = '1' WHERE non_ref_users_id = '".$_SESSION['non_ref_users_id']."'") or die(db_conn_error);	
+    $_SESSION['non_ref_users_order'] = 1;  
+    header('Location:'.GEN_WEBSITE.'/dashboard.php');
+   exit();
+
+}
     
     //     mysqli_query($connect, "UPDATE non_ref_users SET non_ref_users_order='1' WHERE non_ref_users_reference = '".$_GET['reference']."'") or die(db_conn_error);
     // if(isset($_SESSION['non_ref_users_id'])){

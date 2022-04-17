@@ -105,8 +105,8 @@ if(isset($_POST['order']) AND $_SERVER['REQUEST_METHOD'] == "POST" ){
     
 
 
-			$_SESSION['email'] = $email;
-			$_SESSION['reference'] = $reference_num;
+			$_SESSION['non_ref_users_email'] = $email;
+			$_SESSION['non_ref_users_reference'] = $reference_num;
       
 			header('Location:'.GEN_WEBSITE.'/package.php');
 			exit();

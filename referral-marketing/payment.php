@@ -12,7 +12,7 @@ require_once('../incs-marketing/gen_serv_con.php');
 
  }
 
- if(!isset($_SESSION['email']) || !isset($_SESSION['reference'])) {
+ if(!isset($_SESSION['non_ref_users_email']) || !isset($_SESSION['non_ref_users_reference'])) {
     header('Location:'.GEN_WEBSITE.'/logon.php');
        exit();
 }
@@ -35,13 +35,13 @@ require_once('../incs-marketing/gen_serv_con.php');
 }*/
 
 
-$email = $_SESSION['email'];
+$email = $_SESSION['non_ref_users_email'];
 $_SESSION['package'] = mysqli_real_escape_string ($connect, $_POST['package']);
 $price = $_SESSION['price'] = mysqli_real_escape_string($connect, trim($_POST['price']));
-$reference_num = $_SESSION['reference'];
+$reference_num = $_SESSION['non_ref_users_reference'];
 
 
-if(!isset($_SESSION['email']) || !isset($_SESSION['price']) || !isset($_SESSION['reference'])) {
+if(!isset($_SESSION['non_ref_users_email']) || !isset($_SESSION['price']) || !isset($_SESSION['non_ref_users_reference'])) {
     header('Location:'.GEN_WEBSITE.'/signup.php');
        exit();
 }
