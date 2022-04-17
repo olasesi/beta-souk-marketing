@@ -40,7 +40,7 @@ define ('PACKAGE3', 'Premium');
 
 $now = new DateTime();					
 
-define('API_KEY', 'Bearer sk_live_79523fa9ec638728fd7980ab2957226ecc2eac15');
+define('API_KEY', 'Bearer sk_test_4cab8d4d937b1ab5f847c78c0014a2f6a6e3405c');
 
 
 
