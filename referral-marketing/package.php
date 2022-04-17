@@ -115,7 +115,7 @@ require_once('../incs-marketing/gen_serv_con.php');
                         <form action="payment.php" method="post">
                         <input type="hidden" name="package" value="<?php echo PACKAGE1;?>">    
                             <input type="hidden" name="price" value="<?php echo BASIC;?>">
-                            <button type="submit" class="btn btn-primary mb-3">Start free trial</button>
+                            <button type="submit" class="btn btn-primary mb-3">Choose package</button>
                         </form>
                     </div>
                     <div class="card-footer">
@@ -170,7 +170,7 @@ require_once('../incs-marketing/gen_serv_con.php');
                         <form action="payment.php" method="post">
                             <input type="hidden" name="package" value="<?php echo PACKAGE2;?>">
                             <input type="hidden" name="price" value="<?php echo ESSENTIAL;?>">
-                            <button type="submit" class="btn btn-secondary mb-3">Start free trial</button>
+                            <button type="submit" class="btn btn-secondary mb-3">Choose package</button>
                         </form>
                     </div>
                     <div class="card-footer bg-transparent">
