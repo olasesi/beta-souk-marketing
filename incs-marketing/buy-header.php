@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="../referral-marketing/css/font-awesome.css">
     
     <!-- App CSS -->  
-    <link id="theme-style" rel="stylesheet" href="../referral-marketing/assets/css/portal.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 
 </head> 
 

@@ -164,7 +164,7 @@ include('../incs-marketing/header-auth.php');
 			    <footer class="app-auth-footer">
 				    <div class="container text-center py-3">
 				         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-			        <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="app-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+						 <small class="copyright">Designed with <i class="fas fa-heart" style="color: #c43a10;"></i> by <a class="app-link" href="https://duromedia.com.ng" target="_blank">Duromedia</a> for business</small>
 				       
 				    </div>
 			    </footer><!--//app-auth-footer-->	
@@ -178,8 +178,8 @@ include('../incs-marketing/header-auth.php');
 			    <div class="d-flex flex-column align-content-end h-100">
 				    <div class="h-100"></div>
 				    <div class="overlay-content p-3 p-lg-4 rounded">
-					    <h5 class="mb-3 overlay-title">Explore Portal Admin Template</h5>
-					    <div>Portal is a free Bootstrap 5 admin dashboard template. You can download and view the template license <a href="https://themes.3rdwavemedia.com/bootstrap-templates/admin-dashboard/portal-free-bootstrap-admin-dashboard-template-for-developers/">here</a>.</div>
+					<h5 class="mb-3 overlay-title">Explore Betasouk</h5>
+					    <div>a ready made e-commerce website for business owners to expand their market base and make more sales.</div>
 				    </div>
 				</div>
 		    </div><!--//auth-background-overlay-->
