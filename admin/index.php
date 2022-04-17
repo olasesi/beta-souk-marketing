@@ -88,7 +88,7 @@ include('../incs-marketing/header-auth.php');
 									echo '<p class="text-danger" >'.$signup_errors['password'].'</p>';
 									}
 								?>
-								<div class="extra mt-3 row justify-content-between">
+								<!-- <div class="extra mt-3 row justify-content-between">
 									<div class="col-6">
 										<div class="form-check">
 											<input class="form-check-input" type="checkbox" value="" id="RememberPassword">
@@ -96,20 +96,20 @@ include('../incs-marketing/header-auth.php');
 											Remember me
 											</label>
 										</div>
-									</div><!--//col-6-->
+									</div>
 									<div class="col-6">
 										<div class="forgot-password text-end">
 											<a href="reset-password.html">Forgot password?</a>
 										</div>
-									</div><!--//col-6-->
-								</div><!--//extra-->
+									</div>
+								</div>//extra -->
 							</div><!--//form-group-->
 							<div class="text-center">
 								<button type="submit" name="login" class="btn app-btn-primary w-100 theme-btn mx-auto">Log In</button>
 							</div>
 						</form>
 						
-						<div class="auth-option text-center pt-5">No Account? Sign up <a class="text-link" href="/beta-souk-marketing/referral-marketing/signup.php" >here</a>.</div>
+						<!-- <div class="auth-option text-center pt-5">No Account? Sign up <a class="text-link" href="/beta-souk-marketing/referral-marketing/signup.php" >here</a>.</div> -->
 					</div><!--//auth-form-container-->	
 
 			    </div><!--//auth-body-->

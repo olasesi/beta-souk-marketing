@@ -76,7 +76,7 @@ Author: Duromedia
 				</div>
 				<div class="col-lg-2 col-6">
 					<div class="aplpg-header-btns">
-						<a href="/beta-souk-marketing/referral-marketing/buy.php" class="aplpg-rg-btn">Get Started</a>
+						<a href="/beta-souk-marketing/referral-marketing/signup.php" class="aplpg-rg-btn">Get Started</a>
 						<a href="#" class="aplpg-mobile-menu-btn"><i class="fas fa-bars"></i></a>
 					</div>
 				</div>
@@ -100,7 +100,7 @@ Author: Duromedia
 					<li><a class="nav-link" href="#webinar">webinar</a></li>
 					<li><a class="nav-link" href="#pricing">Pricing</a></li>
 					<li><a class="nav-link" href="#blog">Blog</a></li>
-					<li class="btn btn-danger btn-sm rounded-pill mx-3"><a href="/beta-souk-marketing/referral-marketing/buy.php">Get Started</a></li>
+					<li class="btn btn-danger btn-sm rounded-pill mx-3"><a href="/beta-souk-marketing/referral-marketing/signup.php">Get Started</a></li>
 				</ul>
 			</nav>
 			
