@@ -72,15 +72,6 @@ function genReference($qtd){
     }
 
 
-
-
-
-
-
-
-
-
-
 //Techcrunch or Medium.
 
 

@@ -13,7 +13,7 @@ require_once('../incs-marketing/gen_serv_con.php');
  }
 
  if(!isset($_SESSION['non_ref_users_email']) || !isset($_SESSION['non_ref_users_reference'])) {
-    header('Location:'.GEN_WEBSITE.'/logon.php');
+    header('Location:'.GEN_WEBSITE.'/login.php');
        exit();
 }
 
