@@ -18,6 +18,6 @@ Author: Duromedia
     <script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
         
     <!-- App CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
+    <link id="theme-style" rel="stylesheet" href="../referral-marketing/assets/css/portal.css">
 </head>
 <body class="app p-0">    	
